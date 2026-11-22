@@ -27,6 +27,7 @@ describe("TrackView", () => {
     rerender(<TrackView view={open()} send={sent()} />);
     expect(screen.getByRole("button", { name: "Yes, share" })).toBeTruthy();
     expect(screen.getByText(/Northside Pantry \(test\)/)).toBeTruthy();
+    expect(screen.getByText(/what you need and how to reach you\?/)).toBeTruthy();
   });
 
   it("a closed request shows only the closed message", () => {
@@ -132,6 +133,7 @@ describe("TrackView in Spanish", () => {
     expect(screen.getByRole("list", { name: "Pasos de su solicitud" })).toBeTruthy();
     expect(screen.getByText("Recibida")).toBeTruthy();
     expect(screen.getByRole("button", { name: "Sí, compartir" })).toBeTruthy();
+    expect(screen.getByText(/lo que necesita y cómo comunicarse con usted\?/)).toBeTruthy();
     expect(screen.getByRole("button", { name: "No, no compartir" })).toBeTruthy();
     expect(screen.getByText("Llame al 911.")).toBeTruthy();
     expect(screen.getByText("Este registro se borra el 21 de diciembre de 2026.")).toBeTruthy();

@@ -80,6 +80,7 @@ it("the consent ask and the partner ask name the organisation", async () => {
   await send(org, await join(org, "m_d01"), { id: newId(), type: "job.approve", job });
   const consent = (await sentTo(org, card)).find((t) => t.includes("May we share"));
   expect(consent).toMatch(new RegExp(`^${ORG_NAME} can ask `));
+  expect(consent).toContain("your need and your contact details with them");
   const yes: Command = { id: newId(), type: "consent.answer", job, answer: "yes" };
   const effects = await runInDurableObject(env.ORG.getByName(org), (hub: OrgHub) => {
     const state = (hub as unknown as { state: HubState }).state;

@@ -163,7 +163,9 @@ it("the desk gets the audio back with its type and no caching, and a volunteer d
   expect(r.status).toBe(200);
   expect(r.headers.get("Content-Type")).toBe("audio/ogg");
   expect(r.headers.get("Cache-Control")).toBe("no-store");
-  expect(new Uint8Array(await r.arrayBuffer())).toEqual(audio.bytes);
+  const body = new Uint8Array(await r.arrayBuffer());
+  expect(body.length).toBe(audio.bytes.length);
+  expect(audio.bytes.findIndex((b, i) => body[i] !== b)).toBe(-1);
   const volunteer = await join(org, "m_v01");
   const denied = await hubFetch(`${BASE}/${org}/audio/${card}`, {
     headers: { Authorization: `Bearer ${volunteer}` },
@@ -204,7 +206,8 @@ it("writeAudio and readAudio keep the parts in order and the type", async () => 
     return readAudio(s, "c_x");
   });
   expect(read?.mime).toBe("audio/webm");
-  expect(read?.bytes).toEqual(bytes);
+  expect(read?.bytes.length).toBe(bytes.length);
+  expect(bytes.findIndex((b, i) => read?.bytes[i] !== b)).toBe(-1);
   expect(await sql(org, (s) => readAudio(s, "c_none"))).toBeNull();
 });
 

@@ -1,0 +1,87 @@
+.playbook {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.version {
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.master,
+.load {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.label {
+  composes: fieldLabel from "../CardPanel/CardPanel.module.css";
+}
+
+.secondary {
+  composes: secondary from "../CardPanel/CardPanel.module.css";
+}
+
+.hint {
+  color: var(--color-text-2);
+}
+
+.error {
+  color: var(--color-crit);
+}
+
+.file {
+  min-height: var(--control-h);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.table {
+  composes: table from "../StatementTable/StatementTable.module.css";
+}
+
+.head {
+  composes: head from "../StatementTable/StatementTable.module.css";
+}
+
+.row {
+  composes: row from "../StatementTable/StatementTable.module.css";
+}
+
+.cell {
+  composes: cell from "../StatementTable/StatementTable.module.css";
+}
+
+.code {
+  composes: code from "../StatementTable/StatementTable.module.css";
+}
+
+.num {
+  composes: num from "../StatementTable/StatementTable.module.css";
+}
+
+.levels {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.choice {
+  composes: secondary small from "../CardPanel/CardPanel.module.css";
+  min-width: var(--control-h-sm);
+  font-family: var(--font-mono);
+}
+
+.chosen,
+.chosen[data-hovered],
+.chosen[data-disabled] {
+  border-color: var(--color-info);
+  border-left: 3px solid var(--color-info);
+  padding-left: 8px;
+  background: var(--color-select-tint);
+  color: var(--color-text);
+  cursor: default;
+}

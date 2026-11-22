@@ -1,0 +1,92 @@
+:root,
+[data-theme="graphite"] {
+  --color-bg-app: #111315;
+  --color-bg-panel: #1a1d20;
+  --color-bg-raised: #23272b;
+  --color-bg-inset: #0b0c0e;
+  --color-line: #2e3338;
+  --color-line-strong: #6a727b;
+  --color-text: #e8eaec;
+  --color-text-2: #a4abb3;
+  --color-text-3: #868e97;
+  --color-accent: #ffb000;
+  --color-on-accent: #111315;
+  --color-accent-tint: #2a2416;
+  --color-crit: #ff6b5e;
+  --color-crit-fill: #c8281c;
+  --color-crit-tint: #2c1715;
+  --color-on-crit: #ffffff;
+  --color-ok: #4cc982;
+  --color-ok-fill: #1e7a44;
+  --color-info: #6ab0ff;
+  --color-select-tint: #17283a;
+  --color-focus: #6ab0ff;
+  color-scheme: dark;
+}
+
+[data-theme="paper"] {
+  --color-bg-app: #f6f4ef;
+  --color-bg-panel: #ffffff;
+  --color-bg-raised: #ffffff;
+  --color-bg-inset: #ece9e1;
+  --color-line: #d6d2c8;
+  --color-line-strong: #7d7a73;
+  --color-text: #1b1d1f;
+  --color-text-2: #4d5257;
+  --color-text-3: #6b7075;
+  --color-accent: #1b1d1f;
+  --color-on-accent: #ffffff;
+  --color-link: #0b5cad;
+  --color-ok: #1f7a3e;
+  --color-warn: #8a4b00;
+  --color-crit: #b42318;
+  --color-focus: #0b5cad;
+  color-scheme: light;
+}
+
+:root {
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --font-cond: "IBM Plex Sans Condensed", "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  --radius: 2px;
+  --line-w: 1px;
+  --focus-w: 2px;
+
+  --row-h: 32px;
+  --row-h-header: 28px;
+  --lane-row-h: 48px;
+  --control-h: 32px;
+  --control-h-sm: 28px;
+  --control-h-lg: 48px;
+  --topbar-h: 40px;
+  --drawer-w: 480px;
+  --lanes-w: 360px;
+
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 150ms;
+  --dur-mid: 250ms;
+  --dur-flash: 1200ms;
+}
+
+[data-density="comfortable"] {
+  --row-h: 44px;
+  --control-h: 48px;
+}
+
+@media (max-width: 1439px) {
+  :root {
+    --drawer-w: 440px;
+    --lanes-w: 300px;
+  }
+}

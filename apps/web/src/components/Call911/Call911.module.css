@@ -1,0 +1,11 @@
+.box {
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius);
+  background: var(--color-bg-panel);
+}
+
+.call {
+  color: var(--color-crit);
+  font-weight: 600;
+}

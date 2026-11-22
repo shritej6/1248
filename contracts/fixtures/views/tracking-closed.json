@@ -1,0 +1,14 @@
+{
+  "routeCode": null,
+  "closed": true,
+  "steps": [],
+  "messages": [],
+  "consentAsk": null,
+  "checkbackAsk": null,
+  "forgetAt": null,
+  "clock": {
+    "now": 1795334400000,
+    "offsetMs": 0
+  },
+  "orgName": "ComForce demo"
+}

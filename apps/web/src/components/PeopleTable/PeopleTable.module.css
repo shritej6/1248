@@ -1,0 +1,58 @@
+.table {
+  composes: table from "../StatementTable/StatementTable.module.css";
+}
+
+.head {
+  composes: head from "../StatementTable/StatementTable.module.css";
+}
+
+.row {
+  composes: row from "../StatementTable/StatementTable.module.css";
+}
+
+.cell {
+  composes: cell from "../StatementTable/StatementTable.module.css";
+}
+
+.code {
+  composes: code from "../StatementTable/StatementTable.module.css";
+}
+
+.empty {
+  composes: empty from "../StatementTable/StatementTable.module.css";
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.secondary {
+  composes: secondary small from "../CardPanel/CardPanel.module.css";
+}
+
+.shown {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.joinCode {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.hint {
+  color: var(--color-text-2);
+}
+
+.error {
+  color: var(--color-crit);
+}
+
+.state {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}

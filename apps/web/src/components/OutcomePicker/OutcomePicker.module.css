@@ -1,0 +1,51 @@
+.overlay {
+  composes: overlay from "../MemberPicker/MemberPicker.module.css";
+}
+
+.modal {
+  composes: modal from "../MemberPicker/MemberPicker.module.css";
+}
+
+.dialog {
+  composes: dialog from "../MemberPicker/MemberPicker.module.css";
+}
+
+.title {
+  composes: title from "../MemberPicker/MemberPicker.module.css";
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+}
+
+.choice {
+  composes: secondary from "../CardPanel/CardPanel.module.css";
+}
+
+.choice:hover {
+  background: var(--color-bg-raised);
+}
+
+.choice[aria-pressed="true"] {
+  border-color: var(--color-text);
+  background: var(--color-text);
+  color: var(--color-bg-panel);
+}
+
+.actions {
+  composes: actions from "../MemberPicker/MemberPicker.module.css";
+}
+
+.primary {
+  composes: primary from "../CardPanel/CardPanel.module.css";
+}
+
+.ghost {
+  composes: ghost from "../CardPanel/CardPanel.module.css";
+}
+
+.muted {
+  composes: muted from "../MemberPicker/MemberPicker.module.css";
+}

@@ -1,0 +1,188 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: auto;
+}
+
+.tabs {
+  display: flex;
+  gap: 1px;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--line-w) solid var(--color-line);
+}
+
+.tab {
+  composes: secondary small from "../CardPanel/CardPanel.module.css";
+}
+
+.tabOn {
+  border-color: var(--color-info);
+  background: var(--color-select-tint);
+}
+
+.empty {
+  padding: var(--space-3);
+  color: var(--color-text-3);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.head {
+  position: sticky;
+  top: 0;
+  height: var(--row-h-header);
+  padding: 0 var(--space-3);
+  border-bottom: var(--line-w) solid var(--color-line);
+  background: var(--color-bg-app);
+  font-family: var(--font-cond);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-text-2);
+}
+
+.row:hover {
+  background: var(--color-bg-raised);
+}
+
+.mismatch {
+  background: var(--color-crit-tint);
+}
+
+.mismatch td:first-child {
+  box-shadow: inset 3px 0 0 var(--color-crit);
+}
+
+.cell {
+  height: var(--row-h);
+  padding: var(--space-1) var(--space-3);
+  border-bottom: var(--line-w) solid var(--color-line);
+  vertical-align: middle;
+}
+
+.clockCell {
+  text-align: right;
+}
+
+.code {
+  font-weight: 500;
+}
+
+.holder {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.label {
+  composes: fieldLabel from "../CardPanel/CardPanel.module.css";
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.note,
+.muted {
+  display: block;
+  color: var(--color-text-3);
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-accent);
+}
+
+.flagMark {
+  composes: flagMark from "../CardPanel/CardPanel.module.css";
+}
+
+.late {
+  display: block;
+  color: var(--color-accent);
+}
+
+.error {
+  display: block;
+  color: var(--color-crit);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.primary {
+  composes: primary small from "../CardPanel/CardPanel.module.css";
+}
+
+.secondary {
+  composes: secondary small from "../CardPanel/CardPanel.module.css";
+}
+
+.danger {
+  composes: danger small from "../CardPanel/CardPanel.module.css";
+}
+
+.crit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: 600;
+  color: var(--color-crit);
+}
+
+.partnerLink {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.link {
+  user-select: all;
+  word-break: break-all;
+}
+
+.overlay {
+  composes: overlay from "../MemberPicker/MemberPicker.module.css";
+}
+
+.modal {
+  composes: modal from "../MemberPicker/MemberPicker.module.css";
+}
+
+.dialog {
+  composes: dialog from "../MemberPicker/MemberPicker.module.css";
+}
+
+.title {
+  composes: title from "../MemberPicker/MemberPicker.module.css";
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.choice {
+  composes: secondary from "../CardPanel/CardPanel.module.css";
+  justify-content: flex-start;
+}
+
+.cancel {
+  composes: ghost from "../CardPanel/CardPanel.module.css";
+  align-self: flex-start;
+}

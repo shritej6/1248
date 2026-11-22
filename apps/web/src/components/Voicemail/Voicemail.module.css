@@ -1,0 +1,98 @@
+.primary {
+  composes: primary from "../CardPanel/CardPanel.module.css";
+}
+
+.secondary {
+  composes: secondary small from "../CardPanel/CardPanel.module.css";
+}
+
+.ghost {
+  composes: ghost from "../CardPanel/CardPanel.module.css";
+}
+
+.label {
+  composes: fieldLabel from "../CardPanel/CardPanel.module.css";
+}
+
+.muted {
+  composes: muted from "../CardPanel/CardPanel.module.css";
+}
+
+.strong {
+  composes: strong from "../CardPanel/CardPanel.module.css";
+}
+
+.error {
+  composes: error from "../CardPanel/CardPanel.module.css";
+}
+
+.overlay {
+  composes: overlay from "../MemberPicker/MemberPicker.module.css";
+}
+
+.modal {
+  composes: modal from "../MemberPicker/MemberPicker.module.css";
+}
+
+.dialog {
+  composes: dialog from "../MemberPicker/MemberPicker.module.css";
+}
+
+.title {
+  composes: title from "../MemberPicker/MemberPicker.module.css";
+}
+
+.voicemail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: var(--line-w) solid var(--color-line-strong);
+  border-left: 3px solid var(--color-info);
+  border-radius: var(--radius);
+  background: var(--color-bg-raised);
+}
+
+.player {
+  width: 100%;
+  min-height: var(--control-h);
+}
+
+.note {
+  color: var(--color-text);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  min-height: var(--control-h);
+  padding: var(--space-2);
+  border: var(--line-w) solid var(--color-line-strong);
+  border-radius: var(--radius);
+  background: var(--color-bg-panel);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.zip {
+  max-width: 10ch;
+  font-variant-numeric: tabular-nums;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}

@@ -1,0 +1,133 @@
+{
+  "onShift": {
+    "member": "m_c49cea58-4873-4fae-92e0-e292ec742a7f",
+    "name": "Morgan Desk (test)"
+  },
+  "emergency": [
+    {
+      "card": "c_7a1d3f92-4e6b-4c08-b5a7-1f3e9d2c6b84",
+      "receivedAt": 1795334100000,
+      "door": "form",
+      "zip": "53216",
+      "message": "There is a gas smell in my kitchen",
+      "quotes": ["gas smell"],
+      "sorted": {
+        "service": "Other",
+        "division": "Rapid / Incident Response Team",
+        "urgency": "high",
+        "source": "ai"
+      },
+      "flags": ["word_list_hit"],
+      "needOptions": [],
+      "suggestedNeed": null,
+      "quiet": false
+    }
+  ],
+  "triage": [
+    {
+      "card": "c_5e2a9c41-8b7d-4f13-a6e0-3d9c1b7f2a84",
+      "receivedAt": 1795334100000,
+      "door": "form",
+      "zip": "53216",
+      "message": "Snow on my walk and I cannot get to the bus",
+      "quotes": ["cannot get to the bus"],
+      "sorted": {
+        "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+        "division": null,
+        "urgency": "low",
+        "source": "ai"
+      },
+      "flags": [],
+      "needOptions": [
+        {
+          "need": "snow",
+          "label": "Snow shovelling"
+        },
+        {
+          "need": "lawn",
+          "label": "Lawn mowing"
+        }
+      ],
+      "suggestedNeed": "snow",
+      "quiet": false
+    }
+  ],
+  "jobs": [
+    {
+      "job": "j_8d4f1b27-6c3e-4a95-b0d8-7e2a5c9f1b63",
+      "card": "c_5e2a9c41-8b7d-4f13-a6e0-3d9c1b7f2a84",
+      "routeCode": "SNOW-4821",
+      "needLabel": "Snow shovelling",
+      "status": "accepted",
+      "holder": {
+        "kind": "volunteer",
+        "name": "Avery Snow (test)"
+      },
+      "clock": {
+        "label": "Start travel",
+        "dueAt": 1795341600000
+      },
+      "flags": [],
+      "returnReason": null,
+      "mismatch": false,
+      "promiseLate": false,
+      "partnerLink": null,
+      "partnerAnswer": null
+    }
+  ],
+  "pages": [
+    {
+      "page": "pg_4c9a2e71-0b5d-4f38-a6e1-9d2c7b4f8e03",
+      "card": "c_7a1d3f92-4e6b-4c08-b5a7-1f3e9d2c6b84",
+      "reason": "high",
+      "sentAt": 1795334340000,
+      "to": "Morgan Desk (test)"
+    }
+  ],
+  "quietCount": 1,
+  "needOptions": [
+    {
+      "need": "snow",
+      "label": "Snow shovelling"
+    },
+    {
+      "need": "lawn",
+      "label": "Lawn mowing"
+    },
+    {
+      "need": "food",
+      "label": "Food from a pantry"
+    }
+  ],
+  "volunteers": [
+    {
+      "member": "m_be8eaf14-ceca-412a-944f-0f39d961779d",
+      "name": "Avery Snow (test)",
+      "skills": ["snow", "lawn"],
+      "zone": "53216",
+      "on": true,
+      "openJobs": 1
+    },
+    {
+      "member": "m_361a1672-cce4-4a9d-898b-e8694c5a215e",
+      "name": "Blake Frost (test)",
+      "skills": ["snow", "cleanup"],
+      "zone": "53216",
+      "on": true,
+      "openJobs": 0
+    },
+    {
+      "member": "m_78782945-c9d3-41de-bcb2-6d58af4b68ca",
+      "name": "Casey Lane (test)",
+      "skills": ["snow", "rides"],
+      "zone": "53210",
+      "on": false,
+      "openJobs": 0
+    }
+  ],
+  "clock": {
+    "now": 1795334400000,
+    "offsetMs": 0
+  },
+  "orgName": "ComForce demo"
+}

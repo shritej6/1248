@@ -1,0 +1,323 @@
+{
+  "version": "2026-11-21.1",
+  "rows": [
+    {
+      "need": "shelter",
+      "label": "Shelter for tonight",
+      "service": "Homelessness / Emergency Shelter",
+      "defaultForService": true,
+      "code": "SHLT",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "shelter",
+      "promiseHours": 4,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "missing",
+      "label": "Missing person search",
+      "service": "Missing Persons Network",
+      "defaultForService": true,
+      "code": "MISS",
+      "level": 3,
+      "owner": "m_70331f4b-968d-4b66-b62f-9bc465e8368e",
+      "skill": "missing",
+      "promiseHours": 2,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "food",
+      "label": "Food from a pantry",
+      "service": "Meal Programs / Pantry",
+      "defaultForService": true,
+      "code": "FOOD",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "food",
+      "promiseHours": 48,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "partner",
+          "partner": "p_b1f72c2d-3f04-4b3f-8a39-12d7de1493e9",
+          "replyMinutes": 120
+        },
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "snow",
+      "label": "Snow shovelling",
+      "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+      "defaultForService": true,
+      "code": "SNOW",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "snow",
+      "promiseHours": 24,
+      "quiet": false,
+      "crew": 1,
+      "bring": "Shovel and salt",
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "lawn",
+      "label": "Lawn mowing",
+      "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+      "defaultForService": false,
+      "code": "LAWN",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "lawn",
+      "promiseHours": 72,
+      "quiet": false,
+      "crew": 1,
+      "bring": "Mower or rake",
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "jobs",
+      "label": "Job search help",
+      "service": "Bridge To Employment",
+      "defaultForService": true,
+      "code": "JOBS",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "jobs",
+      "promiseHours": 120,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "rides",
+      "label": "A ride to an appointment",
+      "service": "Transportation Service",
+      "defaultForService": true,
+      "code": "RIDE",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "rides",
+      "promiseHours": 48,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "partner",
+          "partner": "p_1833dd8f-0643-4a17-ab76-251195441996",
+          "replyMinutes": 120
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "suicide_prevention",
+      "label": "Crisis support",
+      "service": "Suicide Prevention",
+      "defaultForService": true,
+      "code": "CRIS",
+      "level": 3,
+      "owner": "m_70331f4b-968d-4b66-b62f-9bc465e8368e",
+      "skill": "crisis",
+      "promiseHours": 1,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "violence_prevention",
+      "label": "Violence interruption",
+      "service": "Violence Prevention / Interruption",
+      "defaultForService": true,
+      "code": "VIOL",
+      "level": 3,
+      "owner": "m_70331f4b-968d-4b66-b62f-9bc465e8368e",
+      "skill": "violence",
+      "promiseHours": 2,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "cleanup",
+      "label": "Community clean up",
+      "service": "Community Clean ups",
+      "defaultForService": true,
+      "code": "CLEAN",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "cleanup",
+      "promiseHours": 168,
+      "quiet": false,
+      "crew": 4,
+      "bring": "Gloves and bags",
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "youth_stipend",
+      "label": "Youth stipend information",
+      "service": "Youth Stipend Fund Opportunities",
+      "defaultForService": true,
+      "code": "YOUTH",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "youth",
+      "promiseHours": 120,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "deescalation",
+      "label": "Incident de-escalation",
+      "service": "Incident De-escalation",
+      "defaultForService": true,
+      "code": "DESC",
+      "level": 3,
+      "owner": "m_70331f4b-968d-4b66-b62f-9bc465e8368e",
+      "skill": "deescalation",
+      "promiseHours": 1,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "burial",
+      "label": "Burial assistance",
+      "service": "Burial Assistance",
+      "defaultForService": true,
+      "code": "BURY",
+      "level": 2,
+      "owner": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+      "skill": "burial",
+      "promiseHours": 72,
+      "quiet": false,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    },
+    {
+      "need": "text_extraction",
+      "label": "Safety planning",
+      "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+      "defaultForService": true,
+      "code": "TEXT",
+      "level": 3,
+      "owner": "m_70331f4b-968d-4b66-b62f-9bc465e8368e",
+      "skill": "extraction",
+      "promiseHours": 2,
+      "quiet": true,
+      "crew": 1,
+      "bring": null,
+      "ladder": [
+        {
+          "path": "volunteers"
+        },
+        {
+          "path": "unmet"
+        }
+      ]
+    }
+  ]
+}

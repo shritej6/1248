@@ -1,0 +1,132 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.graphite,
+.paper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-4);
+  border-bottom: var(--line-w) solid var(--color-line);
+}
+
+.graphite {
+  height: var(--topbar-h);
+  background: var(--color-bg-inset);
+}
+
+.paper {
+  min-height: var(--space-12);
+  background: var(--color-bg-panel);
+}
+
+.product {
+  font-weight: 600;
+}
+
+.section,
+.label,
+.demoLabel {
+  font-family: var(--font-cond);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section {
+  color: var(--color-text-2);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--space-5);
+  padding: 0 6px;
+  border: var(--line-w) solid currentColor;
+  border-radius: var(--radius);
+}
+
+.mark {
+  width: 8px;
+  height: 8px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.hollow {
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.live {
+  color: var(--color-ok);
+}
+
+.connecting {
+  color: var(--color-text-2);
+}
+
+.offline {
+  color: var(--color-crit);
+}
+
+[data-theme="paper"] .offline {
+  color: var(--color-text-2);
+}
+
+.since {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.demo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--row-h-header);
+  padding: 0 var(--space-4);
+  overflow: hidden;
+  background: var(--color-bg-app);
+}
+
+.stripes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stripe {
+  fill: var(--color-accent);
+}
+
+.demoBox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-2);
+  background: var(--color-bg-inset);
+  color: var(--color-text);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+[data-theme="paper"] .demoBox {
+  background: var(--color-text);
+  color: var(--color-bg-panel);
+}
+
+.main {
+  flex: 1;
+}

@@ -1,0 +1,232 @@
+.desk {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--topbar-h));
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--topbar-h);
+  padding: 0 var(--space-4);
+  border-bottom: var(--line-w) solid var(--color-line);
+  background: var(--color-bg-inset);
+}
+
+.label {
+  composes: fieldLabel from "../components/CardPanel/CardPanel.module.css";
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.muted {
+  color: var(--color-text-3);
+}
+
+.error {
+  color: var(--color-crit);
+}
+
+.primary {
+  composes: primary from "../components/CardPanel/CardPanel.module.css";
+}
+
+.secondary {
+  composes: secondary small from "../components/CardPanel/CardPanel.module.css";
+}
+
+.ghost {
+  composes: ghost small from "../components/CardPanel/CardPanel.module.css";
+}
+
+.narrow {
+  display: none;
+  padding: var(--space-6);
+  color: var(--color-text-2);
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  flex: 1;
+  min-height: 0;
+  grid-template-columns: var(--lanes-w) minmax(0, 1fr);
+}
+
+.withDrawer {
+  grid-template-columns: var(--lanes-w) minmax(0, 1fr) var(--drawer-w);
+}
+
+.lanes {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-right: var(--line-w) solid var(--color-line);
+}
+
+.lane {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.emergencyLane {
+  flex: 0 0 auto;
+  max-height: 40%;
+}
+
+.triageLane {
+  flex: 1;
+}
+
+.laneHead,
+.laneHeadCrit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--row-h-header);
+  padding: 0 var(--space-3);
+  font-family: var(--font-cond);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.laneHead {
+  border-bottom: var(--line-w) solid var(--color-line);
+  color: var(--color-text-2);
+}
+
+.laneHeadCrit {
+  background: var(--color-crit-fill);
+  color: var(--color-on-crit);
+}
+
+.laneHeadCrit svg {
+  width: 10px;
+  height: 10px;
+}
+
+.count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  min-height: var(--space-8);
+  padding: 0 var(--space-3);
+  color: var(--color-text-3);
+}
+
+.drawer {
+  min-height: 0;
+}
+
+.keys {
+  display: flex;
+  gap: var(--space-6);
+  min-height: var(--row-h-header);
+  align-items: center;
+  padding: 0 var(--space-4);
+  border-top: var(--line-w) solid var(--color-line);
+  background: var(--color-bg-inset);
+  color: var(--color-text-2);
+  font-size: 12px;
+}
+
+.key kbd {
+  font-family: var(--font-mono);
+  color: var(--color-text);
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 480px;
+  padding: var(--space-6);
+}
+
+.title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.link {
+  color: var(--color-info);
+}
+
+.overlay {
+  composes: overlay from "../components/MemberPicker/MemberPicker.module.css";
+}
+
+.modal {
+  composes: modal from "../components/MemberPicker/MemberPicker.module.css";
+}
+
+.dialog {
+  composes: dialog from "../components/MemberPicker/MemberPicker.module.css";
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+@media (max-width: 1439px) {
+  .keys {
+    display: none;
+  }
+
+  .withDrawer {
+    grid-template-columns: var(--lanes-w) minmax(0, 1fr);
+  }
+
+  .drawer {
+    position: absolute;
+    inset: 0 0 0 auto;
+    z-index: 10;
+    width: var(--drawer-w);
+  }
+}
+
+@media (max-width: 1279px) {
+  .narrow {
+    display: block;
+  }
+
+  .grid {
+    display: none;
+  }
+}
+
+.laneNote {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--line-w) solid var(--color-line);
+  color: var(--color-text-2);
+}

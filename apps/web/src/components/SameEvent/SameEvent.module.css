@@ -1,0 +1,118 @@
+.mark {
+  composes: tag from "../CardPanel/CardPanel.module.css";
+  border-color: var(--color-info);
+  color: var(--color-info);
+  white-space: nowrap;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: var(--line-w) solid var(--color-info);
+  border-radius: var(--radius);
+}
+
+.heading {
+  composes: fieldLabel from "../CardPanel/CardPanel.module.css";
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.actions {
+  composes: actions from "../CardPanel/CardPanel.module.css";
+}
+
+.primary {
+  composes: primary from "../CardPanel/CardPanel.module.css";
+}
+
+.secondary {
+  composes: secondary from "../CardPanel/CardPanel.module.css";
+}
+
+.ghost {
+  composes: ghost from "../CardPanel/CardPanel.module.css";
+}
+
+.muted {
+  composes: muted from "../CardPanel/CardPanel.module.css";
+}
+
+.error {
+  composes: error from "../CardPanel/CardPanel.module.css";
+}
+
+.answered {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.overlay {
+  composes: overlay from "../MemberPicker/MemberPicker.module.css";
+}
+
+.modal {
+  composes: modal from "../MemberPicker/MemberPicker.module.css";
+  width: min(960px, calc(100vw - 32px));
+}
+
+.dialog {
+  composes: dialog from "../MemberPicker/MemberPicker.module.css";
+}
+
+.title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.sides {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.quote {
+  composes: quote from "../CardPanel/CardPanel.module.css";
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--line-w) solid var(--color-line);
+}
+
+.groupHead {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.crit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-crit);
+  font-weight: 600;
+}
+
+.members {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-text-2);
+}

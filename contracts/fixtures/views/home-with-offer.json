@@ -1,0 +1,28 @@
+{
+  "member": {
+    "id": "m_be8eaf14-ceca-412a-944f-0f39d961779d",
+    "name": "Avery Snow (test)",
+    "on": true,
+    "skills": ["snow", "lawn"],
+    "zip": "53216"
+  },
+  "offers": [
+    {
+      "job": "j_8d4f1b27-6c3e-4a95-b0d8-7e2a5c9f1b63",
+      "needLabel": "Snow shovelling",
+      "distanceMiles": 0.4,
+      "promiseAt": 1795420800000,
+      "bring": "Shovel and salt",
+      "crew": 1
+    }
+  ],
+  "jobs": [],
+  "record": {
+    "jobsDone": 2,
+    "hours": 3.5
+  },
+  "clock": {
+    "now": 1795334400000,
+    "offsetMs": 0
+  }
+}

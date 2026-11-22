@@ -1,0 +1,67 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: var(--space-5);
+  padding: 0 6px;
+  border: var(--line-w) solid currentColor;
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.label {
+  font-family: var(--font-cond);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.mark {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1.25;
+}
+
+.dash {
+  stroke-dasharray: 1.5 1;
+}
+
+.cut {
+  fill: none;
+  stroke: var(--color-bg-panel);
+  stroke-width: 1.25;
+}
+
+.grey {
+  color: var(--color-text-2);
+}
+
+.strong {
+  color: var(--color-text);
+}
+
+.dim {
+  color: var(--color-text-3);
+}
+
+.ok {
+  color: var(--color-ok);
+}
+
+.crit {
+  color: var(--color-crit);
+}
+
+.emergency {
+  color: var(--color-crit);
+  background: var(--color-crit-tint);
+}

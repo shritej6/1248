@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-21",
+  "model": "@cf/meta/m2m100-1.2b",
+  "rule": {
+    "spanishShare": 0.2,
+    "minWords": 3,
+    "shortWords": 8
+  },
+  "checked": 100,
+  "expected": 6,
+  "found": 6,
+  "falseSpanish": 0,
+  "foundIds": [
+    "m008",
+    "m040",
+    "m060",
+    "m062",
+    "m071",
+    "m079"
+  ],
+  "missedIds": [],
+  "falseSpanishIds": [],
+  "translations": [
+    {
+      "id": "m008",
+      "text": "Buenas tardes. Vivimos por la 37 y Vliet, somos cinco en la casa. A mi esposo le bajaron las horas y este mes no nos alcanza para la comida. ¿Todavía dan despensa los sábados? ¿Qué papeles tengo que llevar, piden ID o prueba de dirección? No tengo carro pero puedo llegar en el bus. Muchas gracias y que Dios los bendiga.",
+      "translation": "Good afternoons. We live by the 37 and Vliet, we are five in the house. My husband was down the hours and this month does not reach us for food. Do they still give dispense on Saturdays? What papers do I have to carry, ask for ID or proof of address? I do not have a car but I can get on the bus."
+    },
+    {
+      "id": "m040",
+      "text": "Fwd from the page inbox, Sat 7:40 am. It's in Spanish, can somebody who reads it take this one?\n\nPor favor, necesito ayuda urgente. Vivo en Riverwest, por la Pierce y la Center. Desde el jueves en la noche no sirve la calefacción en mi apartamento y el dueño no contesta. Tengo una bebé de tres meses y está helada, anoche no dormimos del frío. ¿Hay algún lugar donde nos podamos quedar hoy? Mi número es 414-555-0136.",
+      "translation": "Fwd from the page inbox, Sat 7:40 am. It's in Spanish, can somebody who reads it take this one? Please, I need urgent help. I live in Riverwest, by the Pierce and the Center. Since Thursday night there is no heating in my apartment and the owner does not answer. I have a three-month-old baby and it's frozen, last night we didn't sleep from the cold. Is there any place where we can stay today? My number is 414-555-0136."
+    },
+    {
+      "id": "m060",
+      "text": "Buenas tardes, disculpen la molestia, no sé si esto les toca a ustedes. Desde el jueves en la noche no sirve la calefacción del apartamento y el dueño dice que el técnico viene hasta el lunes. Tengo un bebé de tres meses y estamos durmiendo en la cocina con el horno prendido. ¿Ustedes prestan calentones o saben de un lugar donde quedarnos el fin de semana? Estamos por la 9 y Mineral. 414-555-0190. Gracias.",
+      "translation": "Good afternoon, apologize for the inconvenience, I don't know if this affects you. Since Thursday night, the apartment heating is not served and the owner says the technician is coming until Monday. I have a three-month-old baby and we are sleeping in the kitchen with the oven attached. Do you borrow heaters or know of a place where to stay for the weekend? We are for 9 and Mineral. 414-555-0190. Thank you."
+    },
+    {
+      "id": "m062",
+      "text": "Busco c1ases de ingles para adultos, gratis o baratas. Ustedes dan? Gracias. Marisol 414-555-0188",
+      "translation": "I am looking for English for adults, free or cheap. Do you give? thanks. Marisol 414-555-0188"
+    },
+    {
+      "id": "m071",
+      "text": "sí buenas tardes habla Carmen mire yo tengo setenta y seis años y vivo sola y con la artritis no puedo palear la nieve que cayó el jueves está toda la banqueta y los escalones de enfrente una vecina me dijo que ustedes ayudan a los viejitos con eso sin cobrar yo vivo por la once y Lincoln a la vuelta del parque Kosciuszko voy a estar en la casa todo el sábado mi número es 414-555-0171 muchas gracias que Dios los bendiga",
+      "translation": "yes good afternoons speaks Carmen look I'm seventy-six years old and I live alone and with arthritis I can't pale the snow that fell on Thursday is all the bench and stairs in front of a neighbor told me that you help the elderly with that without charging I live by the eleven and Lincoln at the turn of the park Kosciuszko I'm going to be in the house all Saturday my number is 414-555-0171 thank you God bless you"
+    },
+    {
+      "id": "m079",
+      "text": "Sí, por favor. Una caja de comida para 5 personas. Vivimos por la 31 y Villard. No tengo carro, ¿me la pueden traer el sábado? Muchas gracias.",
+      "translation": "Yes, please. A food box for 5 people. We live by the 31st and Villard. I don't have a car, can you bring it to me on Saturday?"
+    }
+  ],
+  "fidelity": [
+    {
+      "id": "m008",
+      "kept": [
+        "food",
+        "no car",
+        "papers to bring"
+      ],
+      "lost": [],
+      "safetyLost": []
+    },
+    {
+      "id": "m040",
+      "kept": [
+        "no heat",
+        "a baby",
+        "a place to stay",
+        "phone 414-555-0136"
+      ],
+      "lost": [],
+      "safetyLost": []
+    },
+    {
+      "id": "m060",
+      "kept": [
+        "no heat",
+        "a baby",
+        "phone 414-555-0190"
+      ],
+      "lost": [
+        "oven on for heat"
+      ],
+      "safetyLost": [
+        "oven on for heat"
+      ]
+    },
+    {
+      "id": "m062",
+      "kept": [
+        "English classes",
+        "phone 414-555-0188"
+      ],
+      "lost": [],
+      "safetyLost": []
+    },
+    {
+      "id": "m071",
+      "kept": [
+        "snow",
+        "age 76",
+        "lives alone",
+        "phone 414-555-0171"
+      ],
+      "lost": [],
+      "safetyLost": []
+    },
+    {
+      "id": "m079",
+      "kept": [
+        "food",
+        "no car",
+        "5 people"
+      ],
+      "lost": [],
+      "safetyLost": []
+    }
+  ],
+  "safetyLost": 1,
+  "neurons": 31.826249837875366,
+  "passed": false
+}

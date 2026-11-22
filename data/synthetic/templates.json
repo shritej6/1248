@@ -1,0 +1,36 @@
+{
+  "receipt": {
+    "text": "{orgName} has your request for {needLabel}. Your code is {routeCode}. We plan to help by {promiseAt}. Follow it here: {trackingLink}. In an emergency, call 911. Your details are deleted 90 days after the request closes.",
+    "slots": ["orgName", "routeCode", "needLabel", "promiseAt", "trackingLink"]
+  },
+  "consent_ask": {
+    "text": "{orgName} can ask {partnerName} to help with {needLabel}. May we share your first name, your ZIP code and your need with them? Answer here: {trackingLink}. Your details are deleted 90 days after the request closes.",
+    "slots": ["orgName", "partnerName", "needLabel", "trackingLink"]
+  },
+  "partner_ask": {
+    "text": "{orgName} asks for help with {needLabel} in ZIP code {zip}. Please answer by {deadline}: {partnerLink}. Your details are deleted 90 days after the request closes.",
+    "slots": ["orgName", "needLabel", "zip", "deadline", "partnerLink"]
+  },
+  "partner_has_it": {
+    "text": "{partnerName} has your request {routeCode}. Your contact there is {contactName}. Follow it here: {trackingLink}. Your details are deleted 90 days after the request closes.",
+    "slots": ["partnerName", "contactName", "routeCode", "trackingLink"]
+  },
+  "checkback": {
+    "text": "Did they help with {needLabel}? Answer 1 for yes, 2 for partly, 3 for no: {trackingLink}. Your details are deleted 90 days after the request closes.",
+    "slots": ["needLabel", "trackingLink"]
+  },
+  "unmet": {
+    "text": "We are sorry. We could not find help for {needLabel} yet. Your request stays open, and a person at ComForce keeps it. Follow it here: {trackingLink}. Your details are deleted 90 days after the request closes.",
+    "slots": ["needLabel", "trackingLink"]
+  },
+  "es": {
+    "receipt": {
+      "text": "{orgName} recibió su solicitud de ayuda: {needLabel}. Su código es {routeCode}. Planeamos ayudarle a más tardar el {promiseAt}. Siga su solicitud aquí: {trackingLink}. En una emergencia, llame al 911. Sus datos se borran 90 días después de que se cierre la solicitud.",
+      "slots": ["orgName", "routeCode", "needLabel", "promiseAt", "trackingLink"]
+    },
+    "checkback": {
+      "text": "¿Le ayudaron con {needLabel}? Responda 1 para sí, 2 para en parte o 3 para no: {trackingLink}. Sus datos se borran 90 días después de que se cierre la solicitud.",
+      "slots": ["needLabel", "trackingLink"]
+    }
+  }
+}

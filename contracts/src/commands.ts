@@ -4,6 +4,8 @@ import {
   CardIdSchema,
   CommandIdSchema,
   DateSchema,
+  DraftIdSchema,
+  HashSchema,
   JobIdSchema,
   MemberIdSchema,
   PageIdSchema,
@@ -25,6 +27,15 @@ import {
   UrgencySchema,
 } from "./needs.js";
 import { PlaybookSchema } from "./playbook.js";
+import {
+  DraftFlagSchema,
+  DraftKindSchema,
+  DraftSourceSchema,
+  DraftTextSchema,
+  GuardReasonSchema,
+  ResourceIdSchema,
+} from "./resources.js";
+import { MonthSchema } from "./statement.js";
 
 const cmd = <T extends string, S extends z.ZodRawShape>(type: T, shape: S) =>
   z.strictObject({ id: CommandIdSchema, type: z.literal(type), ...shape });
@@ -196,6 +207,28 @@ export const LangResultSchema = z.strictObject({
   outcome: AiOutcomeSchema,
   text: machineText,
 });
+export const DraftAskCommandSchema = z.strictObject({
+  type: z.literal("draft.ask"),
+  draft: DraftIdSchema,
+  kind: DraftKindSchema,
+  month: MonthSchema,
+  resource: ResourceIdSchema.nullable(),
+  by: MemberIdSchema,
+});
+export const DraftResultSchema = z.strictObject({
+  type: z.literal("draft.result"),
+  draft: DraftIdSchema,
+  text: DraftTextSchema,
+  source: DraftSourceSchema,
+  flag: DraftFlagSchema.nullable(),
+  reasons: z.array(GuardReasonSchema).max(9),
+});
+export const DraftApproveCommandSchema = z.strictObject({
+  type: z.literal("draft.approve"),
+  draft: DraftIdSchema,
+  textHash: HashSchema,
+  by: MemberIdSchema,
+});
 export const SystemCommandSchema = z.discriminatedUnion("type", [
   RequestSubmitSchema,
   SortResultSchema,
@@ -205,6 +238,9 @@ export const SystemCommandSchema = z.discriminatedUnion("type", [
   VoiceResultSchema,
   LinkResultSchema,
   LangResultSchema,
+  DraftAskCommandSchema,
+  DraftResultSchema,
+  DraftApproveCommandSchema,
 ]);
 
 export const RequestFormSchema = z.strictObject({
@@ -228,6 +264,9 @@ export type VoiceReceived = z.infer<typeof VoiceReceivedSchema>;
 export type VoiceResult = z.infer<typeof VoiceResultSchema>;
 export type LinkResult = z.infer<typeof LinkResultSchema>;
 export type LangResult = z.infer<typeof LangResultSchema>;
+export type DraftAskCommand = z.infer<typeof DraftAskCommandSchema>;
+export type DraftResult = z.infer<typeof DraftResultSchema>;
+export type DraftApproveCommand = z.infer<typeof DraftApproveCommandSchema>;
 export type SystemCommand = z.infer<typeof SystemCommandSchema>;
 export type RequestForm = z.infer<typeof RequestFormSchema>;
 export type CoreCommand = z.infer<typeof CoreCommandSchema>;

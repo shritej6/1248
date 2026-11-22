@@ -10,13 +10,14 @@ import { submitFromForm } from "../src/doors.js";
 import { drainOutbox, enqueueSorts, MAX_TRIES, type OutboxRow } from "../src/outbox.js";
 import type { Env } from "../src/orghub.js";
 import { residentMessages } from "../src/render.js";
+import { DRAFT_KIND } from "../src/resources/kind.js";
 import { Store } from "../src/store.js";
 import { freshOrg, hubFetch, join, newCard, organiser, sql } from "./helpers.js";
 
 const env = workerEnv as unknown as Env;
 const BASE = "https://hub.test/api/v1/o";
 const CARD = "c_5e2a9c41-8b7d-4f13-a6e0-3d9c1b7f2a84";
-const NO_MODELS = { VOICE_MODEL: "", LINK_MODEL: "", TRANSLATE_MODEL: "" };
+const NO_MODELS = { VOICE_MODEL: "", LINK_MODEL: "", TRANSLATE_MODEL: "", DRAFT_MODEL: "" };
 
 type Applied = { command: SystemCommand; actor: Actor };
 
@@ -104,6 +105,25 @@ it("after the third failed try the job falls back to a person with the outcome f
 it("the give-up hook leaves rows that are not AI jobs alone", () => {
   const applied: Applied[] = [];
   aiGiveUp(fakeHost({}, applied))(row("mail", MAX_TRIES));
+  expect(applied).toEqual([]);
+});
+
+it("a draft effect waits in the outbox under the draft kind with only the draft id", async () => {
+  const draft = "d_0b7e5a2c-4f1d-4c3a-9e8b-6a5d4c3b2a19";
+  const rows = await sql(freshOrg(), (s) => {
+    enqueueSorts(s, [{ kind: "draft", draft }], 5);
+    return s
+      .exec<{ kind: string; card: string | null; payload: string }>("SELECT kind, card, payload FROM outbox")
+      .toArray();
+  });
+  expect(rows).toEqual([{ kind: DRAFT_KIND, card: null, payload: JSON.stringify({ draft }) }]);
+});
+
+it("the give-up hook hands a draft row to the draft job, which leaves a row with a bad payload alone", () => {
+  const applied: Applied[] = [];
+  expect(() => {
+    aiGiveUp(fakeHost({}, applied))(row(DRAFT_KIND, MAX_TRIES));
+  }).not.toThrow();
   expect(applied).toEqual([]);
 });
 

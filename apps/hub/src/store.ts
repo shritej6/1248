@@ -22,6 +22,7 @@ import {
   type VaultPerson,
   type VaultReader,
 } from "@vision/core";
+import { finishDraft } from "./resources/tables.js";
 
 const SnapshotSchema = z.object({ shape: z.literal(STATE_SHAPE), state: z.record(z.string(), z.unknown()) });
 
@@ -192,6 +193,8 @@ export class Store {
         this.insertVault(effect.card, effect.job, effect.textKind, from, effect.text, at);
       } else if (effect.kind === "offer") {
         this.recordOffer(effect.job, effect.members, at);
+      } else if (effect.kind === "draft.text") {
+        finishDraft(this.sql, effect);
       }
     }
   }

@@ -16,6 +16,7 @@ export default defineConfig({
           VOICE_MODEL: "",
           LINK_MODEL: "",
           TRANSLATE_MODEL: "",
+          DRAFT_MODEL: "",
         },
       },
     }),

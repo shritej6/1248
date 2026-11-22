@@ -10,6 +10,8 @@ import type { HubState } from "@vision/core";
 import { z } from "zod";
 import { logEvent } from "../http.js";
 import type { OutboxRow, Sender } from "../outbox.js";
+import { giveUpDraft, sendDraft } from "../resources/job.js";
+import { DRAFT_KIND } from "../resources/kind.js";
 import { langJob } from "./lang.js";
 import { linkJob } from "./link.js";
 import { AiJobError, type AiEnv, type AiJob, type AiModels, type AiTools } from "./types.js";
@@ -62,6 +64,10 @@ const runJob = async (job: AiJob, card: string, tools: AiTools, row: OutboxRow):
 export const aiSender =
   (host: AiHost): Sender =>
   async (row) => {
+    if (row.kind === DRAFT_KIND) {
+      await sendDraft(host, row);
+      return;
+    }
     const job = jobOf(row.kind);
     const card = cardOf(row);
     const model = job.model(host.env);
@@ -78,6 +84,10 @@ export const aiGiveUp =
   (host: AiHost) =>
   (row: OutboxRow): void => {
     if (!isAiKind(row.kind)) return;
+    if (row.kind === DRAFT_KIND) {
+      giveUpDraft(host, row);
+      return;
+    }
     host.apply(jobOf(row.kind).fallback(cardOf(row), "failed"), SYSTEM);
     logEvent({ op: "ai", id: row.id, kind: row.kind, status: "gave_up" });
   };

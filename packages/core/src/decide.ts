@@ -5,6 +5,7 @@ import { langHandlers } from "./decide/lang.js";
 import { linkHandlers } from "./decide/link.js";
 import { offerHandlers } from "./decide/offers.js";
 import { planHandlers } from "./decide/plan.js";
+import { resourceHandlers } from "./decide/resources.js";
 import { CLOSE_KINDS, closeHandlers, fireCloseTimer } from "./decide/close.js";
 import { PARTNER_KINDS, firePartnerTimer, partnerHandlers } from "./decide/partner.js";
 import { timerHandlers } from "./decide/timers.js";
@@ -22,6 +23,9 @@ const SYSTEM_TYPES: readonly string[] = [
   "voice.result",
   "link.result",
   "lang.result",
+  "draft.ask",
+  "draft.result",
+  "draft.approve",
 ];
 
 const baseTimer = timerHandlers["timer.fired"] as Handler<CommandOf<"timer.fired">>;
@@ -43,6 +47,7 @@ const handlers: Handlers = {
   ...voiceHandlers,
   ...linkHandlers,
   ...langHandlers,
+  ...resourceHandlers,
   "timer.fired": timerFired,
 };
 

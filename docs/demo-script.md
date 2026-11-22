@@ -89,6 +89,20 @@ Do this beat after step 12, so it does not change the thread. It shows the voice
 4. On the hub of `make dev`, the card says "Transcript by speech AI. Listen before you confirm." The sorter suggests High, highlights "gas smell in the kitchen" and pages the desk. Select "Got it".
 5. Choose "Snow shovelling" and High, then select CONFIRM.
 
+## The Resources beat
+
+Do this beat after the thread. It takes about 60 seconds and shows the Resources tab of the organiser website. Use a second browser window.
+
+1. Open `http://localhost:8787/comforce-demo/join`, type the organiser code from `.demo-codes.txt` and select Join. Open the tab Resources. Point at the notice: demo mode, synthetic history, and real funder facts that a person checked on 2026-11-22.
+2. Show the chart. The winter peak is snow and shelter. Code makes the forecast, from low to high, with no AI.
+3. Show the matches. Good Neighbor is first, because a resident group can apply and the fund is rolling. Bader shows "Deadline in 8 days" and "Eligibility not stated. Ask first."
+4. In the readiness list, set the fiscal sponsor agreement to Signed. Givebutter and the foundation rows move up, and "Needs a signed fiscal sponsor agreement" becomes "Through the fiscal sponsor".
+5. On the Bader match, select "Write a letter". The draft shows "Writing the draft", then the text, the facts that it may use, and the footer with the seal line.
+6. Select Approve. The ledger gets `draft.approved` with the fingerprint of the text. Copy text shows now.
+7. Close: Vision never sends or posts. The draft guard stops invented numbers, quotes and stories, and a person approves every word.
+
+On the hub of `make dev` with `DRAFT_MODEL` set, the AI writes the draft. On the hub of `make dev-offline`, the draft is the fixed template with "AI did not answer, so this is the fixed template." With `DRAFT_MODEL` empty, the template shows "AI is off, so this is the fixed template."
+
 ## Demo clock between THERE and DONE
 
 The visit clock starts at THERE and runs for 60 minutes. If you jump the demo clock between THERE and DONE, use "+15 min", not "+1 hour". Wait until the phone and the desk both show THERE before you jump. A jump of 1 hour fires the visit clock, and the desk shows "Check on the visit" in the middle of the demo.

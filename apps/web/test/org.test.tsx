@@ -19,6 +19,7 @@ import { SealCheck } from "../src/components/SealCheck/SealCheck.js";
 import { StatementTable } from "../src/components/StatementTable/StatementTable.js";
 import type { GoogleOutcome } from "../src/api.js";
 import { OrgPage, OrgPageView, type AskGoogle } from "../src/pages/OrgPage.js";
+import type { ResourcesClient, ResourcesOutcome } from "../src/resourcesApi.js";
 import { matchRoute } from "../src/router.js";
 import { fakeSockets, fixture, mockFetch } from "./helpers.js";
 
@@ -127,6 +128,11 @@ const sent = () => vi.fn(() => Promise.resolve({ ok: true } as const));
 const ledger = () => Promise.resolve(demoMonthEvents());
 const makeCode = () => Promise.resolve({ ok: true, joinCode: "JOIN-7K2M" } as const);
 const google = (outcome: GoogleOutcome = { ok: true }) => vi.fn<AskGoogle>(() => Promise.resolve(outcome));
+const NO_HUB: ResourcesOutcome = { ok: false, code: "network", message: "No hub in this test." };
+const fakeResources = (): ResourcesClient => ({
+  load: vi.fn(() => Promise.resolve(NO_HUB)),
+  post: vi.fn(() => Promise.resolve(NO_HUB)),
+});
 
 describe("StatementTable", () => {
   it("the statement shows the balance line with counts", () => {
@@ -202,8 +208,34 @@ describe("DemoClock", () => {
   });
 });
 
-const renderOrg = (send: ReturnType<typeof sent>, ask: AskGoogle) =>
-  render(<OrgPageView view={orgView()} loadLedger={ledger} makeCode={makeCode} send={send} google={ask} />);
+const renderOrg = (send: ReturnType<typeof sent>, ask: AskGoogle, resources = fakeResources()) =>
+  render(
+    <OrgPageView
+      view={orgView()}
+      loadLedger={ledger}
+      makeCode={makeCode}
+      send={send}
+      google={ask}
+      resources={resources}
+    />,
+  );
+
+const TAB_ORDER = ["Statement", "Unmet", "Resources", "Playbook", "Volunteers", "Partners", "Settings"];
+
+describe("OrgPageView tabs", () => {
+  it("the tab names come in the order of the plan", () => {
+    renderOrg(sent(), google());
+    expect(screen.getAllByRole("tab").map((tab) => tab.textContent)).toEqual(TAB_ORDER);
+  });
+
+  it("the resources tab loads its own view", async () => {
+    const resources = fakeResources();
+    renderOrg(sent(), google(), resources);
+    fireEvent.click(screen.getByRole("tab", { name: "Resources" }));
+    expect((await screen.findByRole("alert")).textContent).toBe("No hub in this test.");
+    expect(resources.load).toHaveBeenCalledTimes(1);
+  });
+});
 
 describe("OrgPageView", () => {
   it("the unmet section lists the shelf and the finish list", () => {
@@ -248,7 +280,14 @@ describe("PlaybookTable levels", () => {
   it("the chosen level is marked, stays focusable and sends nothing", () => {
     const send = sent();
     render(
-      <OrgPageView view={orgView()} loadLedger={ledger} makeCode={makeCode} send={send} google={google()} />,
+      <OrgPageView
+        view={orgView()}
+        loadLedger={ledger}
+        makeCode={makeCode}
+        send={send}
+        google={google()}
+        resources={fakeResources()}
+      />,
     );
     fireEvent.click(screen.getByRole("tab", { name: "Playbook" }));
     const chosen = screen.getByRole("button", { name: "Set shelter to level 2, current" });
@@ -268,6 +307,7 @@ describe("PeopleTable", () => {
         makeCode={makeCode}
         send={sent()}
         google={google()}
+        resources={fakeResources()}
       />,
     );
     fireEvent.click(screen.getByRole("tab", { name: "Volunteers" }));

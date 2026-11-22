@@ -4,30 +4,41 @@ This glossary takes the place of the closed STE dictionary (C54). Each document 
 
 ## Terms
 
-- **AI job**: One supervised task that a model does for the desk: the voicemail transcript, the same-event link or the Spanish translation. Each AI job has a key: `voice`, `link` or `lang`.
+- **AI job**: One supervised task that a model does for a person: the voicemail transcript, the same-event link, the Spanish translation or the Resources draft. Each AI job has a key: `voice`, `link`, `lang` or `draft`.
 - **card**: The record of one request for help from one person. A card holds one or more jobs.
+- **catalog**: The file `data/resources/catalog.json`. It holds public facts about funders and programs, each with its source and the date that a person checked it.
+- **caution**: A fact on a match that can stop or slow the money, for example "Needs a signed fiscal sponsor agreement". Code adds cautions, and no code removes a caution of the catalog.
 - **check-back**: The question that the hub sends to the person after DONE or GOT IT: "Did they help? 1 yes, 2 partly, 3 no." The answer of the person is the second key that closes a job.
 - **demo clock**: The clock part of the hub in demo mode. An organiser can move it forward by set steps, and each jump writes a ledger line.
+- **draft**: Text that Vision prepares for a person to approve and send: the monthly impact post or a funder letter. Vision never sends a draft.
+- **draft guard**: Code in core that checks each draft before a person sees it. It stops a number that is not a fact, a quote, a story, a link and a claim of status.
+- **fiscal sponsor**: A 501(c)(3) nonprofit that takes money for a group without that status. It takes a fee and answers for compliance.
+- **forecast**: The jobs, hours and money that code expects in each of the next 12 months, as low, likely and high.
 - **gist**: The short words that the desk types for a voicemail when no transcript comes. The gist goes in the vault and then through the sorter and the word list.
 - **holder**: The one named person or partner who holds a job at a given moment. Every open job has exactly one holder.
+- **in-kind value**: The volunteer hours times $34.67, the Wisconsin value of a volunteer hour. It is never cash.
 - **job**: One need for one person. Custody, clocks and closing apply to a job.
 - **ladder**: The ordered list of rungs for one need in the playbook. The last rung is always the unmet shelf.
 - **ledger**: The append-only list of events for one organisation. A ledger line holds no name, no address, no contact detail and no free text.
 - **level**: How much a person takes part in the path of a need. Level 1 goes by itself, level 2 needs one tap, and at level 3 a person leads.
 - **machine translation**: The English text that a model makes from a Spanish message, for the desk only. It never goes to a resident.
+- **match**: One catalog row ranked for ComForce, with a score out of 100, its reasons and its cautions.
 - **mismatch**: The state of a job when the helper said DONE and the person answered "no" at the check-back. The job returns to the desk and goes out again without the first volunteer.
 - **off switch**: The environment variable of one AI part that holds the model id. An empty variable turns that part off.
 - **offer**: The message that a volunteer gets for an open job. It shows the need, the rough distance, the time and what to bring, and it shows no name and no address.
 - **partner card**: The web page that a partner opens by a link with no account. It shows one job and the buttons YES, NO, WAIT and GOT IT.
 - **playbook**: The table of rules from ComForce, with one row for each need. A row gives the owner, the level, the ladder, the promise time and the skill tag.
 - **quiet card**: A card for the extraction service, or a card where contact is not safe. Only the lead sees it, and the machine sends nothing to the person.
+- **readiness list**: The four items that ComForce must have ready before money can arrive.
 - **rehearsal**: A run of invented requests through the same rules in fast time, in the browser of the organiser. It never touches the real ledger.
+- **Resources**: The tab of the organiser website that turns the sealed record into funding.
 - **route code**: The readable code of a card, for example `SNOW-16-042`. The code alone opens nothing.
 - **rung**: One step of a ladder: volunteers, one partner or the unmet shelf. A "no" or silence moves the job to the next rung.
 - **same-event link**: A proposal by the link job that two cards report the same event. Only a person answers it, with "Same event" or "Not the same". A link never merges, closes or lowers a card.
 - **seal**: The chain of SHA-256 fingerprints over the ledger lines. A changed line fails the seal check.
 - **statement**: The monthly report that accounts for every job. It always balances.
 - **supervision rules**: The seven rules that every AI part of Vision follows. `docs/ai-jobs.md` holds them.
+- **synthetic history**: The 24 months of made-up job counts that a seeded generator makes for the demo. The Resources tab labels it.
 - **tracking link**: The link with a random secret part that a resident gets at once after a request. It opens the tracking page of one card.
 - **transcript**: The text that speech AI makes from a voicemail. The desk sees it under the recording and listens before it confirms.
 - **unmet shelf**: The place for jobs that have no path left. The owner of the need holds each job on the unmet shelf.

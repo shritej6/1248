@@ -1,17 +1,9 @@
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import { Button, Tab, TabList, TabPanel, Tabs } from "react-aria-components";
-import { OrgViewSchema, type Command, type LedgerEvent, type OrgView } from "@vision/contracts";
+import { OrgViewSchema, type LedgerEvent, type OrgView } from "@vision/contracts";
 import { statement } from "@vision/core";
-import {
-  ApiError,
-  askGoogle,
-  createJoinCode,
-  getLedger,
-  sendCommand,
-  type Auth,
-  type GoogleAction,
-  type GoogleOutcome,
-} from "../api.js";
+import { ApiError, type Auth, type GoogleOutcome } from "../api.js";
+import type { ResourcesClient } from "../resourcesApi.js";
 import { useView, type OpenSocket, type ViewState } from "../live.js";
 import { orgNameOf } from "../orgName.js";
 import { readSession } from "../session.js";
@@ -20,18 +12,19 @@ import { Offline } from "../components/Offline/Offline.js";
 import { MembersTable, PartnersTable, type MakeJoinCode } from "../components/PeopleTable/PeopleTable.js";
 import { PlaybookTable } from "../components/PlaybookTable/PlaybookTable.js";
 import { Rehearsal } from "../components/Rehearsal/Rehearsal.js";
+import { ResourcesSection } from "../components/Resources/ResourcesSection.js";
 import { SealCheck } from "../components/SealCheck/SealCheck.js";
 import { FinishList, UnmetShelf } from "../components/ShelfList/ShelfList.js";
 import { Shell } from "../components/Shell/Shell.js";
 import { StatementTable } from "../components/StatementTable/StatementTable.js";
 import { classNames } from "../components/classNames.js";
 import type { DeskSend } from "../components/deskCommand.js";
+import { useOrgActions, type AskGoogle, type LoadLedger } from "./orgActions.js";
 import styles from "./OrgPage.module.css";
 
-const cx = classNames(styles);
+export type { AskGoogle, LoadLedger };
 
-export type LoadLedger = () => Promise<LedgerEvent[]>;
-export type AskGoogle = (action: GoogleAction, body: Record<string, unknown>) => Promise<GoogleOutcome>;
+const cx = classNames(styles);
 
 type GoogleState =
   { state: "idle" } | { state: "busy" } | { state: "done" } | { state: "failed"; message: string };
@@ -212,9 +205,10 @@ export type OrgPageViewProps = {
   loadLedger: LoadLedger;
   makeCode: MakeJoinCode;
   google: AskGoogle;
+  resources: ResourcesClient;
 };
 
-function sections({ view, send, loadLedger, makeCode, google }: OrgPageViewProps): Section[] {
+function sections({ view, send, loadLedger, makeCode, google, resources }: OrgPageViewProps): Section[] {
   return [
     {
       id: "statement",
@@ -232,6 +226,7 @@ function sections({ view, send, loadLedger, makeCode, google }: OrgPageViewProps
         </>
       ),
     },
+    { id: "resources", title: "Resources", body: <ResourcesSection client={resources} /> },
     {
       id: "playbook",
       title: "Playbook",
@@ -274,24 +269,7 @@ function OrgLoaded({ org, token, openSocket }: LoadedProps) {
   const auth = useMemo<Auth>(() => ({ kind: "session", token }), [token]);
   const options = useMemo(() => (openSocket === undefined ? {} : { openSocket }), [openSocket]);
   const { view, live, refresh } = useView(org, auth, "org", OrgViewSchema, options);
-  const send = useCallback<DeskSend>(
-    async (command: Command) => {
-      const outcome = await sendCommand(org, auth, command);
-      if (outcome.ok) refresh();
-      return outcome;
-    },
-    [org, auth, refresh],
-  );
-  const loadLedger = useCallback(() => getLedger(org, token), [org, token]);
-  const makeCode = useCallback<MakeJoinCode>((member) => createJoinCode(org, token, member), [org, token]);
-  const google = useCallback<AskGoogle>(
-    async (action, body) => {
-      const outcome = await askGoogle(org, token, action, body);
-      if (outcome.ok) refresh();
-      return outcome;
-    },
-    [org, token, refresh],
-  );
+  const actions = useOrgActions(org, token, auth, refresh);
   const ready = view.state === "ready" ? view.view : null;
   return (
     <Shell
@@ -304,7 +282,7 @@ function OrgLoaded({ org, token, openSocket }: LoadedProps) {
       {ready === null ? (
         <OrgWaiting org={org} view={view} refresh={refresh} />
       ) : (
-        <OrgPageView view={ready} send={send} loadLedger={loadLedger} makeCode={makeCode} google={google} />
+        <OrgPageView view={ready} {...actions} />
       )}
     </Shell>
   );

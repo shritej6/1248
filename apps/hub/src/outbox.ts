@@ -5,6 +5,7 @@ import { aiKind, isAiKind } from "./ai/registry.js";
 import { postToGoogle } from "./google.js";
 import { logEvent } from "./http.js";
 import { mailWords, type ResidentMessage } from "./render.js";
+import { DRAFT_KIND } from "./resources/kind.js";
 import { Store } from "./store.js";
 
 export const MAX_TRIES = 3;
@@ -54,9 +55,10 @@ export const failedSends = (sql: SqlStorage): FailedSend[] =>
 const dueRows = (sql: SqlStorage, now: number): OutboxRow[] =>
   sql
     .exec<OutboxRow>(
-      "SELECT id, kind, payload, tries, next_at, last_error FROM outbox WHERE tries < ? AND next_at <= ? ORDER BY next_at, id",
+      "SELECT id, kind, payload, tries, next_at, last_error FROM outbox WHERE tries < ? AND next_at <= ? ORDER BY kind = ?, next_at, id",
       MAX_TRIES,
       now,
+      DRAFT_KIND,
     )
     .toArray();
 
@@ -90,6 +92,7 @@ export const drainOutbox = async (
     } catch (error) {
       if (recordFailure(sql, row, error, now) >= MAX_TRIES) giveUp(row);
     }
+    if (row.kind === DRAFT_KIND) break;
   }
   return sent;
 };
@@ -126,6 +129,7 @@ export const enqueueSorts = (sql: SqlStorage, effects: readonly Effect[], at: nu
   for (const e of effects) {
     if (e.kind === "sort") enqueue(sql, { kind: SORT_KIND, card: e.card, payload: { card: e.card } }, at);
     if (e.kind === "ai") enqueue(sql, { kind: aiKind(e.job), card: e.card, payload: { card: e.card } }, at);
+    if (e.kind === "draft") enqueue(sql, { kind: DRAFT_KIND, card: null, payload: { draft: e.draft } }, at);
   }
 };
 

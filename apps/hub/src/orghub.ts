@@ -337,6 +337,7 @@ export class OrgHub extends DurableObject<Env> {
       state: () => this.state,
       playbook: () => this.store.playbook() ?? { version: "none", rows: [] },
       now: () => this.now(),
+      config: () => this.config(),
     };
   }
 

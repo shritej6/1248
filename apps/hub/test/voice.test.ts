@@ -399,6 +399,16 @@ it("a voicemail the core refuses leaves no audio in the vault", async () => {
       state: () => emptyState(),
       playbook: () => ({ version: "none", rows: [] }),
       now: () => clock,
+      config: () => ({
+        org,
+        orgName: org,
+        pageList: [],
+        waveSize: 10,
+        maxWaves: 3,
+        demoMode: true,
+        forgetDays: 90,
+        sorterOn: false,
+      }),
     };
     const upload = { ok: true as const, audio: { mime: "audio/mpeg" as const, bytes: audioOf().bytes } };
     const result = admit(host, card, { ...upload, fields: { zip: null, callback: null, seconds: 30 } });

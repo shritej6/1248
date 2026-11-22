@@ -4,6 +4,7 @@ import {
   ActorSchema,
   CardIdSchema,
   DateSchema,
+  DraftIdSchema,
   HashSchema,
   JobIdSchema,
   MemberIdSchema,
@@ -29,6 +30,15 @@ import {
   UrgencySchema,
 } from "./needs.js";
 import type { Rejection } from "./errors.js";
+import { MonthSchema } from "./statement.js";
+import {
+  DraftFlagSchema,
+  DraftKindSchema,
+  DraftSourceSchema,
+  DraftTextSchema,
+  GuardReasonSchema,
+  ResourceIdSchema,
+} from "./resources.js";
 import {
   TemplateIdSchema,
   type Config,
@@ -127,6 +137,20 @@ export const eventData = {
   "ai.done": z.strictObject({ job: AiJobKeySchema, outcome: AiOutcomeSchema }),
   "link.proposed": z.strictObject({ other: CardIdSchema, score: LinkScoreSchema }),
   "link.answered": z.strictObject({ other: CardIdSchema, answer: LinkAnswerSchema }),
+  "draft.asked": z.strictObject({
+    draft: DraftIdSchema,
+    kind: DraftKindSchema,
+    month: MonthSchema,
+    resource: ResourceIdSchema.nullable(),
+    by: MemberIdSchema,
+  }),
+  "draft.done": z.strictObject({
+    draft: DraftIdSchema,
+    source: DraftSourceSchema,
+    flag: DraftFlagSchema.nullable(),
+    textHash: HashSchema,
+  }),
+  "draft.approved": z.strictObject({ draft: DraftIdSchema, textHash: HashSchema, by: MemberIdSchema }),
 } as const;
 
 export type EventType = keyof typeof eventData;
@@ -199,6 +223,16 @@ export const EffectSchema = z.discriminatedUnion("kind", [
   z.strictObject({ kind: z.literal("pass"), job: JobIdSchema, member: MemberIdSchema }),
   z.strictObject({ kind: z.literal("page"), page: PageIdSchema, member: MemberIdSchema }),
   z.strictObject({ kind: z.literal("partner_link"), job: JobIdSchema, partner: PartnerIdSchema }),
+  z.strictObject({ kind: z.literal("draft"), draft: DraftIdSchema }),
+  z.strictObject({
+    kind: z.literal("draft.text"),
+    draft: DraftIdSchema,
+    text: DraftTextSchema,
+    textHash: HashSchema,
+    source: DraftSourceSchema,
+    flag: DraftFlagSchema.nullable(),
+    reasons: z.array(GuardReasonSchema).max(9),
+  }),
 ]);
 
 export type Effect = z.infer<typeof EffectSchema>;

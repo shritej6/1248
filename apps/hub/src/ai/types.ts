@@ -1,7 +1,12 @@
 import type { AiJobKey, SystemCommand } from "@vision/contracts";
 import type { HubState, ModelRun } from "@vision/core";
 
-export type AiModels = { VOICE_MODEL: string; LINK_MODEL: string; TRANSLATE_MODEL: string };
+export type AiModels = {
+  VOICE_MODEL: string;
+  LINK_MODEL: string;
+  TRANSLATE_MODEL: string;
+  DRAFT_MODEL: string;
+};
 export type AiEnv = AiModels & { AI: { run: ModelRun } };
 
 export type AiTools = { run: ModelRun; model: string; sql: SqlStorage; state: HubState; now: number };

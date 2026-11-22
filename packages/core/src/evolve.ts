@@ -372,6 +372,12 @@ const orgHandlers = {
   "vault.erased": same,
 } satisfies Partial<Handlers>;
 
+const resourceHandlers = {
+  "draft.asked": same,
+  "draft.done": same,
+  "draft.approved": same,
+} satisfies Partial<Handlers>;
+
 const handlers: Handlers = {
   ...cardHandlers,
   ...jobStatusHandlers,
@@ -379,6 +385,7 @@ const handlers: Handlers = {
   ...followHandlers,
   ...orgHandlers,
   ...aiHandlers,
+  ...resourceHandlers,
 };
 
 export const evolve = (state: HubState, event: LedgerEvent): HubState => {

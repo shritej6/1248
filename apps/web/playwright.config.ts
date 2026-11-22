@@ -8,7 +8,13 @@ process.env.E2E_HUB_URL ??= ORIGIN;
 process.env.E2E_BOOTSTRAP_CODE ??= `e2e-${randomUUID()}`;
 process.env.E2E_DOOR_SECRET ??= `e2e-${randomUUID()}`;
 
-export const MODEL_VARS = ["SORTER_MODEL", "VOICE_MODEL", "LINK_MODEL", "TRANSLATE_MODEL"] as const;
+export const MODEL_VARS = [
+  "SORTER_MODEL",
+  "VOICE_MODEL",
+  "LINK_MODEL",
+  "TRANSLATE_MODEL",
+  "DRAFT_MODEL",
+] as const;
 
 const hub = [
   "wrangler dev --local",

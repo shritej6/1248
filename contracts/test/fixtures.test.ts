@@ -8,6 +8,7 @@ import {
   DeskBoardSchema,
   TrackingSchema,
   PartnerCardSchema,
+  ResourcesViewSchema,
 } from "../src/index.js";
 
 const read = (dir: string) =>
@@ -30,6 +31,7 @@ describe("fixtures", () => {
       desk: DeskBoardSchema,
       tracking: TrackingSchema,
       partner: PartnerCardSchema,
+      resources: ResourcesViewSchema,
     };
     for (const { f, v } of read("views")) {
       const schema = Object.entries(byPrefix).find(([p]) => f.startsWith(p))?.[1];

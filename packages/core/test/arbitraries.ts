@@ -319,6 +319,8 @@ export const seal = (drafts: readonly EventDraft[]): LedgerEvent[] => {
 };
 
 const DESK: Actor = { role: "desk", ref: IDS.desk };
+const DRAFT_ID = uid("d_", 1);
+const TEXT_HASH = "a".repeat(64);
 const ORGANISER: Actor = { role: "organiser", ref: IDS.owner };
 const metaDrafts: EventDraft[] = [
   draftOf(null, null, { type: "shift.taken", data: { member: IDS.desk } }, DESK),
@@ -327,6 +329,30 @@ const metaDrafts: EventDraft[] = [
   draftOf(null, null, { type: "levels.master_set", data: { on: true } }, ORGANISER),
   draftOf(null, null, { type: "need.level_set", data: { need: "snow", level: 1 } }, ORGANISER),
   draftOf(null, null, { type: "playbook.loaded", data: { version: "test-1", rows: 3 } }, ORGANISER),
+  draftOf(
+    null,
+    null,
+    {
+      type: "draft.asked",
+      data: { draft: DRAFT_ID, kind: "impact_post", month: "2026-11", resource: null, by: IDS.owner },
+    },
+    SYSTEM,
+  ),
+  draftOf(
+    null,
+    null,
+    {
+      type: "draft.done",
+      data: { draft: DRAFT_ID, source: "template", flag: "ai_off", textHash: TEXT_HASH },
+    },
+    SYSTEM,
+  ),
+  draftOf(
+    null,
+    null,
+    { type: "draft.approved", data: { draft: DRAFT_ID, textHash: TEXT_HASH, by: IDS.owner } },
+    SYSTEM,
+  ),
 ];
 
 const cardSpec: fc.Arbitrary<CardSpec> = fc.record({

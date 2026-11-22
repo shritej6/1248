@@ -68,6 +68,14 @@ The hub sends personal data to Workers AI for three jobs: the recording for spee
 
 The laptop hub of `make dev` runs the Worker and its vault on the laptop. Its AI binding runs on Workers AI (D30), so the texts above leave the laptop for Cloudflare. The hub of `make dev-offline` uses `wrangler dev --local` and needs no network. That hub sends no text to Workers AI, and a person does each AI job. `make e2e` and CI also use `--local`.
 
+## Resources
+
+The Resources tab of the organiser website keeps three kinds of rows in the hub: the unit cost of each need, the state of each readiness item and the drafts. These rows hold totals, public funder facts and member ids. They never hold a name, a contact or the text of a request. Only an organiser can use Resources.
+
+A draft uses only the totals of the statement, the forecast and one catalog row. The draft job sends only these facts to Workers AI. The totals come from the statement, which counts a quiet job as a number only and never shows its details. The forecast, the match and the facts for each need leave quiet jobs and quiet needs out.
+
+The ledger lines `draft.asked`, `draft.done` and `draft.approved` hold ids, codes and the SHA-256 of the text, never the text. The text of a draft stays in the table `resource_drafts` of the hub. It has no forget date, because it holds no personal data.
+
 ## Limits
 
 - The vault has no field encryption yet. A person with access to the Cloudflare account can read the vault.

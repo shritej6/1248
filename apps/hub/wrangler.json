@@ -16,6 +16,7 @@
     "VOICE_MODEL": "@cf/openai/whisper-large-v3-turbo",
     "LINK_MODEL": "@cf/baai/bge-m3",
     "TRANSLATE_MODEL": "@cf/meta/m2m100-1.2b",
+    "DRAFT_MODEL": "@cf/google/gemma-4-26b-a4b-it",
     "PUBLIC_ORIGIN": "http://localhost:8787"
   }
 }

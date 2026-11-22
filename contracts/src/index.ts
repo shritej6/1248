@@ -9,3 +9,4 @@ export * from "./errors.js";
 export * from "./session.js";
 export * from "./statement.js";
 export * from "./ai.js";
+export * from "./resources.js";

@@ -1,8 +1,9 @@
 import { runDurableObjectAlarm, runInDurableObject } from "cloudflare:test";
 import { env as workerEnv } from "cloudflare:workers";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
-import { enqueue, retryWait, type OutboxRow } from "../src/outbox.js";
+import { drainOutbox, enqueue, nextOutboxAt, retryWait, type OutboxRow } from "../src/outbox.js";
 import type { Env } from "../src/orghub.js";
+import { DRAFT_KIND } from "../src/resources/kind.js";
 import { DeskBoardSchema } from "@vision/contracts";
 import { freshOrg, get, organiser, sql } from "./helpers.js";
 
@@ -112,6 +113,41 @@ it("a failed row waits before the next try", async () => {
 
 it("the waits grow from 30 seconds to 2 and 8 minutes", () => {
   expect([1, 2, 3].map(retryWait)).toEqual([30_000, 2 * MINUTE, 8 * MINUTE]);
+});
+
+it("a draft row and a mail row due at the same time drain in the order mail, then draft", async () => {
+  const sent = await sql(ORG, async (s) => {
+    enqueue(s, { kind: DRAFT_KIND, card: null, payload: { draft: "d_1" } }, 5);
+    enqueue(s, { kind: "mail", card: null, payload: { to: "resident@example.test" } }, 5);
+    const kinds: string[] = [];
+    await drainOutbox(s, 10, (row) => {
+      kinds.push(row.kind);
+      return Promise.resolve();
+    });
+    return kinds;
+  });
+  expect(sent).toEqual(["mail", DRAFT_KIND]);
+});
+
+it("a drain stops after one draft row, so a page that comes in meanwhile goes before the other drafts", async () => {
+  const page = { to: "organiser@example.test", subject: "Vision page: please answer now" };
+  const run = await sql(ORG, async (s) => {
+    enqueue(s, { kind: DRAFT_KIND, card: null, payload: { draft: "d_1" } }, 5);
+    enqueue(s, { kind: DRAFT_KIND, card: null, payload: { draft: "d_2" } }, 5);
+    const order: unknown[] = [];
+    const send = (row: OutboxRow): Promise<void> => {
+      order.push(JSON.parse(row.payload));
+      if (order.length === 1) enqueue(s, { kind: "mail", card: null, payload: page }, 6);
+      return Promise.resolve();
+    };
+    const first = await drainOutbox(s, 10, send);
+    const dueAfterFirst = nextOutboxAt(s);
+    const counts = [first, await drainOutbox(s, 10, send), await drainOutbox(s, 10, send)];
+    return { order, counts, dueAfterFirst };
+  });
+  expect(run.counts).toEqual([1, 2, 0]);
+  expect(run.dueAfterFirst).toBe(5);
+  expect(run.order).toEqual([{ draft: "d_1" }, page, { draft: "d_2" }]);
 });
 
 it("a hub with no outside address keeps the row with a clear error and makes no call", async () => {

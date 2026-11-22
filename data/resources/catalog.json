@@ -1,0 +1,562 @@
+{
+  "version": "2026-11-22.1",
+  "checked": "2026-11-22",
+  "resources": [
+    {
+      "id": "safe_sound_good_neighbor",
+      "name": "Safe & Sound Good Neighbor Grant Fund",
+      "kind": "grant",
+      "what": "Up to $2,500 for a project that residents lead. A lead resident or a fiscal sponsor holds the money, and a check needs three signatures.",
+      "amount": { "min": null, "max": 2500 },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": false,
+        "sponsorOk": true,
+        "residentGroupOk": true,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": {
+        "needs": ["cleanup", "lawn", "snow", "food"],
+        "divisions": ["Disaster Relief Division"],
+        "general": false
+      },
+      "cautions": ["resident_group_only", "no_stipends"],
+      "source": {
+        "url": "https://safesound.org/the-good-neighbor-grant-fund-application/",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "community_connections",
+      "name": "Community Connections Small Grants",
+      "kind": "grant",
+      "what": "$50 to $600 for a neighbourhood project of 3 unrelated adult residents. Volunteer time or donated goods can count as the match.",
+      "amount": { "min": 50, "max": 600 },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": false,
+        "sponsorOk": null,
+        "residentGroupOk": true,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "between_cycles",
+      "rolling": false,
+      "deadlines": [],
+      "fit": {
+        "needs": ["cleanup", "lawn", "food"],
+        "divisions": ["Disaster Relief Division"],
+        "general": false
+      },
+      "cautions": ["resident_group_only", "match_required", "no_equipment", "no_business_account"],
+      "source": { "url": "https://www.ccsmallgrants.org", "checked": "2026-11-22", "quality": "opened" }
+    },
+    {
+      "id": "bader_preliminary",
+      "name": "Bader Philanthropies, preliminary application",
+      "kind": "grant",
+      "what": "A short first application for Revitalizing Milwaukee: neighbourhood engagement, youth development and community projects.",
+      "amount": null,
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": null,
+        "sponsorOk": null,
+        "residentGroupOk": null,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": false,
+      "deadlines": ["2026-11-30", "2027-05-31"],
+      "fit": {
+        "needs": ["youth_stipend", "cleanup", "jobs"],
+        "divisions": ["Youth Issues / Outreach"],
+        "general": true
+      },
+      "cautions": [],
+      "source": {
+        "url": "https://bader.org/apply-for-a-grant/",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "gmf_grant_cycles",
+      "name": "Greater Milwaukee Foundation, grant cycles",
+      "kind": "grant",
+      "what": "Foundation grants for community work in Milwaukee. A group without 501(c)(3) status applies with a signed fiscal sponsor agreement.",
+      "amount": null,
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": true,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "unknown",
+      "rolling": false,
+      "deadlines": [],
+      "fit": { "needs": [], "divisions": [], "general": true },
+      "cautions": ["board_rules"],
+      "source": {
+        "url": "https://greatermilwaukeefoundation.org/grantseekers/eligibility-and-guidelines/",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "gmf_reasons_for_hope",
+      "name": "Greater Milwaukee Foundation, Reasons for Hope",
+      "kind": "grant",
+      "what": "$1,000 to $10,000 for short summer community projects, through a fiscal sponsor. The 2026 focus was Harambee, Halyard Park and Brewers Hill.",
+      "amount": { "min": 1000, "max": 10000 },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": true,
+        "residentGroupOk": null,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "between_cycles",
+      "rolling": false,
+      "deadlines": [],
+      "fit": {
+        "needs": ["youth_stipend", "cleanup", "violence_prevention"],
+        "divisions": ["Youth Issues / Outreach"],
+        "general": false
+      },
+      "cautions": ["area_limited"],
+      "source": {
+        "url": "https://greatermilwaukeefoundation.org/grantseekers/funding-opportunities/reason-for-hope-mke-fund",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "mcw_wcsf",
+      "name": "Wisconsin Community Safety Fund",
+      "kind": "grant",
+      "what": "Money for violence prevention from the Medical College of Wisconsin. It has funded an LLC through a fiscal sponsor. The next round is not announced.",
+      "amount": null,
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": null,
+        "sponsorOk": true,
+        "residentGroupOk": null,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "between_cycles",
+      "rolling": false,
+      "deadlines": [],
+      "fit": {
+        "needs": ["violence_prevention", "deescalation"],
+        "divisions": ["Emergency Response / Mental Health"],
+        "general": false
+      },
+      "cautions": ["funding_uncertain"],
+      "source": {
+        "url": "https://www.mcw.edu/departments/comprehensive-injury-center/divisions/division-of-community-safety-policy-and-engagement/wisconsin-community-safety-fund",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "lions_lcif_emergency",
+      "name": "Lions Clubs International Foundation, Emergency Grant",
+      "kind": "grant",
+      "what": "$5,000 to $15,000 for relief after a natural disaster. A Lions district governor applies, and a local Lions club must carry the request.",
+      "amount": { "min": 5000, "max": 15000 },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": null,
+        "sponsorOk": null,
+        "residentGroupOk": null,
+        "invitationOnly": false,
+        "partnerApplies": true,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": {
+        "needs": ["cleanup", "shelter", "food"],
+        "divisions": ["Disaster Relief Division"],
+        "general": false
+      },
+      "cautions": [],
+      "source": {
+        "url": "https://www.lionsclubs.org/en/give-our-focus-areas/disaster-relief",
+        "checked": "2026-11-22",
+        "quality": "secondary"
+      }
+    },
+    {
+      "id": "efsp_milwaukee",
+      "name": "Emergency Food and Shelter Program, Milwaukee County board",
+      "kind": "grant",
+      "what": "Federal money for emergency food and shelter through the local board that United Way leads. A local nonprofit or its fiscal agent applies.",
+      "amount": null,
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": true,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": true
+      },
+      "status": "unknown",
+      "rolling": false,
+      "deadlines": [],
+      "fit": { "needs": ["food", "shelter"], "divisions": ["Disaster Relief Division"], "general": false },
+      "cautions": ["funding_uncertain", "single_source"],
+      "source": {
+        "url": "https://www.hungertaskforce.org/?p=104069",
+        "checked": "2026-11-22",
+        "quality": "old"
+      }
+    },
+    {
+      "id": "united_way_urgent_need",
+      "name": "United Way Urgent Need Fund, flood recovery",
+      "kind": "grant",
+      "what": "Up to $15,000 to nonprofits for flood cleanup and basic needs. The fund is closed because the money is used up.",
+      "amount": { "min": null, "max": 15000 },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": null,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "closed",
+      "rolling": false,
+      "deadlines": [],
+      "fit": {
+        "needs": ["cleanup", "food", "shelter"],
+        "divisions": ["Disaster Relief Division"],
+        "general": false
+      },
+      "cautions": [],
+      "source": {
+        "url": "https://www.unitedwaygmwc.org/Funding-Opportunities/Urgent-Needs-Fund-Flood-Recovery",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "we_energies_foundation",
+      "name": "We Energies Foundation",
+      "kind": "company",
+      "what": "Grants for community and neighbourhood development, and for health and human services. It prefers projects to operating support.",
+      "amount": null,
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": null,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": false,
+      "deadlines": ["2027-01-31", "2027-04-30", "2027-07-31", "2027-10-31"],
+      "fit": { "needs": ["shelter", "food", "snow"], "divisions": [], "general": true },
+      "cautions": ["one_grant_a_year"],
+      "source": {
+        "url": "https://www.wecenergygroup.com/community/we-energies-community.htm",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "walmart_spark_good",
+      "name": "Walmart Spark Good Local Grants",
+      "kind": "company",
+      "what": "$250 to $5,000 from a local store, one grant for each store each year. An applicant verifies through Deed.",
+      "amount": { "min": 250, "max": 5000 },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": null,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": false,
+      "deadlines": ["2026-11-30"],
+      "fit": { "needs": ["food", "youth_stipend"], "divisions": [], "general": true },
+      "cautions": ["conflicting_source"],
+      "source": {
+        "url": "https://www.walmart.org/how-we-give/program-guidelines/spark-good-local-grants-guidelines",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "brewers_community_foundation",
+      "name": "Brewers Community Foundation",
+      "kind": "company",
+      "what": "Grants for health, education, recreation and basic needs of youth and families with low incomes. It funded Flood Hope 500.",
+      "amount": { "min": 1000, "max": 10000 },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": null,
+        "sponsorOk": null,
+        "residentGroupOk": null,
+        "invitationOnly": true,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "unknown",
+      "rolling": false,
+      "deadlines": [],
+      "fit": {
+        "needs": ["youth_stipend", "food"],
+        "divisions": ["Youth Issues / Outreach"],
+        "general": false
+      },
+      "cautions": ["amount_unverified", "ask_contact_first", "single_source"],
+      "source": {
+        "url": "https://www.mlb.com/brewers/community/grant-requests",
+        "checked": "2026-11-22",
+        "quality": "search_summary"
+      }
+    },
+    {
+      "id": "givebutter_sponsor",
+      "name": "Givebutter, through the fiscal sponsor",
+      "kind": "people",
+      "what": "An online giving page that uses the EIN of the fiscal sponsor. With tips on, the group pays no platform fee.",
+      "amount": null,
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": true,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": { "needs": [], "divisions": [], "general": true },
+      "cautions": ["platform_fees"],
+      "source": {
+        "url": "https://givebutter.com/blog/fiscal-sponsorship",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "every_org_sponsor",
+      "name": "Every.org, through the fiscal sponsor",
+      "kind": "people",
+      "what": "An online giving page for a fiscally sponsored project. The sponsor usually sets up the profile first. There is no platform fee.",
+      "amount": null,
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": true,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": { "needs": [], "divisions": [], "general": true },
+      "cautions": [],
+      "source": { "url": "https://every.org/fiscal-sponsors", "checked": "2026-11-22", "quality": "opened" }
+    },
+    {
+      "id": "taproot_plus",
+      "name": "Taproot Plus",
+      "kind": "goods_skills",
+      "what": "Free skilled volunteers for marketing, data and strategy work.",
+      "amount": null,
+      "inKind": "Skilled volunteers, free",
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": true,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": { "needs": [], "divisions": [], "general": true },
+      "cautions": [],
+      "source": {
+        "url": "https://taprootplus.org/taproot-plus",
+        "checked": "2026-11-22",
+        "quality": "secondary"
+      }
+    },
+    {
+      "id": "milwaukee_time_exchange",
+      "name": "Milwaukee Area Time Exchange",
+      "kind": "goods_skills",
+      "what": "A time bank: members trade hours of help, for example rides, repairs and cleanup.",
+      "amount": null,
+      "inKind": "Time credits",
+      "eligibility": {
+        "needs501c3": false,
+        "sponsorOk": null,
+        "residentGroupOk": true,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "unknown",
+      "rolling": true,
+      "deadlines": [],
+      "fit": { "needs": ["rides", "cleanup", "lawn", "snow"], "divisions": [], "general": false },
+      "cautions": ["activity_unconfirmed"],
+      "source": {
+        "url": "https://milwaukeenns.org/tag/milwaukee-area-time-exchange/",
+        "checked": "2026-11-22",
+        "quality": "secondary"
+      }
+    },
+    {
+      "id": "hunger_task_force",
+      "name": "Hunger Task Force network",
+      "kind": "goods_skills",
+      "what": "Free food for member pantries and meal programs that meet the network standards.",
+      "amount": null,
+      "inKind": "Food for members",
+      "eligibility": {
+        "needs501c3": null,
+        "sponsorOk": null,
+        "residentGroupOk": null,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": { "needs": ["food"], "divisions": [], "general": false },
+      "cautions": [],
+      "source": {
+        "url": "https://www.hungertaskforce.org/wp-content/uploads/2018/09/SOE-2018-Edited-Master-FINAL-email-version.pdf",
+        "checked": "2026-11-22",
+        "quality": "old"
+      }
+    },
+    {
+      "id": "feeding_america_ew",
+      "name": "Feeding America Eastern Wisconsin",
+      "kind": "goods_skills",
+      "what": "Food for partner pantries and meal programs that are open to the public. A partner needs 501(c)(3) status and 6 months of food distribution.",
+      "amount": null,
+      "inKind": "Food for partners",
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": null,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": { "needs": ["food"], "divisions": [], "general": false },
+      "cautions": [],
+      "source": {
+        "url": "https://feedingamericawi.org/partner-with-us",
+        "checked": "2026-11-22",
+        "quality": "search_summary"
+      }
+    },
+    {
+      "id": "habitat_restore",
+      "name": "Milwaukee Habitat for Humanity ReStore",
+      "kind": "goods_skills",
+      "what": "A store that sells donated building materials at low prices. No program for groups was found.",
+      "amount": null,
+      "inKind": "Building materials at low prices",
+      "eligibility": {
+        "needs501c3": false,
+        "sponsorOk": null,
+        "residentGroupOk": true,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": { "needs": ["cleanup"], "divisions": [], "general": false },
+      "cautions": ["not_free"],
+      "source": {
+        "url": "https://milwaukeehabitat.org/shop/donate-items-to-restore/",
+        "checked": "2026-11-22",
+        "quality": "search_summary"
+      }
+    }
+  ],
+  "sponsors": [
+    {
+      "id": "c4cs",
+      "name": "Center for Community Stewardship",
+      "place": "Madison",
+      "fee": "9 percent, or 15 percent for government money, plus $250 a year",
+      "note": "Sponsors charitable work. Its rules for groups that are not incorporated are not stated.",
+      "source": {
+        "url": "https://www.community-stewardship.org/faq",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "embolden_wi",
+      "name": "Embolden WI",
+      "place": "Madison",
+      "fee": "8 percent for the pre-approved grant model, 10 percent full service, 15 percent for government money",
+      "note": "Topics include youth, social justice and health. One directory source.",
+      "source": {
+        "url": "https://fiscalsponsordirectory.org/?p=13943",
+        "checked": "2026-11-22",
+        "quality": "secondary"
+      }
+    },
+    {
+      "id": "safe_sound_inc",
+      "name": "Safe & Sound Inc.",
+      "place": "Milwaukee",
+      "fee": "Not published",
+      "note": "It is already the fiscal agent of Flood Hope 500. Ask it first.",
+      "source": {
+        "url": "https://milwaukeenns.org/2026/05/13/disaster-relief-organizers-push-for-changes-in-milwaukees-flood-response/",
+        "checked": "2026-11-22",
+        "quality": "secondary"
+      }
+    }
+  ]
+}

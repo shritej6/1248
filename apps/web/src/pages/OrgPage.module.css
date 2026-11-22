@@ -100,3 +100,20 @@
 .notice {
   padding: var(--space-6);
 }
+
+@media (max-width: 720px) {
+  .org {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: 0;
+    border-bottom: var(--line-w) solid var(--color-line);
+  }
+
+  .content {
+    padding: var(--space-4);
+  }
+}

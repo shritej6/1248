@@ -8,7 +8,13 @@ const vars = hub.vars;
 const models = Object.keys(vars).filter((name) => name.endsWith("_MODEL"));
 
 test("the hub has the sorter var and one var for each AI job", () => {
-  assert.deepEqual(models.sort(), ["LINK_MODEL", "SORTER_MODEL", "TRANSLATE_MODEL", "VOICE_MODEL"]);
+  assert.deepEqual(models.sort(), [
+    "DRAFT_MODEL",
+    "LINK_MODEL",
+    "SORTER_MODEL",
+    "TRANSLATE_MODEL",
+    "VOICE_MODEL",
+  ]);
 });
 
 test("the sorter and the three AI jobs are on in the hub config (C64, owner decision)", () => {
@@ -16,6 +22,10 @@ test("the sorter and the three AI jobs are on in the hub config (C64, owner deci
   assert.equal(vars.VOICE_MODEL, "@cf/openai/whisper-large-v3-turbo");
   assert.equal(vars.LINK_MODEL, "@cf/baai/bge-m3");
   assert.equal(vars.TRANSLATE_MODEL, "@cf/meta/m2m100-1.2b");
+});
+
+test("the draft job of Resources is on in the hub config (O20, owner decision)", () => {
+  assert.equal(vars.DRAFT_MODEL, "@cf/google/gemma-4-26b-a4b-it");
 });
 
 test("the AI binding runs remotely, so wrangler dev without --local reaches Workers AI", () => {

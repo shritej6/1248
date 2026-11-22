@@ -39,11 +39,15 @@ const objectText = (text: string): unknown => {
   }
 };
 
-export const readPass = (reply: unknown): SortPass | null => {
+export const replyObject = (reply: unknown): unknown => {
   const parsed = ReplySchema.safeParse(reply);
   if (!parsed.success) return null;
   const body = "response" in parsed.data ? parsed.data.response : parsed.data.choices[0].message.content;
-  const pass = ReplyPassSchema.safeParse(typeof body === "string" ? objectText(body) : body);
+  return typeof body === "string" ? objectText(body) : body;
+};
+
+export const readPass = (reply: unknown): SortPass | null => {
+  const pass = ReplyPassSchema.safeParse(replyObject(reply));
   if (!pass.success) return null;
   const { service, division, urgency, words, reason } = pass.data;
   return { service, division, urgency, words, reason };

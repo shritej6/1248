@@ -13,6 +13,9 @@ const TABLES = [
   "CREATE TABLE IF NOT EXISTS playbook (version TEXT PRIMARY KEY, rows TEXT NOT NULL, loaded_at INTEGER NOT NULL)",
   "CREATE TABLE IF NOT EXISTS org (id INTEGER PRIMARY KEY CHECK (id = 1), name TEXT NOT NULL)",
   "CREATE TABLE IF NOT EXISTS vault_audio (id INTEGER PRIMARY KEY, card TEXT NOT NULL, part INTEGER NOT NULL, mime TEXT NOT NULL, bytes BLOB NOT NULL, at INTEGER NOT NULL, forget_at INTEGER)",
+  "CREATE TABLE IF NOT EXISTS resource_costs (need TEXT PRIMARY KEY, cents_per_job INTEGER NOT NULL, basis TEXT NOT NULL, updated_at INTEGER NOT NULL, updated_by TEXT NOT NULL)",
+  "CREATE TABLE IF NOT EXISTS resource_readiness (item TEXT PRIMARY KEY, state TEXT NOT NULL, updated_at INTEGER NOT NULL, updated_by TEXT NOT NULL)",
+  "CREATE TABLE IF NOT EXISTS resource_drafts (id TEXT PRIMARY KEY, kind TEXT NOT NULL, month TEXT NOT NULL, resource TEXT, day TEXT NOT NULL, status TEXT NOT NULL, source TEXT, flag TEXT, reasons TEXT NOT NULL, facts TEXT NOT NULL, text TEXT, text_hash TEXT, created_at INTEGER NOT NULL, approved_at INTEGER, approved_by TEXT)",
 ];
 
 const INDEXES = [
@@ -22,6 +25,7 @@ const INDEXES = [
   "CREATE INDEX IF NOT EXISTS outbox_card ON outbox (card)",
   "CREATE INDEX IF NOT EXISTS vault_audio_card ON vault_audio (card, part)",
   "CREATE INDEX IF NOT EXISTS vault_audio_forget_at ON vault_audio (forget_at)",
+  "CREATE INDEX IF NOT EXISTS resource_drafts_day ON resource_drafts (day)",
 ];
 
 export const migrate = (sql: SqlStorage): void => {

@@ -21,8 +21,11 @@ Every AI job in Vision follows the supervision rules. A new job must follow all 
 | `voice` | Voicemail door: speech to text | `VOICE_MODEL` | `@cf/openai/whisper-large-v3-turbo` | `exam/src/voice-check.ts` |
 | `link` | Same-event linking | `LINK_MODEL` | `@cf/baai/bge-m3` | `exam/src/link-check.ts` |
 | `lang` | Spanish support: translation for the desk | `TRANSLATE_MODEL` | `@cf/meta/m2m100-1.2b` | `exam/src/lang-check.ts` |
+| `draft` | Resources: the impact post and the funder letter | `DRAFT_MODEL` | `@cf/google/gemma-4-26b-a4b-it` | `exam/src/draft-check.ts` |
 
-The three variables are set in `vars` of `apps/hub/wrangler.json`, so the jobs are on (D31). A person always confirms their output. The sorter is on too: `SORTER_MODEL` holds `@cf/google/gemma-4-26b-a4b-it`, which passed the sorter exam (C64, C66, D27).
+The first three variables are set in `vars` of `apps/hub/wrangler.json`, so those jobs are on (D31). A person always confirms their output. The sorter is on too: `SORTER_MODEL` holds `@cf/google/gemma-4-26b-a4b-it`, which passed the sorter exam (C64, C66, D27).
+
+`DRAFT_MODEL` holds its default model too, and the owner decides whether the draft job stays on for the finals (O20). The draft guard in `packages/core/src/resources/guard.ts` checks each draft, and a draft that it stops falls back to the fixed template with a flag. `docs/resources.md` describes the draft job.
 
 ## AI on a laptop
 
@@ -65,6 +68,8 @@ The hub tests and the end-to-end tests set every model variable empty. `apps/hub
 5. The core decides on the result. It writes ledger lines with no text, and it puts the text in the vault.
 6. A failed call is tried again by the outbox with a growing wait. After the third failed try, the registry applies the result with the outcome `failed`. The desk then sees a flag.
 
+The draft job of Resources starts when an organiser asks for a draft, not when a message is ready. Its item in the outbox holds only the draft id, and `docs/resources.md` gives its path.
+
 ## The parts each job fills
 
 | Part | Shared file, written once | File of the job |
@@ -86,5 +91,8 @@ A desk slot is a React component that the desk shows in a fixed place: on a card
 | `card.gist_typed` | none | The desk typed the gist of a voicemail. |
 | `link.proposed` | `other`, `score` | The link job proposes that two cards report the same event. |
 | `link.answered` | `other`, `answer` | The desk answered `same` or `not_same`. |
+| `draft.asked` | `draft`, `kind`, `month`, `resource`, `by` | An organiser asked for a draft, and the draft job has an item in the outbox. |
+| `draft.done` | `draft`, `source`, `flag`, `textHash` | The draft is ready: the AI text that passed the draft guard, or the fixed template. |
+| `draft.approved` | `draft`, `textHash`, `by` | An organiser approved the draft with this text fingerprint. |
 
-No event holds a transcript, a translation, a vector or any other text.
+No event holds a transcript, a translation, a vector, a draft or any other text.

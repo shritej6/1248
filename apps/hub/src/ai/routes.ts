@@ -5,6 +5,7 @@ import {
   VoiceTypeSchema,
   VoicemailFieldsSchema,
   type Actor,
+  type Config,
   type MemberRecord,
   type Playbook,
   type Role,
@@ -17,6 +18,7 @@ import { z } from "zod";
 import { sameSecret, tokenHash } from "../auth.js";
 import type { DoorResult } from "../doors.js";
 import { fail, json, logEvent } from "../http.js";
+import { routeResources } from "../resources/routes.js";
 import { deleteAudio, joinBytes, readAudio, writeAudio } from "./audio.js";
 
 const DESK_ROLES: readonly Role[] = ["desk", "lead"];
@@ -38,6 +40,7 @@ export type AiRouteHost = {
   state(): HubState;
   playbook(): Playbook;
   now(): number;
+  config(): Config;
 };
 
 export type DeskCaller = { ok: true; member: MemberRecord } | { ok: false; response: Response };
@@ -190,5 +193,5 @@ export const routeAi = (
   if (route === "POST voicemails" && parts.length === 1) return postVoicemail(request, host);
   if (route === "GET audio" && second !== undefined && parts.length === 2)
     return Promise.resolve(getAudio(request, second, host));
-  return null;
+  return routeResources(request, parts, host);
 };

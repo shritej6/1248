@@ -100,7 +100,7 @@ Vision has five screens and one optional record:
 | Resident pages | Residents, with no account | A request form in English or Spanish, and a tracking page by a link |
 | Desk website | The desk person on shift | The emergency and triage lanes, cards with quoted words, the holders and their clocks |
 | Volunteer app | Volunteers | An Android app: an on and off switch, offers, the job card and the record of each volunteer |
-| Organiser view | Organisers and leads | The playbook, members, partners, the unmet shelf, the statement, the seal check, the rehearsal and the demo clock |
+| Organiser view | Organisers and leads | The playbook, members, partners, the unmet shelf, the statement, the seal check, the rehearsal, the demo clock and, for organisers, the Resources tab |
 | Partner card | An outside partner, by a link with no account | One job with YES, NO, WAIT and GOT IT |
 | Record | ComForce | An optional Google Sheet in the Drive of ComForce, written by one Apps Script |
 
@@ -123,7 +123,7 @@ Vision is built on how ComForce works today. The call-out to many volunteers bec
 
 *Four AI jobs. Each one suggests and shows its evidence, and a person confirms.*
 
-Vision uses four AI jobs. The sorter suggests the need and the urgency with Gemma 4 26B. Whisper large v3 turbo writes a transcript of each voicemail. BGE M3 finds two open reports of the same event in one ZIP code within 7 days. M2M100 1.2B translates a Spanish message for the desk.
+Vision uses four AI jobs on requests for help. The sorter suggests the need and the urgency with Gemma 4 26B. Whisper large v3 turbo writes a transcript of each voicemail. BGE M3 finds two open reports of the same event in one ZIP code within 7 days. M2M100 1.2B translates a Spanish message for the desk.
 
 All four use open-weights models on Cloudflare Workers AI, inside the free daily allowance for a demo, with no separate model licence or API key. No job decides anything about a person. Every job follows the same seven supervision rules in `docs/ai-jobs.md`: one off switch, evidence on screen, caution only, a person confirms, a flag after at most 3 failed tries, nothing personal in the ledger or the logs, and a measured check on synthetic data.
 
@@ -164,13 +164,21 @@ Some cards always go to a person: a card with any flag, a card with high urgency
 
 The free plan of Workers AI gives 10,000 neurons a day, and the paid price is 0.011 dollars for each 1,000 neurons. The sorter makes two model calls for each card. Each other job makes one call for each try. The daily volume of ComForce was not measured, so check the use on the Cloudflare dashboard after one week. The prices and their sources are in `docs/cost.md`.
 
+### The draft job of Resources
+
+The Resources tab of the organiser view forecasts the next 12 months of work and ranks funders from a catalog of public facts. It also shows what ComForce must have ready before money can arrive. Code makes the forecast and the match, with no AI.
+
+Resources adds one more AI job. The draft job writes the impact post and the funder letter with Gemma 4 26B (`DRAFT_MODEL`). It uses only a fixed list of facts that the hub takes from the sealed record, the forecast and the catalog. The draft guard in core stops invented numbers, percents, numbers in words, quotes, stories, links and claims of status. A stopped draft falls back to the fixed template with a flag.
+
+An organiser approves each draft, and the ledger line `draft.approved` holds the SHA-256 of the text. Vision never sends or posts: the website gives Copy and Download only. Vision writes at most 20 drafts a day for each organisation. The details are in `docs/resources.md`.
+
 ## 6. Privacy and responsible technology
 
 The event asks teams to protect sensitive information, respect privacy and keep human judgment in consequential decisions. Vision holds these as numbered rules in `CONSTITUTION.md`, and the hub applies them, not the screens.
 
 - **A sealed ledger.** The ledger is an append-only list of events. A ledger line holds no name, no address, no contact detail and no free text. The fingerprint of each line is SHA-256 over the line before and its own content, so a changed line fails the seal check.
 - **A vault with forget dates.** Private details live in the vault, apart from the ledger. Each vault row has a forget date, 90 days after the job closes by default, and the hub erases the row on that date.
-- **No scores.** Vision never scores, ranks or predicts a person. A pass is free, and the ledger records no offer list and no pass, so no acceptance score can exist.
+- **No scores.** Vision never scores, ranks or predicts a person. A pass is free, and the ledger records no offer list and no pass, so no acceptance score can exist. The Resources match ranks funders and programs, never a person.
 - **Need to know.** An offer never shows a name or an address. Only the holder of the job sees them.
 - **Quiet cards.** A card where contact is not safe is a quiet card. Only the lead sees it, and the machine sends nothing to the person.
 - **Links that open one card.** A tracking link or a partner link opens one card only. The hub stores only a SHA-256 fingerprint of its secret part. An old link shows only "This request is closed".
@@ -208,6 +216,7 @@ A command flows in a fixed order. A client sends a command with its own id. The 
 | `google/` | The Apps Script for mail, the playbook sheet and the record |
 | `exam/` | The sorter exam, the measured checks of the other AI jobs and their saved results |
 | `data/synthetic/` | The synthetic organisation: members, partners, the playbook, templates and ZIP centres |
+| `data/resources/` | The catalog of public facts about funders and programs for Resources, each with its source and checked date |
 | `tools/` | The quality gate scripts, the seal tool and the media pipeline that records the demo |
 | `docs/` | Architecture, privacy, handover, cost, the exam, the demo script, decisions, the glossary and the media |
 
@@ -394,7 +403,7 @@ The command `make check` is the one quality gate. It runs the lint, the type che
 make check
 ```
 
-The browser tests run the whole demo thread and the voicemail door in Chromium. The first run downloads Chromium.
+The browser tests run the whole demo thread, the voicemail door and the Resources tab in Chromium. The first run downloads Chromium.
 
 ```bash
 make e2e
@@ -402,16 +411,16 @@ make e2e
 
 | Suite | Tests passed |
 |---|---|
-| Core rules | 459 of 459 |
-| Websites | 232 of 232 |
-| Hub | 170 of 170 |
-| Contracts | 45 of 45 |
-| Exam | 40 of 40 |
-| Quality gate tools | 51 of 51 |
+| Core rules | 763 of 763 |
+| Websites | 275 of 275 |
+| Hub | 204 of 204 |
+| Contracts | 67 of 67 |
+| Exam | 47 of 47 |
+| Quality gate tools | 52 of 52 |
 | Android unit tests | 74 of 74 |
-| Browser tests: the demo thread and the voicemail door | 2 of 2 |
+| Browser tests: the demo thread, the voicemail door and the Resources tab | 3 of 3 |
 
-The counts are from `make check` and `make e2e` on 2026-11-21. GitHub Actions runs the same gate on each push.
+All counts are from `make check` and `make e2e` on 2026-11-22. GitHub Actions runs the same gate on each push.
 
 The quality gate also holds the rules of the code. No file has a code comment. A function has at most 40 lines, and a file has at most 500 lines. The hub tests and the browser tests run with every model variable empty, so they never call a real model.
 
@@ -433,6 +442,7 @@ The quality gate also holds the rules of the code. No file has a code comment. A
 - The vault fields are stored as plain text. A person with access to the Cloudflare account can read the vault.
 - The Google Sheet link was not tested with a real Google account.
 - The Android app is built for the laptop hub. A deployed hub needs a rebuild of the app with its address.
+- The Resources forecast of the demo uses synthetic history. The catalog facts were checked on 2026-11-22, and a person checks each source page again before ComForce applies.
 
 ### Roadmap
 
@@ -455,10 +465,11 @@ The quality gate also holds the rules of the code. No file has a code comment. A
 | `docs/ai-voice.md` | The voicemail door |
 | `docs/ai-link.md` | Same-event linking and its threshold |
 | `docs/ai-lang.md` | Spanish support and the translation for the desk |
-| `docs/exam.md` | The sorter exam and the measured checks of the three other AI jobs |
+| `docs/resources.md` | The Resources tab: the forecast, the catalog, the match, the readiness list and the drafts |
+| `docs/exam.md` | The sorter exam and the measured checks of the other AI jobs |
 | `docs/cost.md` | Each price, with its source and date |
 | `docs/handover.md` | How ComForce takes over the accounts, deploys, backs up and shuts down |
-| `docs/demo-script.md` | The demo thread, step by step |
+| `docs/demo-script.md` | The demo thread and the Resources beat, step by step |
 | `docs/decisions.md` | The decisions of the owner and the open items |
 | `docs/glossary.md` | The words of the project |
 | `docs/rules/` | The documentation, domain and stack rules, and the checks for each rule |

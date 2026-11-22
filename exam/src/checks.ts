@@ -2,7 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { z } from "zod";
 import { chicagoDate, jsonText } from "./record.js";
 
-export const CHECK_FOLDERS = ["voice-results", "link-results", "lang-results"] as const;
+export const CHECK_FOLDERS = ["voice-results", "link-results", "lang-results", "draft-results"] as const;
 export type CheckFolder = (typeof CHECK_FOLDERS)[number];
 
 export class CheckStopped extends Error {

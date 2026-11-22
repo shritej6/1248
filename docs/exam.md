@@ -54,15 +54,18 @@ Two models took the exam on 2026-11-21. The rows are in `exam/results/record.jso
 
 ## The measured checks of the AI jobs
 
-Each AI job has a measured check on the synthetic exam messages (rule 7 of the supervision rules in `docs/ai-jobs.md`). The results go in `exam/voice-results/`, `exam/link-results/` and `exam/lang-results/`, never in `exam/results/`. No check decides whether a job is on, because a person confirms each output.
+Each AI job has a measured check on the synthetic exam messages (rule 7 of the supervision rules in `docs/ai-jobs.md`). The results go in `exam/voice-results/`, `exam/link-results/`, `exam/lang-results/` and `exam/draft-results/`, never in `exam/results/`. No check decides whether a job is on, because a person confirms each output.
 
 | Job | Check | Result of 2026-11-21 | Neurons |
 |---|---|---|---|
 | Voicemail door | `exam/src/voice-check.ts` speaks the 8 garbled voicemails, transcribes them and sorts the transcripts. | 79 wrong words in 720, a word error rate of 0.11. The 3 emergencies m020, m033 and m081 were all found in the transcripts. | 319 |
 | Same-event linking | `exam/src/link-check.ts` embeds the 100 messages and scores the 4950 pairs. | At the owner's threshold of 0.75, the job finds 12 of 36 true pairs and proposes 15 wrong pairs: 1 look-alike, 4 from two event groups and 10 with a message with no event group. A person answers each proposal, and a wrong one costs one tap on "Not the same". | 16.011 |
 | Spanish support | `exam/src/lang-check.ts` runs the detector on the 100 messages and translates the Spanish ones. | The detector found 6 of 6 Spanish messages and marked 0 English messages. In 1 of 6 translations a safety fact was lost (m060, "oven on for heat"), so the check did not pass and records `passed: false`. The owner kept the job on for the finals at 17:20 CT on 2026-11-21 with a stronger warning. The desk card always shows the original above the translation, and residents get only human-written Spanish. | 32 |
+| Resources drafts | `exam/src/draft-check.ts` writes 3 impact posts and 3 funder letters from synthetic facts. The draft guard checks each one. | Not run yet | Not run yet |
 
 The link result means that the desk sees about a third of the true pairs and answers some wrong proposals. A link never merges, closes or lowers a card. Two reports of one fallen tree with the same facts in a different order scored 0.961 in the smoke test of 2026-11-21. The lost safety fact means that the desk must read the original Spanish words, and the desk label says so.
+
+The draft check passes when it uses at most 500 neurons and at least half of its 6 drafts are AI text that passed the draft guard. A draft that the guard stops falls back to the fixed template, so every saved draft passes the guard. To run it, put `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` in the shell, never in a file. Then run `pnpm exec tsx src/draft-check.ts` in `exam/`. It makes at most 18 model calls and writes `exam/draft-results/<date>.json`.
 
 ## Limits
 

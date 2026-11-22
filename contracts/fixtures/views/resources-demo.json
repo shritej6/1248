@@ -1,0 +1,1096 @@
+{
+  "today": "2026-11-22",
+  "month": "2026-11",
+  "demo": true,
+  "catalog": {
+    "version": "2026-11-22.1",
+    "checked": "2026-11-22"
+  },
+  "needs": [
+    {
+      "need": "snow",
+      "label": "Snow shovelling"
+    },
+    {
+      "need": "food",
+      "label": "Food from a pantry"
+    }
+  ],
+  "resources": [
+    {
+      "id": "safe_sound_good_neighbor",
+      "name": "Safe & Sound Good Neighbor Grant Fund",
+      "kind": "grant",
+      "what": "Up to $2,500 for a project that residents lead. A lead resident or a fiscal sponsor holds the money, and a check needs three signatures.",
+      "amount": {
+        "min": null,
+        "max": 2500
+      },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": false,
+        "sponsorOk": true,
+        "residentGroupOk": true,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": true,
+      "deadlines": [],
+      "fit": {
+        "needs": ["cleanup", "lawn", "snow", "food"],
+        "divisions": ["Disaster Relief Division"],
+        "general": false
+      },
+      "cautions": ["resident_group_only", "no_stipends"],
+      "source": {
+        "url": "https://safesound.org/the-good-neighbor-grant-fund-application/",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "bader_preliminary",
+      "name": "Bader Philanthropies, preliminary application",
+      "kind": "grant",
+      "what": "A short first application for Revitalizing Milwaukee: neighbourhood engagement, youth development and community projects.",
+      "amount": null,
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": null,
+        "sponsorOk": null,
+        "residentGroupOk": null,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "open",
+      "rolling": false,
+      "deadlines": ["2026-11-30", "2027-05-31"],
+      "fit": {
+        "needs": ["youth_stipend", "cleanup", "jobs"],
+        "divisions": ["Youth Issues / Outreach"],
+        "general": true
+      },
+      "cautions": [],
+      "source": {
+        "url": "https://bader.org/apply-for-a-grant/",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "united_way_urgent_need",
+      "name": "United Way Urgent Need Fund, flood recovery",
+      "kind": "grant",
+      "what": "Up to $15,000 to nonprofits for flood cleanup and basic needs. The fund is closed because the money is used up.",
+      "amount": {
+        "min": null,
+        "max": 15000
+      },
+      "inKind": null,
+      "eligibility": {
+        "needs501c3": true,
+        "sponsorOk": null,
+        "residentGroupOk": false,
+        "invitationOnly": false,
+        "partnerApplies": false,
+        "federal": false
+      },
+      "status": "closed",
+      "rolling": false,
+      "deadlines": [],
+      "fit": {
+        "needs": ["cleanup", "food", "shelter"],
+        "divisions": ["Disaster Relief Division"],
+        "general": false
+      },
+      "cautions": [],
+      "source": {
+        "url": "https://www.unitedwaygmwc.org/Funding-Opportunities/Urgent-Needs-Fund-Flood-Recovery",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    }
+  ],
+  "sponsors": [
+    {
+      "id": "c4cs",
+      "name": "Center for Community Stewardship",
+      "place": "Madison",
+      "fee": "9 percent, or 15 percent for government money, plus $250 a year",
+      "note": "Sponsors charitable work. Its rules for groups that are not incorporated are not stated.",
+      "source": {
+        "url": "https://www.community-stewardship.org/faq",
+        "checked": "2026-11-22",
+        "quality": "opened"
+      }
+    },
+    {
+      "id": "embolden_wi",
+      "name": "Embolden WI",
+      "place": "Madison",
+      "fee": "8 percent for the pre-approved grant model, 10 percent full service, 15 percent for government money",
+      "note": "Topics include youth, social justice and health. One directory source.",
+      "source": {
+        "url": "https://fiscalsponsordirectory.org/?p=13943",
+        "checked": "2026-11-22",
+        "quality": "secondary"
+      }
+    },
+    {
+      "id": "safe_sound_inc",
+      "name": "Safe & Sound Inc.",
+      "place": "Milwaukee",
+      "fee": "Not published",
+      "note": "It is already the fiscal agent of Flood Hope 500. Ask it first.",
+      "source": {
+        "url": "https://milwaukeenns.org/2026/05/13/disaster-relief-organizers-push-for-changes-in-milwaukees-flood-response/",
+        "checked": "2026-11-22",
+        "quality": "secondary"
+      }
+    }
+  ],
+  "forecast": {
+    "status": "ready",
+    "history": {
+      "from": "2024-11",
+      "to": "2026-10",
+      "syntheticMonths": 24,
+      "recordMonths": 0
+    },
+    "hourValueCents": 3467,
+    "months": [
+      "2026-12",
+      "2027-01",
+      "2027-02",
+      "2027-03",
+      "2027-04",
+      "2027-05",
+      "2027-06",
+      "2027-07",
+      "2027-08",
+      "2027-09",
+      "2027-10",
+      "2027-11"
+    ],
+    "needs": [
+      {
+        "need": "snow",
+        "label": "Snow shovelling",
+        "rule": "snow",
+        "hoursPerJob": 1.5,
+        "cost": {
+          "centsPerJob": 2500,
+          "basis": "estimate"
+        },
+        "months": [
+          {
+            "month": "2026-12",
+            "jobs": {
+              "low": 18,
+              "likely": 21,
+              "high": 27
+            },
+            "hours": {
+              "low": 27,
+              "likely": 32,
+              "high": 41
+            },
+            "inKindCents": {
+              "low": 93609,
+              "likely": 110944,
+              "high": 142147
+            },
+            "cashCents": {
+              "low": 45000,
+              "likely": 52500,
+              "high": 67500
+            }
+          },
+          {
+            "month": "2027-01",
+            "jobs": {
+              "low": 25,
+              "likely": 30,
+              "high": 38
+            },
+            "hours": {
+              "low": 38,
+              "likely": 45,
+              "high": 57
+            },
+            "inKindCents": {
+              "low": 131746,
+              "likely": 156015,
+              "high": 197619
+            },
+            "cashCents": {
+              "low": 62500,
+              "likely": 75000,
+              "high": 95000
+            }
+          },
+          {
+            "month": "2027-02",
+            "jobs": {
+              "low": 20,
+              "likely": 24,
+              "high": 30
+            },
+            "hours": {
+              "low": 30,
+              "likely": 36,
+              "high": 45
+            },
+            "inKindCents": {
+              "low": 104010,
+              "likely": 124812,
+              "high": 156015
+            },
+            "cashCents": {
+              "low": 50000,
+              "likely": 60000,
+              "high": 75000
+            }
+          },
+          {
+            "month": "2027-03",
+            "jobs": {
+              "low": 11,
+              "likely": 14,
+              "high": 18
+            },
+            "hours": {
+              "low": 17,
+              "likely": 21,
+              "high": 27
+            },
+            "inKindCents": {
+              "low": 58939,
+              "likely": 72807,
+              "high": 93609
+            },
+            "cashCents": {
+              "low": 27500,
+              "likely": 35000,
+              "high": 45000
+            }
+          },
+          {
+            "month": "2027-04",
+            "jobs": {
+              "low": 3,
+              "likely": 4,
+              "high": 6
+            },
+            "hours": {
+              "low": 5,
+              "likely": 6,
+              "high": 9
+            },
+            "inKindCents": {
+              "low": 17335,
+              "likely": 20802,
+              "high": 31203
+            },
+            "cashCents": {
+              "low": 7500,
+              "likely": 10000,
+              "high": 15000
+            }
+          },
+          {
+            "month": "2027-05",
+            "jobs": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "hours": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "inKindCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "cashCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            }
+          },
+          {
+            "month": "2027-06",
+            "jobs": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "hours": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "inKindCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "cashCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            }
+          },
+          {
+            "month": "2027-07",
+            "jobs": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "hours": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "inKindCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "cashCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            }
+          },
+          {
+            "month": "2027-08",
+            "jobs": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "hours": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "inKindCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "cashCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            }
+          },
+          {
+            "month": "2027-09",
+            "jobs": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "hours": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "inKindCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            },
+            "cashCents": {
+              "low": 0,
+              "likely": 0,
+              "high": 0
+            }
+          },
+          {
+            "month": "2027-10",
+            "jobs": {
+              "low": 0,
+              "likely": 1,
+              "high": 1
+            },
+            "hours": {
+              "low": 0,
+              "likely": 2,
+              "high": 2
+            },
+            "inKindCents": {
+              "low": 0,
+              "likely": 6934,
+              "high": 6934
+            },
+            "cashCents": {
+              "low": 0,
+              "likely": 2500,
+              "high": 2500
+            }
+          },
+          {
+            "month": "2027-11",
+            "jobs": {
+              "low": 4,
+              "likely": 5,
+              "high": 7
+            },
+            "hours": {
+              "low": 6,
+              "likely": 8,
+              "high": 11
+            },
+            "inKindCents": {
+              "low": 20802,
+              "likely": 27736,
+              "high": 38137
+            },
+            "cashCents": {
+              "low": 10000,
+              "likely": 12500,
+              "high": 17500
+            }
+          }
+        ],
+        "total": {
+          "jobs": {
+            "low": 81,
+            "likely": 99,
+            "high": 127
+          },
+          "hours": {
+            "low": 123,
+            "likely": 150,
+            "high": 192
+          },
+          "inKindCents": {
+            "low": 426441,
+            "likely": 520050,
+            "high": 665664
+          },
+          "cashCents": {
+            "low": 202500,
+            "likely": 247500,
+            "high": 317500
+          }
+        }
+      },
+      {
+        "need": "food",
+        "label": "Food from a pantry",
+        "rule": "heating",
+        "hoursPerJob": 2,
+        "cost": null,
+        "months": [
+          {
+            "month": "2026-12",
+            "jobs": {
+              "low": 18,
+              "likely": 23,
+              "high": 27
+            },
+            "hours": {
+              "low": 36,
+              "likely": 46,
+              "high": 54
+            },
+            "inKindCents": {
+              "low": 124812,
+              "likely": 159482,
+              "high": 187218
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-01",
+            "jobs": {
+              "low": 18,
+              "likely": 23,
+              "high": 27
+            },
+            "hours": {
+              "low": 36,
+              "likely": 46,
+              "high": 54
+            },
+            "inKindCents": {
+              "low": 124812,
+              "likely": 159482,
+              "high": 187218
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-02",
+            "jobs": {
+              "low": 18,
+              "likely": 23,
+              "high": 27
+            },
+            "hours": {
+              "low": 36,
+              "likely": 46,
+              "high": 54
+            },
+            "inKindCents": {
+              "low": 124812,
+              "likely": 159482,
+              "high": 187218
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-03",
+            "jobs": {
+              "low": 18,
+              "likely": 23,
+              "high": 27
+            },
+            "hours": {
+              "low": 36,
+              "likely": 46,
+              "high": 54
+            },
+            "inKindCents": {
+              "low": 124812,
+              "likely": 159482,
+              "high": 187218
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-04",
+            "jobs": {
+              "low": 18,
+              "likely": 23,
+              "high": 27
+            },
+            "hours": {
+              "low": 36,
+              "likely": 46,
+              "high": 54
+            },
+            "inKindCents": {
+              "low": 124812,
+              "likely": 159482,
+              "high": 187218
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-05",
+            "jobs": {
+              "low": 16,
+              "likely": 21,
+              "high": 25
+            },
+            "hours": {
+              "low": 32,
+              "likely": 42,
+              "high": 50
+            },
+            "inKindCents": {
+              "low": 110944,
+              "likely": 145614,
+              "high": 173350
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-06",
+            "jobs": {
+              "low": 14,
+              "likely": 19,
+              "high": 22
+            },
+            "hours": {
+              "low": 28,
+              "likely": 38,
+              "high": 44
+            },
+            "inKindCents": {
+              "low": 97076,
+              "likely": 131746,
+              "high": 152548
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-07",
+            "jobs": {
+              "low": 14,
+              "likely": 19,
+              "high": 22
+            },
+            "hours": {
+              "low": 28,
+              "likely": 38,
+              "high": 44
+            },
+            "inKindCents": {
+              "low": 97076,
+              "likely": 131746,
+              "high": 152548
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-08",
+            "jobs": {
+              "low": 14,
+              "likely": 19,
+              "high": 22
+            },
+            "hours": {
+              "low": 28,
+              "likely": 38,
+              "high": 44
+            },
+            "inKindCents": {
+              "low": 97076,
+              "likely": 131746,
+              "high": 152548
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-09",
+            "jobs": {
+              "low": 14,
+              "likely": 19,
+              "high": 22
+            },
+            "hours": {
+              "low": 28,
+              "likely": 38,
+              "high": 44
+            },
+            "inKindCents": {
+              "low": 97076,
+              "likely": 131746,
+              "high": 152548
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-10",
+            "jobs": {
+              "low": 18,
+              "likely": 23,
+              "high": 27
+            },
+            "hours": {
+              "low": 36,
+              "likely": 46,
+              "high": 54
+            },
+            "inKindCents": {
+              "low": 124812,
+              "likely": 159482,
+              "high": 187218
+            },
+            "cashCents": null
+          },
+          {
+            "month": "2027-11",
+            "jobs": {
+              "low": 18,
+              "likely": 23,
+              "high": 27
+            },
+            "hours": {
+              "low": 36,
+              "likely": 46,
+              "high": 54
+            },
+            "inKindCents": {
+              "low": 124812,
+              "likely": 159482,
+              "high": 187218
+            },
+            "cashCents": null
+          }
+        ],
+        "total": {
+          "jobs": {
+            "low": 198,
+            "likely": 258,
+            "high": 302
+          },
+          "hours": {
+            "low": 396,
+            "likely": 516,
+            "high": 604
+          },
+          "inKindCents": {
+            "low": 1372932,
+            "likely": 1788972,
+            "high": 2094068
+          },
+          "cashCents": null
+        }
+      }
+    ],
+    "total": {
+      "jobs": {
+        "low": 279,
+        "likely": 357,
+        "high": 429
+      },
+      "hours": {
+        "low": 519,
+        "likely": 666,
+        "high": 796
+      },
+      "inKindCents": {
+        "low": 1799373,
+        "likely": 2309022,
+        "high": 2759732
+      }
+    }
+  },
+  "matches": [
+    {
+      "resource": "safe_sound_good_neighbor",
+      "score": 100,
+      "parts": {
+        "fit": 1,
+        "reach": 1,
+        "timing": 1
+      },
+      "path": "direct",
+      "nextDeadline": null,
+      "why": [
+        {
+          "code": "fits_needs",
+          "needs": ["snow", "food"]
+        },
+        {
+          "code": "resident_group_ok"
+        },
+        {
+          "code": "sponsor_ok"
+        },
+        {
+          "code": "rolling"
+        },
+        {
+          "code": "amount"
+        }
+      ],
+      "cautions": [
+        {
+          "code": "resident_group_only"
+        },
+        {
+          "code": "no_stipends"
+        }
+      ]
+    },
+    {
+      "resource": "bader_preliminary",
+      "score": 60,
+      "parts": {
+        "fit": 0.5,
+        "reach": 0.5,
+        "timing": 1
+      },
+      "path": "ask_first",
+      "nextDeadline": "2026-11-30",
+      "why": [
+        {
+          "code": "general_support"
+        },
+        {
+          "code": "deadline",
+          "date": "2026-11-30"
+        }
+      ],
+      "cautions": [
+        {
+          "code": "eligibility_not_stated"
+        },
+        {
+          "code": "deadline_soon",
+          "days": 8
+        }
+      ]
+    },
+    {
+      "resource": "united_way_urgent_need",
+      "score": 0,
+      "parts": {
+        "fit": 0.7227,
+        "reach": 0,
+        "timing": 0
+      },
+      "path": "closed",
+      "nextDeadline": null,
+      "why": [
+        {
+          "code": "fits_needs",
+          "needs": ["food"]
+        },
+        {
+          "code": "amount"
+        }
+      ],
+      "cautions": [
+        {
+          "code": "closed"
+        }
+      ]
+    }
+  ],
+  "readiness": {
+    "sponsor": "none",
+    "dfi": "not_checked",
+    "c3": "no",
+    "uei": "not_needed"
+  },
+  "costs": [
+    {
+      "need": "snow",
+      "centsPerJob": 2500,
+      "basis": "estimate",
+      "updatedAt": 1795363500000
+    }
+  ],
+  "drafts": [
+    {
+      "id": "d_26ed3724-8822-4f7b-8b66-e631502a596c",
+      "kind": "funder_letter",
+      "month": "2026-11",
+      "resource": "safe_sound_good_neighbor",
+      "status": "writing",
+      "source": null,
+      "flag": null,
+      "reasons": [],
+      "facts": [
+        {
+          "key": "org",
+          "label": "Group",
+          "text": "ComForce demo"
+        },
+        {
+          "key": "funder",
+          "label": "Funder",
+          "text": "Safe & Sound Good Neighbor Grant Fund"
+        },
+        {
+          "key": "month",
+          "label": "Month",
+          "text": "November 2026 so far"
+        },
+        {
+          "key": "new",
+          "label": "Jobs planned",
+          "text": "14"
+        },
+        {
+          "key": "helped",
+          "label": "Jobs closed as helped",
+          "text": "9"
+        },
+        {
+          "key": "hours",
+          "label": "Volunteer hours",
+          "text": "312"
+        },
+        {
+          "key": "in_kind",
+          "label": "Value of volunteer time at $34.67 an hour",
+          "text": "$10,817"
+        },
+        {
+          "key": "window",
+          "label": "Forecast window",
+          "text": "December 2026 to November 2027"
+        },
+        {
+          "key": "horizon",
+          "label": "Forecast months",
+          "text": "12"
+        },
+        {
+          "key": "needs",
+          "label": "Needs that this funder fits",
+          "text": "Community clean up, Lawn mowing, Snow shovelling, Food from a pantry"
+        },
+        {
+          "key": "forecast_jobs",
+          "label": "Forecast jobs in these needs, low to high",
+          "text": "402 to 618"
+        },
+        {
+          "key": "forecast_hours",
+          "label": "Forecast volunteer hours in these needs, low to high",
+          "text": "764 to 986"
+        },
+        {
+          "key": "amount",
+          "label": "Award size on the funder page",
+          "text": "up to $2,500"
+        }
+      ],
+      "text": null,
+      "textHash": null,
+      "createdAt": 1795370280000,
+      "approvedAt": null,
+      "approvedBy": null
+    },
+    {
+      "id": "d_0a8fcdbc-d907-468d-aa73-f70ddf4947c0",
+      "kind": "impact_post",
+      "month": "2026-11",
+      "resource": null,
+      "status": "ready",
+      "source": "template",
+      "flag": "ai_off",
+      "reasons": [],
+      "facts": [
+        {
+          "key": "org",
+          "label": "Group",
+          "text": "ComForce demo"
+        },
+        {
+          "key": "month",
+          "label": "Month",
+          "text": "November 2026 so far"
+        },
+        {
+          "key": "new",
+          "label": "Jobs planned",
+          "text": "14"
+        },
+        {
+          "key": "helped",
+          "label": "Jobs closed as helped",
+          "text": "9"
+        },
+        {
+          "key": "unmet",
+          "label": "Jobs on the unmet shelf now",
+          "text": "3"
+        },
+        {
+          "key": "hours",
+          "label": "Volunteer hours",
+          "text": "312"
+        },
+        {
+          "key": "in_kind",
+          "label": "Value of volunteer time at $34.67 an hour",
+          "text": "$10,817"
+        }
+      ],
+      "text": "ComForce demo in November 2026 so far:\nJobs planned: 14\nJobs closed as helped: 9\nJobs on the unmet shelf now: 3\nVolunteer hours: 312\nValue of volunteer time at $34.67 an hour: $10,817\nThank you to every volunteer. Each figure comes from the sealed Vision record.\n\nSource: the Vision record for November 2026 so far, sealed at line 128.",
+      "textHash": "25ba0823f85a767613f691cb8838c377c37f16717cfe701f74c11606485b8792",
+      "createdAt": 1795369200000,
+      "approvedAt": null,
+      "approvedBy": null
+    },
+    {
+      "id": "d_ed3fe182-70a0-4f1a-848e-3e3051ac4d53",
+      "kind": "funder_letter",
+      "month": "2026-11",
+      "resource": "bader_preliminary",
+      "status": "approved",
+      "source": "ai",
+      "flag": null,
+      "reasons": [],
+      "facts": [
+        {
+          "key": "org",
+          "label": "Group",
+          "text": "ComForce demo"
+        },
+        {
+          "key": "funder",
+          "label": "Funder",
+          "text": "Bader Philanthropies, preliminary application"
+        },
+        {
+          "key": "month",
+          "label": "Month",
+          "text": "November 2026 so far"
+        },
+        {
+          "key": "new",
+          "label": "Jobs planned",
+          "text": "14"
+        },
+        {
+          "key": "helped",
+          "label": "Jobs closed as helped",
+          "text": "9"
+        },
+        {
+          "key": "hours",
+          "label": "Volunteer hours",
+          "text": "312"
+        },
+        {
+          "key": "in_kind",
+          "label": "Value of volunteer time at $34.67 an hour",
+          "text": "$10,817"
+        },
+        {
+          "key": "window",
+          "label": "Forecast window",
+          "text": "December 2026 to November 2027"
+        },
+        {
+          "key": "horizon",
+          "label": "Forecast months",
+          "text": "12"
+        },
+        {
+          "key": "needs",
+          "label": "Needs that this funder fits",
+          "text": "Youth stipend information, Community clean up, Job search help"
+        },
+        {
+          "key": "forecast_jobs",
+          "label": "Forecast jobs in these needs, low to high",
+          "text": "131 to 214"
+        },
+        {
+          "key": "forecast_hours",
+          "label": "Forecast volunteer hours in these needs, low to high",
+          "text": "346 to 562"
+        },
+        {
+          "key": "deadline",
+          "label": "Next deadline on the funder page",
+          "text": "30 November 2026"
+        }
+      ],
+      "text": "Dear team at Bader Philanthropies,\n\nComForce demo is a group of volunteers in Milwaukee. In November 2026 so far, we received 14 requests for help and helped with 9 of them. Our volunteers gave 312 hours, a value of $10,817 at $34.67 an hour.\n\nFor December 2026 to November 2027, our forecast for youth stipend information, community clean up and job search help is 131 to 214 jobs and 346 to 562 volunteer hours. Your page lists the next deadline as 30 November 2026.\n\nWe would like to ask whether ComForce demo may apply. Could we talk about the next steps?\n\nWith thanks,\nComForce demo\n\nSource: the Vision record for November 2026 so far, sealed at line 128. The forecast uses synthetic history.",
+      "textHash": "c1868e864cd0b2eff63abea3683569e60e337902d6653a6279f2e8a107d51a30",
+      "createdAt": 1795368000000,
+      "approvedAt": 1795368660000,
+      "approvedBy": {
+        "member": "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+        "name": "Quinn Organiser (test)"
+      }
+    }
+  ],
+  "draftMonths": ["2026-11"],
+  "drafting": {
+    "cap": 20,
+    "usedToday": 3
+  }
+}

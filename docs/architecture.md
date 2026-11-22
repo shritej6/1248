@@ -88,15 +88,15 @@ Every AI part of Vision follows the supervision rules. `docs/ai-jobs.md` holds t
 
 | Rule | Where the code holds it |
 |---|---|
-| 1. One off switch for each job: a variable that holds the model id. Empty means off, and the system still works. | `SORTER_MODEL`, `VOICE_MODEL`, `LINK_MODEL` and `TRANSLATE_MODEL` in `apps/hub/wrangler.json`. `aiOn` in `apps/hub/src/ai/registry.ts` fills `Config.aiOn`, and `askAi` in `packages/core/src/decide/aiask.ts` writes nothing for a job that is off. |
+| 1. One off switch for each job: a variable that holds the model id. Empty means off, and the system still works. | `SORTER_MODEL`, `VOICE_MODEL`, `LINK_MODEL`, `TRANSLATE_MODEL` and `DRAFT_MODEL` in `apps/hub/wrangler.json`. `aiOn` in `apps/hub/src/ai/registry.ts` fills `Config.aiOn`, and `askAi` in `packages/core/src/decide/aiask.ts` writes nothing for a job that is off. |
 | 2. The AI only suggests and always shows its evidence. | The desk shows the recording above the transcript, both reports of a link side by side, and the original above the translation. |
 | 3. The AI can only add caution or information. | The result handlers in the core only add flags, add vault text, raise or propose. `link.answered` changes no card, and the flag `voice_transcript` can only raise a level. |
 | 4. A person confirms. | Each output waits for a desk tap: confirm, "Same event" or "Not the same". A machine translation never goes to a resident. |
 | 5. A failure or a refusal falls back to a person with a flag, after at most 3 tries. | The outbox tries each item at most 3 times with a growing wait. Then `aiGiveUp` applies the result with the outcome `failed`. |
 | 6. What the AI makes from personal text or audio is personal data. | The vault holds the audio, the transcript, the translation and the vector, with the forget date of the card. The ledger holds only statuses, a language code and a score. |
-| 7. Each job has a measured check on synthetic data. | `exam/src/voice-check.ts`, `exam/src/link-check.ts` and `exam/src/lang-check.ts`. `docs/exam.md` gives the results. |
+| 7. Each job has a measured check on synthetic data. | `exam/src/voice-check.ts`, `exam/src/link-check.ts`, `exam/src/lang-check.ts` and `exam/src/draft-check.ts`. `docs/exam.md` gives the results. |
 
-The three jobs share one path. When a message is ready, `messageReady` in `packages/core/src/decide/intake.ts` runs the sort step, the link step and the language step. A step that needs a model writes `ai.asked` and one outbox item of the kind `ai.<key>`, which holds only the card id. The alarm sends the item to the job in `apps/hub/src/ai/registry.ts`, and the job returns one system command for the core.
+The three jobs share one path. When a message is ready, `messageReady` in `packages/core/src/decide/intake.ts` runs the sort step, the link step and the language step. A step that needs a model writes `ai.asked` and one outbox item of the kind `ai.<key>`, which holds only the card id. The alarm sends the item to the job in `apps/hub/src/ai/registry.ts`, and the job returns one system command for the core. The draft job of Resources starts from an organiser instead, and `docs/resources.md` gives its path.
 
 | Job | Key | What it does | Document |
 |---|---|---|---|

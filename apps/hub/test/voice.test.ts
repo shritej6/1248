@@ -200,7 +200,7 @@ it("audio rows get the card forget date when the job closes, and the alarm erase
 
 it("writeAudio and readAudio keep the parts in order and the type", async () => {
   const org = freshOrg();
-  const bytes = Uint8Array.from({ length: AUDIO_PART_BYTES * 2 + 7 }, (_, i) => (i * 7) % 256);
+  const bytes = Uint8Array.from({ length: AUDIO_PART_BYTES * 2 + 7 }, (_, i) => i % 251);
   const read = await sql(org, (s) => {
     expect(writeAudio(s, "c_x", { mime: "audio/webm", bytes }, 5)).toBe(3);
     return readAudio(s, "c_x");

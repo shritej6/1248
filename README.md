@@ -407,7 +407,7 @@ make e2e
 | Hub | 170 of 170 |
 | Contracts | 45 of 45 |
 | Exam | 40 of 40 |
-| Quality gate tools | 50 of 50 |
+| Quality gate tools | 51 of 51 |
 | Android unit tests | 74 of 74 |
 | Browser tests: the demo thread and the voicemail door | 2 of 2 |
 

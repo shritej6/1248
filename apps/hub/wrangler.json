@@ -1,0 +1,21 @@
+{
+  "name": "vision-hub",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "../web/dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "ai": { "binding": "AI", "remote": true },
+  "durable_objects": { "bindings": [{ "name": "ORG", "class_name": "OrgHub" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["OrgHub"] }],
+  "vars": {
+    "DEMO_MODE": "on",
+    "SORTER_MODEL": "@cf/google/gemma-4-26b-a4b-it",
+    "VOICE_MODEL": "@cf/openai/whisper-large-v3-turbo",
+    "LINK_MODEL": "@cf/baai/bge-m3",
+    "TRANSLATE_MODEL": "@cf/meta/m2m100-1.2b",
+    "PUBLIC_ORIGIN": "http://localhost:8787"
+  }
+}

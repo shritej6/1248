@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Connected systems</title>
+    <link rel="stylesheet" href="base.css" />
+    <style>
+      .canvas {
+        position: relative;
+        height: 1044px;
+        margin-top: 32px;
+      }
+
+      .wires {
+        position: absolute;
+        inset: 0;
+        width: 1504px;
+        height: 1044px;
+        overflow: visible;
+      }
+
+      .wires path {
+        fill: none;
+        stroke: var(--line-strong);
+        stroke-width: 1.5;
+      }
+
+      .wires .tip {
+        fill: var(--line-strong);
+        stroke: none;
+      }
+
+      .col-label {
+        position: absolute;
+        top: 0;
+        display: flex;
+        gap: 12px;
+        align-items: baseline;
+      }
+
+      .col-label .note {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-3);
+      }
+
+      .box {
+        position: absolute;
+        border-radius: 2px;
+      }
+
+      .paper {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 16px 18px;
+        background: var(--paper-bg);
+        border: 1px solid var(--paper-line);
+        color: var(--ink);
+      }
+
+      .paper .label {
+        color: var(--ink-3);
+      }
+
+      .paper h3,
+      .team h3 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+      }
+
+      .paper p {
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--ink-2);
+      }
+
+      .paper .fields {
+        margin-top: auto;
+        padding: 8px 10px;
+        background: var(--paper-inset);
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--ink);
+      }
+
+      .paper .route,
+      .team .route {
+        margin-top: auto;
+        font-family: var(--mono);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .paper .route {
+        color: var(--ink);
+      }
+
+      .team {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px 18px;
+        background: var(--bg-panel);
+        border: 1px solid var(--line);
+      }
+
+      .team p {
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+      }
+
+      .team .route {
+        color: var(--text-3);
+      }
+
+      .head-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+
+      .hub {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+        background: var(--bg-panel);
+        border: 1px solid var(--line-strong);
+      }
+
+      .worker {
+        padding: 14px 16px;
+        background: var(--bg-raised);
+        border: 1px solid var(--line);
+        border-radius: 2px;
+      }
+
+      .worker h3,
+      .object h3 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+      }
+
+      .worker p,
+      .object > p {
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+      }
+
+      .worker .code {
+        font-size: 14px;
+        color: var(--text);
+      }
+
+      .down {
+        display: flex;
+        justify-content: center;
+        margin: -8px 0;
+      }
+
+      .down svg {
+        width: 14px;
+        height: 22px;
+      }
+
+      .object {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        background: var(--bg-app);
+        border: 1px solid var(--line);
+        border-radius: 2px;
+      }
+
+      .core {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 4px 16px;
+        padding: 12px 14px;
+        border: 1px dashed var(--line-strong);
+        border-radius: 2px;
+      }
+
+      .core p {
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+      }
+
+      .core .code {
+        color: var(--text);
+      }
+
+      .tiles {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .tile {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 14px;
+        background: var(--bg-panel);
+        border: 1px solid var(--line);
+        border-radius: 2px;
+      }
+
+      .tile h4 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--cond);
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+
+      .tile h4 svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: var(--text-2);
+        stroke-width: 1.5;
+      }
+
+      .tile p {
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+      }
+
+      .tile .code {
+        margin-top: auto;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-3);
+      }
+
+      .outside {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 20px;
+        background: var(--bg-panel);
+        border: 1px solid var(--line);
+      }
+
+      .outside h3 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+      }
+
+      .rows {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        border-top: 1px solid var(--line);
+      }
+
+      .rows > * {
+        padding: 8px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      .rows .code {
+        padding-right: 24px;
+        font-size: 14px;
+        color: var(--text);
+      }
+
+      .rows .what {
+        color: var(--text-2);
+      }
+
+      .rows .key {
+        padding-right: 24px;
+        font-family: var(--cond);
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <header class="head">
+        <div>
+          <p class="eyebrow"><span>Vision</span><b>Figure 2</b><span>Architecture</span></p>
+          <h1 class="title">Connected systems</h1>
+          <p class="lede">
+            Each organisation gets one hub. Every door feeds it, and every screen reads from it. The hub is
+            the only writer, so there is one record of every request.
+          </p>
+        </div>
+      </header>
+
+      <section class="canvas">
+        <svg class="wires" viewBox="0 0 1504 1044">
+          <path d="M340 146.5 H426" />
+          <path class="tip" d="M432 146.5 l-9 -5 v10 z" />
+          <path d="M340 387.5 H426" />
+          <path class="tip" d="M432 387.5 l-9 -5 v10 z" />
+          <path d="M340 629 H426" />
+          <path class="tip" d="M432 629 l-9 -5 v10 z" />
+
+          <path d="M1078 218 H1120 M1120 92 V344 M1120 92 H1158 M1120 218 H1158 M1120 344 H1158" />
+          <path class="tip" d="M1164 92 l-9 -5 v10 z" />
+          <path class="tip" d="M1164 218 l-9 -5 v10 z" />
+          <path class="tip" d="M1164 344 l-9 -5 v10 z" />
+          <path class="tip" d="M1072 218 l9 -5 v10 z" />
+          <path d="M1078 602 H1120 M1120 529 V675 M1120 529 H1158 M1120 675 H1158" />
+          <path class="tip" d="M1164 529 l-9 -5 v10 z" />
+          <path class="tip" d="M1164 675 l-9 -5 v10 z" />
+          <path class="tip" d="M1072 602 l9 -5 v10 z" />
+
+          <path d="M752 746 V772 M350 772 H1154 M350 772 V802 M1154 772 V802" />
+          <path class="tip" d="M350 808 l-5 -9 h10 z" />
+          <path class="tip" d="M1154 808 l-5 -9 h10 z" />
+          <path class="tip" d="M752 740 l-5 9 h10 z" />
+        </svg>
+
+        <p class="col-label" style="left: 0"><span class="label">Doors</span><span class="note">A request comes in</span></p>
+        <p class="col-label" style="left: 432px"><span class="label">The hub</span><span class="note">One for each organisation</span></p>
+        <p class="col-label" style="left: 1164px"><span class="label">Screens</span><span class="note">Signed in, live over a WebSocket</span></p>
+
+        <article class="box paper" style="left: 0; top: 36px; width: 340px; height: 221px">
+          <div class="head-row"><h3>Ask form</h3><span class="route">POST requests</span></div>
+          <p>A resident writes the need in their own words, in English or Spanish. The tracking link comes back at once.</p>
+          <p class="fields">First name, a way to reach them, ZIP, address, safe to contact</p>
+        </article>
+        <article class="box paper" style="left: 0; top: 277px; width: 340px; height: 221px">
+          <div class="head-row"><h3>Email</h3><span class="route">POST doors/email</span></div>
+          <p>Google Apps Script reads new mail in Gmail and posts each one to the hub.</p>
+          <p class="fields">One card for each message id, so a second send adds nothing</p>
+        </article>
+        <article class="box paper" style="left: 0; top: 518px; width: 340px; height: 222px">
+          <div class="head-row"><h3>Voicemail</h3><span class="route">POST doors/voice</span></div>
+          <p>The audio goes to the vault. Whisper writes a transcript, and the desk listens before it confirms.</p>
+          <p class="fields">WAV, MP3, OGG, WEBM or M4A, at most 2 minutes and 2 MB</p>
+        </article>
+
+        <div class="box hub" style="left: 432px; top: 36px; width: 640px; height: 704px">
+          <div class="worker">
+            <div class="head-row"><h3>Cloudflare Worker</h3><span class="code">/api/v1/o/{org}/</span></div>
+            <p>Takes every call and sends it to the hub of its organisation. It also serves the websites.</p>
+          </div>
+          <div class="down">
+            <svg viewBox="0 0 14 22"><path d="M7 0 V16" stroke="#6A727B" stroke-width="1.5" /><path d="M2 14 L7 22 L12 14 Z" fill="#6A727B" /></svg>
+          </div>
+          <div class="object">
+            <div class="head-row"><h3>Durable Object with SQLite</h3><span class="label">The only writer</span></div>
+            <div class="core">
+              <span class="code">decide</span><p>checks the role and the rules, then writes new ledger lines</p>
+              <span class="code">evolve</span><p>folds each line into the state of every card</p>
+            </div>
+            <div class="tiles">
+              <div class="tile">
+                <h4><svg viewBox="0 0 16 16"><rect x="2" y="1.5" width="12" height="13" /><path d="M5 5.5 H11 M5 8 H11 M5 10.5 H9" /></svg>Sealed ledger</h4>
+                <p>Every event, never changed. The SHA-256 fingerprint of each line also covers the line before. No names and no free text.</p>
+                <span class="code">events</span>
+              </div>
+              <div class="tile">
+                <h4><svg viewBox="0 0 16 16"><rect x="1.5" y="2" width="13" height="5" /><rect x="1.5" y="9" width="13" height="5" /><path d="M6.5 4.5 H9.5 M6.5 11.5 H9.5" /></svg>Vault</h4>
+                <p>Names, contacts, addresses and words. Each row has a forget date, and the hub erases it on that day.</p>
+                <span class="code">vault</span>
+              </div>
+              <div class="tile">
+                <h4><svg viewBox="0 0 16 16"><path d="M2 8 H12 M8.5 4 L12.5 8 L8.5 12" /><path d="M14 2.5 V13.5" /></svg>Outbox</h4>
+                <p>Every outside call waits here. A failed call is tried at most 3 times, then a person is told.</p>
+                <span class="code">outbox</span>
+              </div>
+              <div class="tile">
+                <h4><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" /><path d="M8 4 V8 L10.5 9.5" /></svg>Clock alarm</h4>
+                <p>One alarm at the earliest of the next deadline, the next outbox try and the next forget date.</p>
+                <span class="code">alarm.ts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <article class="box team" style="left: 1164px; top: 36px; width: 340px; height: 112px">
+          <div class="head-row"><h3>Desk website</h3><span class="route">Web</span></div>
+          <p>The desk on shift confirms each card and watches every clock.</p>
+        </article>
+        <article class="box team" style="left: 1164px; top: 162px; width: 340px; height: 112px">
+          <div class="head-row"><h3>Volunteer app</h3><span class="route">Android</span></div>
+          <p>Offers, ACCEPT, ON MY WAY, THERE, DONE and my record.</p>
+        </article>
+        <article class="box team" style="left: 1164px; top: 288px; width: 340px; height: 112px">
+          <div class="head-row"><h3>Organiser view</h3><span class="route">Web</span></div>
+          <p>The playbook, the statement, the seal check and the rehearsal.</p>
+        </article>
+
+        <p class="col-label" style="left: 1164px; top: 428px"><span class="label">Link pages</span><span class="note">No account</span></p>
+        <article class="box paper" style="left: 1164px; top: 464px; width: 340px; height: 130px">
+          <div class="head-row"><h3>Tracking page</h3><span class="route">/t/{token}</span></div>
+          <p>The resident sees each step with its time and answers the check-back.</p>
+        </article>
+        <article class="box paper" style="left: 1164px; top: 610px; width: 340px; height: 130px">
+          <div class="head-row"><h3>Partner card</h3><span class="route">/p/{token}</span></div>
+          <p>An outside partner answers YES, NO or WAIT, then GOT IT.</p>
+        </article>
+
+        <p class="col-label" style="left: 0; top: 772px"><span class="label">Outside calls</span><span class="note">Through the outbox</span></p>
+
+        <article class="box outside" style="left: 0; top: 808px; width: 700px; height: 236px">
+          <div class="head-row"><h3>Cloudflare Workers AI</h3><span class="label">One off switch each</span></div>
+          <div class="rows">
+            <span class="code">@cf/google/gemma-4-26b-a4b-it</span><span class="what">SORT: suggests the need and the urgency</span>
+            <span class="code">@cf/openai/whisper-large-v3-turbo</span><span class="what">LISTEN: writes the voicemail transcript</span>
+            <span class="code">@cf/baai/bge-m3</span><span class="what">LINK: finds reports of the same event</span>
+            <span class="code">@cf/meta/m2m100-1.2b</span><span class="what">TRANSLATE: Spanish to English for the desk</span>
+          </div>
+        </article>
+
+        <article class="box outside" style="left: 804px; top: 808px; width: 700px; height: 236px">
+          <div class="head-row"><h3>Google Apps Script</h3><span class="label">In the Drive of the organisation</span></div>
+          <div class="rows">
+            <span class="key">Playbook tab</span><span class="what">The organisation edits its rules. The hub reads them.</span>
+            <span class="key">Ledger tab</span><span class="what">A copy of every sealed line, with its fingerprint</span>
+            <span class="key">Statement tab</span><span class="what">The monthly statement that balances</span>
+            <span class="key">Gmail</span><span class="what">Receipts and check-backs to residents</span>
+          </div>
+        </article>
+      </section>
+
+      <footer class="foot">
+        <p>
+          <span class="label">Source</span>&nbsp;&nbsp;<span class="code">docs/architecture.md</span>,
+          <span class="code">apps/hub/src/schema.ts</span>, <span class="code">apps/hub/wrangler.json</span>,
+          <span class="code">google/Vision.gs</span>
+        </p>
+        <p>Paper cards face people outside the organisation.</p>
+      </footer>
+    </main>
+  </body>
+</html>

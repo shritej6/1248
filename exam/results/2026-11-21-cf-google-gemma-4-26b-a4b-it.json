@@ -1,0 +1,3830 @@
+{
+  "model": "@cf/google/gemma-4-26b-a4b-it",
+  "promptSha256": "53519d93a86757b9e2c4d149f087287c2002eb2689e18900240dd33f76bd3de5",
+  "date": "2026-11-21",
+  "runs": [
+    {
+      "caught": 24,
+      "emergencies": 24,
+      "falseAlarms": 16,
+      "needRight": 96,
+      "divisionRight": 93,
+      "quotesExact": 30
+    },
+    {
+      "caught": 24,
+      "emergencies": 24,
+      "falseAlarms": 18,
+      "needRight": 97,
+      "divisionRight": 91,
+      "quotesExact": 29
+    }
+  ],
+  "passed": true,
+  "answers": [
+    [
+      {
+        "id": "m063",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "disabled veteran in a wheelchair",
+            "reason": "A person with a disability is unable to access their exit due to snow accumulation."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "RAMP STILL NOT SHOVELED",
+            "reason": "The requester is a disabled person in a wheelchair unable to access their ramp due to snow, which presents a mobility and safety risk."
+          }
+        ]
+      },
+      {
+        "id": "m073",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting a messy alleyway and asking for the appropriate contact."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting a messy alleyway, which falls under community cleanups and neighborhood concerns."
+          }
+        ]
+      },
+      {
+        "id": "m035",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "The request involves an elderly individual with health issues needing snow removal to maintain access to food and mobility during freezing weather."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "The request involves an elderly individual with a heart condition needing snow removal to ensure safety and access to food."
+          }
+        ]
+      },
+      {
+        "id": "m033",
+        "passes": [
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "he got out of the house this morning before I woke up maybe 5:00 the door was open and his coat is still here he only has his slipper's and a cardigan",
+            "reason": "An elderly person with dementia is missing in freezing weather with inadequate clothing."
+          },
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "he's 80 won and he has the dimension and he got out of the house this morning... he only has his slipper's and a cardigan... it's so cold",
+            "reason": "The request involves a vulnerable elderly person with dementia who is missing in freezing weather."
+          }
+        ]
+      },
+      {
+        "id": "m069",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting assistance with illegal dumping and debris removal in an alley."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for help removing bulky discarded items and trash from an alley."
+          }
+        ]
+      },
+      {
+        "id": "m058",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for employment assistance and transportation support for a motivated individual."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for employment support and transportation assistance for a motivated job seeker."
+          }
+        ]
+      },
+      {
+        "id": "m037",
+        "passes": [
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "fighting RIGHT NOW in the street, somebody got a bat out",
+            "reason": "The message reports an active fight involving a weapon in a public area."
+          },
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "fighting RIGHT NOW in the street, somebody got a bat out!!",
+            "reason": "The message reports an active fight involving a weapon in a public area with children present."
+          }
+        ]
+      },
+      {
+        "id": "m080",
+        "passes": [
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The conflict has already concluded without physical violence and the request is for a future intervention."
+          },
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The conflict has already concluded for the night and no immediate physical threat or weapons were reported."
+          }
+        ]
+      },
+      {
+        "id": "m029",
+        "passes": [
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The parent is inquiring about after-school activities and earning opportunities for their teenager."
+          },
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The parent is seeking extracurricular engagement and income opportunities for their teenager."
+          }
+        ]
+      },
+      {
+        "id": "m007",
+        "passes": [
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "missing over three hours",
+            "reason": "A vulnerable elderly man with memory loss is missing and was last seen without a coat."
+          },
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "missing over three hours",
+            "reason": "An elderly person with memory loss is missing and at risk."
+          }
+        ]
+      },
+      {
+        "id": "m018",
+        "passes": [
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is looking for a relative for a non-emergency social reason and states he is healthy."
+          },
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is looking for a healthy adult relative for a non-emergency social reason."
+          }
+        ]
+      },
+      {
+        "id": "m067",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "running low",
+            "reason": "The requester is pregnant with physical restrictions and is running low on food supplies."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "The sender is pregnant and cannot clear snow from their walkway, posing a safety risk in freezing weather."
+          }
+        ]
+      },
+      {
+        "id": "m072",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "being hit with a belt at home. Two staff saw marks on her arms and back, and she cried and said she is scared to go home tonight.",
+            "reason": "The message reports immediate physical abuse of a child and a need for a safety plan."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "9-year-old girl... told staff she is being hit with a belt at home. Two staff saw marks on her arms and back, and she cried and said she is scared to go home tonight.",
+            "reason": "The message reports immediate physical abuse of a child and a need for a safety plan."
+          }
+        ]
+      },
+      {
+        "id": "m094",
+        "passes": [
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The conflict has already concluded and there are no immediate threats of violence or weapons reported."
+          },
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting mediation for a recurring neighbor dispute that has not escalated to physical violence."
+          }
+        ]
+      },
+      {
+        "id": "m005",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking employment assistance and inquiring about program enrollment."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking employment assistance and expressing frustration with their job search, but there is no immediate danger or crisis."
+          }
+        ]
+      },
+      {
+        "id": "m006",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is inquiring about future cleanup efforts for debris in an alley."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about the schedule for neighborhood cleanups due to litter."
+          }
+        ]
+      },
+      {
+        "id": "m090",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "belt marks across his back. He says it happens most nights at home and he is crying and afraid to go back there today.",
+            "reason": "The message reports an active case of child abuse and requires immediate safety planning and transportation."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "belt marks across his back. He says it happens most nights at home and he is crying and afraid to go back there today.",
+            "reason": "The message reports a child showing signs of physical abuse and immediate fear for their safety."
+          }
+        ]
+      },
+      {
+        "id": "m076",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting non-emergency snow removal for an elderly person with mobility issues."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting snow removal assistance for a non-emergency timeframe."
+          }
+        ]
+      },
+      {
+        "id": "m074",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting resource mapping for winter clothing to update a community help sheet."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting resource mapping for winter clothing, which is a research task for the Investigations division."
+          }
+        ]
+      },
+      {
+        "id": "m041",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting damaged community pantry infrastructure and offering assistance with repairs."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is reporting damage to a community pantry box and offering assistance to repair it."
+          }
+        ]
+      },
+      {
+        "id": "m064",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "Cant talk, not safe right now. Text only pls dont call. Still need to get out tonight",
+            "reason": "The sender indicates they are in immediate danger and cannot speak on the phone due to safety concerns."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "Cant talk, not safe right now. Text only pls dont call. Still need to get out tonight",
+            "reason": "The sender indicates immediate danger and a need for emergency relocation/extraction for themselves and children."
+          }
+        ]
+      },
+      {
+        "id": "m062",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for English classes, which is not a service offered by ComForce."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for free or cheap English classes, which is not a service offered by ComForce."
+          }
+        ]
+      },
+      {
+        "id": "m003",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running the furnace fan and a lamp since. It's loud and my wife and I have both had a headache and felt sleepy all day",
+            "reason": "The sender describes symptoms of carbon monoxide poisoning from running a generator indoors."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running indoors, headache and felt sleepy",
+            "reason": "The sender is reporting symptoms of carbon monoxide poisoning due to running a generator indoors."
+          }
+        ]
+      },
+      {
+        "id": "m099",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is asking for general assistance to get back on their feet after being away."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking general assistance to get back on their feet but does not specify a service or immediate crisis."
+          }
+        ]
+      },
+      {
+        "id": "m050",
+        "passes": [
+          {
+            "service": "Legislation / Policy Division",
+            "division": "Legislation / Policy Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting know-your-rights information regarding police interactions and specifies there is no rush."
+          },
+          {
+            "service": "Legislation / Policy Division",
+            "division": "Legislation / Policy Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting know-your-rights education regarding police interactions and specifically mentions wanting to attend a class or receive a card."
+          }
+        ]
+      },
+      {
+        "id": "m059",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "The requester is an elderly person with mobility issues and significant snow accumulation, implying a risk related to weather and safety."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting snow removal assistance for an elderly individual, which is a service offered, but there is no immediate life-threatening danger."
+          }
+        ]
+      },
+      {
+        "id": "m083",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "can't shuffle the snow from Thursday night it's still on my front walk and the steps",
+            "reason": "An elderly resident with a hip replacement is unable to clear snow, which creates a safety hazard and prevents mail delivery."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I can't shuffle the snow",
+            "reason": "An elderly person with a recent hip replacement is unable to clear snow, creating a safety hazard and accessibility issue."
+          }
+        ]
+      },
+      {
+        "id": "m019",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for neighborhood trash removal, which is not an immediate life-safety emergency."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for garbage removal which has been sitting for two weeks."
+          }
+        ]
+      },
+      {
+        "id": "m085",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "garage caught fire",
+            "reason": "The family's home is uninhabitable due to a fire and they are facing imminent displacement."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "garage caught fire",
+            "reason": "The family has lost their home due to a fire and needs immediate housing assistance."
+          }
+        ]
+      },
+      {
+        "id": "m086",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "Cant talk. He is home till 6 and he checks my phone. Text only, pls dont call.",
+            "reason": "The sender indicates they are in an unsafe situation involving domestic monitoring and needs immediate extraction for themselves and a baby."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "Cant talk. He is home till 6 and he checks my phone. Text only, pls dont call.",
+            "reason": "The sender indicates they are in a situation where they cannot speak freely due to a monitoring individual, implying immediate domestic safety risks."
+          }
+        ]
+      },
+      {
+        "id": "m066",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting non-emergency transportation for a scheduled medical appointment."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting non-emergency medical transportation for a scheduled appointment in the future."
+          }
+        ]
+      },
+      {
+        "id": "m008",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for information regarding food pantry availability and requirements due to financial hardship."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about food pantry availability and requirements due to financial hardship."
+          }
+        ]
+      },
+      {
+        "id": "m100",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "Pet Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is looking for a lost pet, which is not a ComForce service but falls under the Pet Division."
+          },
+          {
+            "service": "Other",
+            "division": "Pet Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for a lost pet, which is not a service provided by ComForce."
+          }
+        ]
+      },
+      {
+        "id": "m098",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is requesting transportation for a medication refill, but the child is currently stable and breathing well."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is requesting a ride for a pharmacy trip and specifies the child is currently stable."
+          }
+        ]
+      },
+      {
+        "id": "m026",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is an elderly person seeking snow removal assistance for her walkway and steps."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for routine snow removal for an elderly person and does not indicate an immediate life-safety emergency."
+          }
+        ]
+      },
+      {
+        "id": "m031",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about illegal dumping cleanup assistance."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about bulky item removal from an alley following a snow event."
+          }
+        ]
+      },
+      {
+        "id": "m084",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "Legislation / Policy Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for tax assistance, which is not a listed service, though it may fall under policy/legal referrals."
+          },
+          {
+            "service": "Other",
+            "division": "Legislation / Policy Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for help interpreting an IRS letter, which is not a direct service offered but falls under general resource/legal information inquiries."
+          }
+        ]
+      },
+      {
+        "id": "m055",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is requesting snow removal assistance due to mobility issues, but there is no immediate life-threatening danger."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for snow removal assistance for an elderly person, but there is no immediate threat to life or safety."
+          }
+        ]
+      },
+      {
+        "id": "m016",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I use a walk her so I can't do it",
+            "reason": "An elderly person using a walker is unable to clear snow, creating a high fall risk and accessibility issue."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "the snow from Thursday is steel there and I use a walk her so I can't do it",
+            "reason": "The elderly resident is unable to clear snow and has a mobility issue, creating a safety risk."
+          }
+        ]
+      },
+      {
+        "id": "m039",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting snow removal assistance for an elderly individual with mobility issues."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting snow removal assistance due to age and mobility issues."
+          }
+        ]
+      },
+      {
+        "id": "m079",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a food box for five people and asking for delivery due to lack of transportation."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a food box for five people to be delivered on Saturday."
+          }
+        ]
+      },
+      {
+        "id": "m002",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting illegal dumping of bulky items and asking for cleanup assistance."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting illegal dumping of bulky items and requesting a cleanup."
+          }
+        ]
+      },
+      {
+        "id": "m034",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The client is requesting housing assistance for a future date and states there is no rush."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for housing assistance starting in December and the sender explicitly states there is no rush."
+          }
+        ]
+      },
+      {
+        "id": "m057",
+        "passes": [
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "fight goin on RIGHT NOW",
+            "reason": "The message reports an active fight involving a weapon."
+          },
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "fight goin on RIGHT NOW, somebody got a bat",
+            "reason": "The message reports an active fight involving a weapon."
+          }
+        ]
+      },
+      {
+        "id": "m049",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for employment assistance and transportation to interviews, which are not immediate emergencies."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for employment assistance and transportation, neither of which indicate an immediate crisis."
+          }
+        ]
+      },
+      {
+        "id": "m070",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting shelter resources due to upcoming housing instability."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking shelter resources due to an upcoming housing loss, but there is no immediate danger described."
+          }
+        ]
+      },
+      {
+        "id": "m043",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting illegal dumping and asking about cleanup services."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting illegal dumping and asking about cleanup services."
+          }
+        ]
+      },
+      {
+        "id": "m038",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting non-emergency transportation for a scheduled medical appointment."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a non-emergency ride to a medical appointment."
+          }
+        ]
+      },
+      {
+        "id": "m028",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running indoors",
+            "reason": "The user mentions running a generator in the basement, which presents a carbon monoxide hazard."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running indoors",
+            "reason": "The user mentions running a generator in the basement, which poses a carbon monoxide risk."
+          }
+        ]
+      },
+      {
+        "id": "m025",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is frustrated about a delayed non-emergency medical appointment ride, but there is no immediate threat to life or safety."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for a scheduled medical transport in the future and does not meet high urgency criteria."
+          }
+        ]
+      },
+      {
+        "id": "m052",
+        "passes": [
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "she's twelve she left Humboldt Park School yesterday around three thirty and she never came home",
+            "reason": "The request involves a missing twelve-year-old child."
+          },
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "she's twelve she left Humboldt Park School yesterday around three thirty and she never came home",
+            "reason": "The report involves a missing twelve-year-old child."
+          }
+        ]
+      },
+      {
+        "id": "m091",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for trash/bulk item removal which falls under community clean ups."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is about trash removal/illegal dumping, which is a community cleanup task."
+          }
+        ]
+      },
+      {
+        "id": "m075",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running in the yard",
+            "reason": "The message mentions a generator being used, which is a specified high urgency condition for safety monitoring."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running in the yard",
+            "reason": "The message mentions a generator running, which is a safety concern, and requests food assistance due to power loss."
+          }
+        ]
+      },
+      {
+        "id": "m054",
+        "passes": [
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is inquiring about paid opportunities for teenagers."
+          },
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about paid opportunities for teenagers."
+          }
+        ]
+      },
+      {
+        "id": "m046",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting direct financial assistance for a utility bill, which is not a service listed."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for direct financial assistance to pay a phone bill, which is not a service offered."
+          }
+        ]
+      },
+      {
+        "id": "m060",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no sirve la calefacción... Tengo un bebé de tres meses",
+            "reason": "The request involves no heat for an infant, which is a high-urgency safety concern."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no sirve la calefacción del apartamento",
+            "reason": "The request involves a lack of heat for a baby, which constitutes an immediate safety risk."
+          }
+        ]
+      },
+      {
+        "id": "m017",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "It is not safe for me to talk at home.",
+            "reason": "The sender indicates they are in an unsafe living situation and cannot use standard communication methods."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "It is not safe for me to talk at home.",
+            "reason": "The sender indicates they are in an unsafe situation and cannot communicate via phone."
+          }
+        ]
+      },
+      {
+        "id": "m009",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "ramp n front walk still buried since thurs",
+            "reason": "The user is a wheelchair user unable to access their home due to snow."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "ramp n front walk still buried since thurs",
+            "reason": "A wheelchair user is unable to access their home due to snow, which constitutes a safety risk for a disabled individual."
+          }
+        ]
+      },
+      {
+        "id": "m071",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "An elderly woman is requesting assistance with snow removal due to arthritis."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "An elderly woman is requesting assistance with snow removal due to arthritis."
+          }
+        ]
+      },
+      {
+        "id": "m040",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no sirve la calefacción... Tengo una bebé de tres meses y está helada",
+            "reason": "The request involves a lack of heat for a baby in freezing weather, which is a life-safety issue."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no sirve la calefacción... Tengo una bebé de tres meses y está helada",
+            "reason": "The request involves a lack of heat for an infant in freezing weather."
+          }
+        ]
+      },
+      {
+        "id": "m065",
+        "passes": [
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The incident occurred in the past and is currently quiet, but the user is requesting community presence to prevent recurrence."
+          },
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The incident has already passed and the sender notes that it has been quiet since, requesting future outreach."
+          }
+        ]
+      },
+      {
+        "id": "m013",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for pet supplies, which is not a service offered by ComForce."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for animal supplies which is not a service offered by ComForce."
+          }
+        ]
+      },
+      {
+        "id": "m014",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is about illegal dumping and trash removal, which does not meet the high urgency criteria for immediate physical danger."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is about illegal dumping and garbage pickup, which does not meet the criteria for high urgency."
+          }
+        ]
+      },
+      {
+        "id": "m004",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting snow removal assistance due to age and medical history, but there is no immediate threat to life or safety."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is a senior requesting snow removal assistance due to medical restrictions."
+          }
+        ]
+      },
+      {
+        "id": "m056",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for scheduled non-emergency medical transportation for a person with mobility needs."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for scheduled medical transportation for a person with mobility needs."
+          }
+        ]
+      },
+      {
+        "id": "m081",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "hit the back of my head on the rail and since then I been sleeping most the day and yesterday I walked to the corner store and couldn't fine my way back home",
+            "reason": "The sender reports a head injury followed by excessive sleepiness and disorientation/memory loss."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "hit the back of my head on the rail and since then I been sleeping most the day and yesterday I walked to the corner store and couldn't fine my way back home",
+            "reason": "The requester reports a head injury followed by loss of consciousness/lethargy and disorientation, indicating a potential medical emergency."
+          }
+        ]
+      },
+      {
+        "id": "m092",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running indoors in the basement",
+            "reason": "The user reports running a generator in the basement, which poses an immediate carbon monoxide poisoning risk."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running indoors",
+            "reason": "The user mentioned running a generator in the basement, which poses a carbon monoxide risk."
+          }
+        ]
+      },
+      {
+        "id": "m048",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "my back bleeding rn. im scared to go back tonight",
+            "reason": "The message describes physical injury and immediate danger to a child."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "my back bleeding rn. im scared to go back tonight.",
+            "reason": "The message reports physical injury and an immediate danger to a child's safety."
+          }
+        ]
+      },
+      {
+        "id": "m027",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is to repair and restock a damaged community pantry box."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is to repair and restock a damaged community pantry box."
+          }
+        ]
+      },
+      {
+        "id": "m030",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is an elderly individual requesting snow removal assistance but reports no current injury or immediate medical crisis."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is an elderly person requesting snow removal but explicitly states she is fine and uninjured."
+          }
+        ]
+      },
+      {
+        "id": "m012",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I took all my pills a little while ago",
+            "reason": "The mention of taking all pills implies a potential overdose or self-harm event."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I took all my pills a little while ago",
+            "reason": "The mention of taking all pills implies a potential intentional overdose or medical emergency."
+          }
+        ]
+      },
+      {
+        "id": "m020",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no heat at all I got a new born she three week sold and it's forty eight degrees in here",
+            "reason": "The requester has no heat in freezing temperatures with a newborn infant in the home."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no heat at all I got a new born she three week sold and it's forty eight degrees in here",
+            "reason": "The requester has no heat in freezing temperatures with a newborn infant present."
+          }
+        ]
+      },
+      {
+        "id": "m042",
+        "passes": [
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for mediation regarding a neighborhood dispute, but there is no immediate threat of violence."
+          },
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for conflict mediation regarding parking and trash, which does not involve immediate physical danger or weapons."
+          }
+        ]
+      },
+      {
+        "id": "m095",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "lost the use of their home in a house fire",
+            "reason": "The family is displaced due to a recent house fire and requires immediate shelter and transportation."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "lost the use of their home in a house fire",
+            "reason": "The family is displaced due to a recent house fire and needs immediate shelter and transportation."
+          }
+        ]
+      },
+      {
+        "id": "m061",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is regarding illegal dumping/trash removal, which is a community cleanup issue, but no immediate physical danger is present."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The message is a complaint about illegal dumping and trash accumulation, which is a community cleanup matter but lacks an immediate threat to life or safety."
+          }
+        ]
+      },
+      {
+        "id": "m093",
+        "passes": [
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about youth programs/opportunities for a teenager."
+          },
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is a teenager inquiring about youth programs or stipend opportunities."
+          }
+        ]
+      },
+      {
+        "id": "m053",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is requesting help with trash removal and equipment for a neighborhood cleanup."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for assistance with illegal dumping and debris removal in an alley."
+          }
+        ]
+      },
+      {
+        "id": "m032",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting property damage to a food pantry location, but there is no immediate threat to life or safety."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting property damage to a food pantry location and asking for repairs."
+          }
+        ]
+      },
+      {
+        "id": "m015",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "nowhere to sleep",
+            "reason": "The individual faces immediate homelessness starting Monday night."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "as of Monday night he has nowhere to sleep",
+            "reason": "The individual will be without shelter starting Monday night, requiring immediate emergency placement."
+          }
+        ]
+      },
+      {
+        "id": "m096",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is an elderly person requesting snow removal for this weekend and explicitly states there is no rush."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for snow removal for an elderly person and specifically states there is no rush."
+          }
+        ]
+      },
+      {
+        "id": "m082",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is expressing frustration about illegal dumping and city response times, but there is no immediate physical danger or emergency."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is about illegal dumping and trash removal, which does not meet the criteria for high urgency."
+          }
+        ]
+      },
+      {
+        "id": "m088",
+        "passes": [
+          {
+            "service": "Burial Assistance",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is asking if burial assistance covers a headstone for a past passing."
+          },
+          {
+            "service": "Burial Assistance",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is asking if burial assistance covers a headstone for a deceased relative."
+          }
+        ]
+      },
+      {
+        "id": "m051",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting assistance with snow removal for an elderly person with mobility issues."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for yard work assistance for an elderly person."
+          }
+        ]
+      },
+      {
+        "id": "m089",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "8 months pregnant",
+            "reason": "The requester is pregnant and cannot shovel snow, which creates a safety risk in freezing weather."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "8 months pregnant, my doctor told me no shoveling",
+            "reason": "The request involves a pregnant individual unable to clear snow, which presents a physical safety and mobility risk."
+          }
+        ]
+      },
+      {
+        "id": "m077",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "garage on fire RIGHT NOW",
+            "reason": "The message reports an active fire occurring immediately."
+          },
+          {
+            "service": "Other",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "garage on fire RIGHT NOW",
+            "reason": "The message reports an active fire occurring immediately."
+          }
+        ]
+      },
+      {
+        "id": "m087",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a food delivery for a family of four on a specific future date."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a food delivery for a family of four on a specific date."
+          }
+        ]
+      },
+      {
+        "id": "m022",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking general assistance after job loss, which does not match a specific service or immediate crisis criteria."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking help with employment and general guidance following job loss, but no immediate crisis is indicated."
+          }
+        ]
+      },
+      {
+        "id": "m097",
+        "passes": [
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "I cut my arm again this afternoon, worse than the other times, and about an hour ago I took more of my sleeping pills than I am supposed to. I am very tired now.",
+            "reason": "The sender reports intentional self-harm and an overdose of sleeping pills."
+          },
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "took more of my sleeping pills than I am supposed to. I am very tired now.",
+            "reason": "The sender indicates a recent overdose and intent of self-harm."
+          }
+        ]
+      },
+      {
+        "id": "m047",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting a damaged community food cupboard that has been in the snow for several days."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting a damaged community food cupboard, which is not a direct service request for ComForce."
+          }
+        ]
+      },
+      {
+        "id": "m021",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "The request involves a pregnant woman unable to clear snow for access to medical care in freezing weather."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "The requester is 8 months pregnant and unable to clear snow to reach a medical appointment in freezing weather."
+          }
+        ]
+      },
+      {
+        "id": "m024",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "furnace quit Thursday night",
+            "reason": "The request involves a lack of heat in a living space which can become a safety issue."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "furnace quit",
+            "reason": "The requester is without heat in a residence, which is a critical safety concern."
+          }
+        ]
+      },
+      {
+        "id": "m001",
+        "passes": [
+          {
+            "service": "Burial Assistance",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting assistance for upcoming funeral costs following a recent passing."
+          },
+          {
+            "service": "Burial Assistance",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is seeking assistance for upcoming funeral costs following a natural passing."
+          }
+        ]
+      },
+      {
+        "id": "m010",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "went down on my hip I got myself back to the kitchen but I can't stand on that leg so I'm just sitting here on the floor",
+            "reason": "The sender is injured and currently unable to stand, stuck on the floor."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I can't stand on that leg so I'm just sitting here on the floor by the phone",
+            "reason": "The sender is an elderly individual who has fallen and is currently unable to stand or move."
+          }
+        ]
+      },
+      {
+        "id": "m044",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "caught the back of my head on the concrete since then the room's been kind of spinning and I threw up a couple times this morning and I keep nodding off",
+            "reason": "The sender is describing neurological symptoms following a head injury, which indicates a potential medical emergency."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "caught the back of my head on the concrete since then the room's been kind of spinning and I threw up a couple times this morning and I keep nodding off",
+            "reason": "The sender is reporting a head injury with neurological symptoms like dizziness, vomiting, and loss of consciousness."
+          }
+        ]
+      },
+      {
+        "id": "m011",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting utility bill assistance, which is not a listed service."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for utility bill assistance, which is not a service offered by ComForce."
+          }
+        ]
+      },
+      {
+        "id": "m078",
+        "passes": [
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "Some nights I think everybody would be better off without me",
+            "reason": "The sender expresses suicidal ideation regarding their worth, even though they state they have no immediate plan."
+          },
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "Some nights I think everybody would be better off without me.",
+            "reason": "The sender expresses passive suicidal ideation and is seeking emotional support to avoid being alone with these thoughts."
+          }
+        ]
+      },
+      {
+        "id": "m045",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "The plow left a wall at the end of my walk and this hip is killing me. I'm 74 and can't lift a shovel.",
+            "reason": "An elderly individual is trapped by snow and in physical pain, which may pose a safety risk in freezing weather."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "can't lift a shovel",
+            "reason": "An elderly person is unable to clear snow, which poses a safety and accessibility risk."
+          }
+        ]
+      },
+      {
+        "id": "m036",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting ruined food in a community pantry due to weather and property damage, but there is no immediate threat to life or safety."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request concerns a damaged food pantry box, which is a resource issue rather than a life-safety emergency."
+          }
+        ]
+      },
+      {
+        "id": "m023",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for a scheduled neighborhood cleanup of discarded items."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting debris removal from an alleyway for a future cleanup date."
+          }
+        ]
+      },
+      {
+        "id": "m068",
+        "passes": [
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "I took the whole bottle of my sleeping pills",
+            "reason": "The sender reports a recent suicide attempt via ingestion of pills."
+          },
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "I took the whole bottle of my sleeping pills",
+            "reason": "The sender indicates they have ingested a bottle of sleeping pills, implying a suicide attempt in progress."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "m063",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "disabled veteran in a wheelchair",
+            "reason": "The request involves a person with a disability unable to access their residence due to snow."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "RAMP STILL NOT SHOVELED",
+            "reason": "The requester is a disabled individual in a wheelchair unable to access their ramp due to snow."
+          }
+        ]
+      },
+      {
+        "id": "m073",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting a messy alleyway, which falls under community clean up concerns."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting a messy alleyway, which falls under community cleanups and neighborhood concerns."
+          }
+        ]
+      },
+      {
+        "id": "m035",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "An 80-year-old with a heart condition is unable to clear snow, which poses a safety risk regarding mobility and access to food."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no shoveling",
+            "reason": "An elderly person with a heart condition is unable to clear snow, creating a safety and mobility risk."
+          }
+        ]
+      },
+      {
+        "id": "m033",
+        "passes": [
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "he's 80 won and he has the dimension and he got out of the house this morning",
+            "reason": "An elderly person with dementia is missing in freezing weather."
+          },
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "he's 80 won and he has the dimension and he got out of the house this morning... he only has his slipper's and a cardigan... it's so cold",
+            "reason": "An elderly person with dementia is missing in freezing weather."
+          }
+        ]
+      },
+      {
+        "id": "m069",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting assistance with large item removal/trash cleanup due to snow coverage."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for assistance with illegal dumping and bulky item removal."
+          }
+        ]
+      },
+      {
+        "id": "m058",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for employment support and transportation assistance for a job seeker."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for employment support and transportation assistance for a motivated individual."
+          }
+        ]
+      },
+      {
+        "id": "m037",
+        "passes": [
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "fighting RIGHT NOW in the street, somebody got a bat out",
+            "reason": "The message reports an active fight involving a weapon in a public area with children present."
+          },
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "fighting RIGHT NOW in the street, somebody got a bat out!!",
+            "reason": "The message reports an active fight involving a weapon in a public space with children present."
+          }
+        ]
+      },
+      {
+        "id": "m080",
+        "passes": [
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The verbal altercation has already concluded and no physical violence or weapons were reported."
+          },
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The verbal dispute has already concluded without physical violence, but the sender is requesting mediation for a recurring conflict."
+          }
+        ]
+      },
+      {
+        "id": "m029",
+        "passes": [
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The parent is seeking after-school activities and earning opportunities for their teenager."
+          },
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The parent is looking for after-school activities and income opportunities for their teenager."
+          }
+        ]
+      },
+      {
+        "id": "m007",
+        "passes": [
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "missing over three hours",
+            "reason": "An elderly man with memory loss is missing and has been out in the cold without a coat."
+          },
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "He has now been missing over three hours.",
+            "reason": "The request involves a missing elderly person with memory loss who is outdoors without a coat."
+          }
+        ]
+      },
+      {
+        "id": "m018",
+        "passes": [
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is looking for a relative but explicitly states nothing is wrong and he is healthy."
+          },
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is looking for a family member who is healthy and not currently in danger."
+          }
+        ]
+      },
+      {
+        "id": "m067",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "The requester is 34 weeks pregnant and cannot clear snow from her walk/steps, which poses a safety risk in freezing weather."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is asking for snow removal and food delivery assistance due to pregnancy-related physical restrictions."
+          }
+        ]
+      },
+      {
+        "id": "m072",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "she is being hit with a belt at home. Two staff saw marks on her arms and back, and she cried and said she is scared to go home tonight.",
+            "reason": "The message describes an active child abuse situation and a need for immediate safety planning."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "9-year-old girl... being hit with a belt at home. Two staff saw marks on her arms and back, and she cried and said she is scared to go home tonight.",
+            "reason": "The message reports an instance of child abuse with physical marks and an immediate safety concern for a minor."
+          }
+        ]
+      },
+      {
+        "id": "m094",
+        "passes": [
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting mediation for a recurring neighbor dispute that has not escalated to physical violence."
+          },
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is requesting mediation for a recurring verbal dispute that has already de-escalated."
+          }
+        ]
+      },
+      {
+        "id": "m005",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is expressing frustration about unemployment but is not in immediate physical danger or crisis."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is inquiring about job placement resources following a layoff."
+          }
+        ]
+      },
+      {
+        "id": "m006",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is inquiring about the schedule for a neighborhood cleanup due to debris in an alley."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about the schedule for a neighborhood cleanup due to litter/debris."
+          }
+        ]
+      },
+      {
+        "id": "m090",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "belt marks across his back. He says it happens most nights at home and he is crying and afraid",
+            "reason": "The message reports physical abuse of a child and an immediate need for safety planning and transportation."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "belt marks across his back. He says it happens most nights at home and he is crying and afraid to go back there today.",
+            "reason": "The message describes an active case of child abuse and requires immediate safety planning and transportation for a vulnerable minor."
+          }
+        ]
+      },
+      {
+        "id": "m076",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting snow removal assistance for an elderly person with mobility issues, but it is not an immediate emergency."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for non-emergency snow removal for an elderly resident."
+          }
+        ]
+      },
+      {
+        "id": "m074",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting resource mapping for winter clothing, which is a research task for a community need."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting resource mapping for winter clothing to update a community help sheet."
+          }
+        ]
+      },
+      {
+        "id": "m041",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting damaged community pantry equipment and offering assistance for repairs."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting damage to a community pantry box and offering assistance to repair it."
+          }
+        ]
+      },
+      {
+        "id": "m064",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "Cant talk, not safe right now. Text only pls dont call. Still need to get out tonight",
+            "reason": "The sender indicates immediate danger and an urgent need for relocation/extraction involving children."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "Cant talk, not safe right now. Text only pls dont call. Still need to get out tonight",
+            "reason": "The sender indicates they are in immediate danger and cannot speak on the phone due to safety concerns."
+          }
+        ]
+      },
+      {
+        "id": "m062",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for free or cheap English classes, which is not a service offered by ComForce."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for English classes, which is not a service offered by ComForce."
+          }
+        ]
+      },
+      {
+        "id": "m003",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running the furnace fan and a lamp since. It's loud and my wife and I have both had a headache and felt sleepy all day",
+            "reason": "The user describes symptoms of carbon monoxide poisoning from a generator running indoors."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running the furnace fan and a lamp since. It's loud and my wife and I have both had a headache and felt sleepy all day",
+            "reason": "The message indicates potential carbon monoxide poisoning from a generator running indoors."
+          }
+        ]
+      },
+      {
+        "id": "m099",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking general assistance to get back on their feet after being away."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking general assistance to stabilize their life after a long absence."
+          }
+        ]
+      },
+      {
+        "id": "m050",
+        "passes": [
+          {
+            "service": "Legislation / Policy Division",
+            "division": "Legislation / Policy Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for know-your-rights information regarding police interactions and specifically mentions wanting to attend a class."
+          },
+          {
+            "service": "Legislation / Policy Division",
+            "division": "Legislation / Policy Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for know-your-rights information regarding police interactions and explicitly states there is no rush."
+          }
+        ]
+      },
+      {
+        "id": "m059",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "three inches from Thursday night",
+            "reason": "The sender is an elderly person requesting snow removal due to medical restrictions, and the weather condition implies a potential safety issue."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "three inches from Thursday night",
+            "reason": "The request involves snow removal for an elderly person with medical restrictions, and implies a potential weather-related hazard."
+          }
+        ]
+      },
+      {
+        "id": "m083",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "can't shuffle the snow",
+            "reason": "The request involves an elderly individual with a medical condition unable to clear snow, creating a potential safety hazard."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "can't shuffle the snow",
+            "reason": "An elderly person with a hip replacement cannot clear snow, creating a fall risk and preventing mail delivery."
+          }
+        ]
+      },
+      {
+        "id": "m019",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for trash removal from an alley, which is a community cleanup task but does not meet high urgency criteria."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting illegal dumping and requesting a cleanup, but there is no immediate threat to life or safety."
+          }
+        ]
+      },
+      {
+        "id": "m085",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "garage caught fire",
+            "reason": "The requester is facing immediate displacement due to a house fire and needs shelter after Sunday."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "garage caught fire",
+            "reason": "The message reports a house fire that has left a family displaced and without safe housing after Sunday."
+          }
+        ]
+      },
+      {
+        "id": "m086",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "Cant talk. He is home till 6 and he checks my phone. Text only, pls dont call.",
+            "reason": "The sender indicates immediate danger and a need for covert communication due to a controlling individual."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "Cant talk. He is home till 6 and he checks my phone. Text only, pls dont call.",
+            "reason": "The sender indicates immediate danger due to monitoring and requests a secure way to communicate regarding relocation."
+          }
+        ]
+      },
+      {
+        "id": "m066",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting non-emergency medical transportation for a scheduled appointment."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting non-emergency transportation for a scheduled medical appointment."
+          }
+        ]
+      },
+      {
+        "id": "m008",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is asking about food pantry availability and requirements due to financial hardship."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about food pantry availability and requirements due to financial hardship."
+          }
+        ]
+      },
+      {
+        "id": "m100",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "Pet Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is regarding a lost pet, which is not covered by the specified services."
+          },
+          {
+            "service": "Other",
+            "division": "Pet Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is regarding a lost pet, which is not a service provided by ComForce."
+          }
+        ]
+      },
+      {
+        "id": "m098",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a ride for a medication refill, but the child is currently stable and not in immediate respiratory distress."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is requesting a ride for a non-emergency pharmacy trip and states the child is currently breathing well."
+          }
+        ]
+      },
+      {
+        "id": "m026",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is an elderly person seeking snow removal assistance for a future date."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is an elderly person seeking non-emergency snow removal assistance."
+          }
+        ]
+      },
+      {
+        "id": "m031",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about trash removal services for bulky items left in an alley."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about illegal dumping cleanup assistance."
+          }
+        ]
+      },
+      {
+        "id": "m084",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "Legislation / Policy Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for tax assistance, which is not a listed service, though the division offers policy and resource referrals."
+          },
+          {
+            "service": "Other",
+            "division": "Legislation / Policy Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for tax assistance, which is not a service offered, though the division handles legal/public service resource links."
+          }
+        ]
+      },
+      {
+        "id": "m055",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting snow removal assistance due to age and mobility issues, but there is no immediate life-threatening danger."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "That ridge will be the death of me",
+            "reason": "The sender is an elderly individual with mobility issues facing significant snow accumulation that poses a safety risk."
+          }
+        ]
+      },
+      {
+        "id": "m016",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I use a walk her so I can't do it",
+            "reason": "The requester is an elderly individual with mobility issues unable to clear snow, creating a fall risk."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I use a walk her so I can't do it",
+            "reason": "An elderly person using a walker is unable to clear snow, creating a significant fall risk."
+          }
+        ]
+      },
+      {
+        "id": "m039",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting snow removal assistance for an elderly person with mobility issues."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "84, use a wa1ker",
+            "reason": "The request involves an elderly person with mobility issues needing snow removal to access their home."
+          }
+        ]
+      },
+      {
+        "id": "m079",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a food box delivery for five people on a specific future date."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a food box delivery for Saturday."
+          }
+        ]
+      },
+      {
+        "id": "m002",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting illegal dumping of bulky items and requesting a scheduled cleanup."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for a scheduled community cleanup of illegally dumped items."
+          }
+        ]
+      },
+      {
+        "id": "m034",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The client is requesting housing assistance for a future date and currently reports feeling safe."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The client is requesting housing assistance for a future date and currently states she is safe."
+          }
+        ]
+      },
+      {
+        "id": "m057",
+        "passes": [
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "fight goin on RIGHT NOW, somebody got a bat",
+            "reason": "The message reports an active fight involving a weapon."
+          },
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "fight goin on RIGHT NOW",
+            "reason": "The message reports an active fight involving a weapon."
+          }
+        ]
+      },
+      {
+        "id": "m049",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for job placement assistance and transportation support following a layoff."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for job placement assistance and transportation, which does not meet the high urgency criteria."
+          }
+        ]
+      },
+      {
+        "id": "m070",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a list of men's shelters due to upcoming displacement."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking shelter resources due to an upcoming housing loss, but there is no immediate life-safety threat."
+          }
+        ]
+      },
+      {
+        "id": "m043",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting illegal dumping and asking about cleanup services."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting dumped trash and asking about community cleanup services."
+          }
+        ]
+      },
+      {
+        "id": "m038",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a scheduled ride for a medical appointment."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for a scheduled transportation ride for a medical appointment."
+          }
+        ]
+      },
+      {
+        "id": "m028",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running indoors",
+            "reason": "The user reports running a generator in the basement and experiencing headaches, which indicates a potential carbon monoxide hazard."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running indoors",
+            "reason": "The sender mentions running a generator in the basement, which poses a carbon monoxide risk."
+          }
+        ]
+      },
+      {
+        "id": "m025",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting non-emergency transportation for a scheduled medical appointment."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a non-emergency medical ride for a future appointment."
+          }
+        ]
+      },
+      {
+        "id": "m052",
+        "passes": [
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "she's twelve she left Humboldt Park School yesterday around three thirty and she never came home",
+            "reason": "A twelve-year-old child is missing and has not returned home since yesterday."
+          },
+          {
+            "service": "Missing Persons Network",
+            "division": "Missing Persons Network",
+            "urgency": "high",
+            "words": "she's twelve she left Humboldt Park School yesterday around three thirty and she never came home",
+            "reason": "The request involves a missing twelve-year-old child."
+          }
+        ]
+      },
+      {
+        "id": "m091",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about illegal dumping cleanup and offering assistance."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is about disposing of bulky trash and tires in an alley."
+          }
+        ]
+      },
+      {
+        "id": "m075",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running",
+            "reason": "The message mentions a generator being used in a residential setting, which meets the criteria for high urgency due to potential safety risks."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running in the yard",
+            "reason": "The message mentions a generator running, which is a safety concern for carbon monoxide, and a loss of food due to power outage."
+          }
+        ]
+      },
+      {
+        "id": "m054",
+        "passes": [
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about paid opportunities for teenagers."
+          },
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about paid opportunities for teenagers."
+          }
+        ]
+      },
+      {
+        "id": "m046",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting direct financial assistance for a utility bill, which is not a service listed."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for direct financial assistance for a phone bill, which is not a service listed."
+          }
+        ]
+      },
+      {
+        "id": "m060",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no sirve la calefacción... Tengo un bebé de tres meses",
+            "reason": "The request involves a lack of heat for an infant in freezing weather."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no sirve la calefacción... Tengo un bebé de tres meses",
+            "reason": "The request involves a lack of heat for an infant in freezing weather."
+          }
+        ]
+      },
+      {
+        "id": "m017",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "It is not safe for me to talk at home.",
+            "reason": "The sender indicates immediate safety concerns regarding their ability to communicate at home, implying potential domestic danger."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "It is not safe for me to talk at home.",
+            "reason": "The sender indicates they are in an unsafe situation and cannot communicate via phone."
+          }
+        ]
+      },
+      {
+        "id": "m009",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "ramp n front walk still buried since thurs",
+            "reason": "A disabled person is trapped or lacks access due to snow, which is a safety concern."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "wheelchair user",
+            "reason": "The request involves a disabled individual unable to access their home due to snow."
+          }
+        ]
+      },
+      {
+        "id": "m071",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is an elderly woman asking for help with snow removal due to arthritis."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is requesting snow removal assistance due to age and arthritis."
+          }
+        ]
+      },
+      {
+        "id": "m040",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no sirve la calefacción... Tengo una bebé de tres meses y está helada",
+            "reason": "The request involves a lack of heat for an infant in freezing weather."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no sirve la calefacción en mi apartamento... Tengo una bebé de tres meses y está helada",
+            "reason": "The requester has no heat and an infant in freezing conditions."
+          }
+        ]
+      },
+      {
+        "id": "m065",
+        "passes": [
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The incident occurred in the past and the situation is currently quiet, though the community remains shaken."
+          },
+          {
+            "service": "Violence Prevention / Interruption",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The fight has already concluded and the police have already responded, so there is no immediate danger."
+          }
+        ]
+      },
+      {
+        "id": "m013",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for animal supplies, which is not listed in the service list."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is regarding supplies for a pet, which is not a listed service."
+          }
+        ]
+      },
+      {
+        "id": "m014",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting illegal dumping and requesting debris removal, which falls under community cleanups but lacks immediate safety threats."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is about illegal dumping/trash removal, which is a community clean up issue but does not meet the criteria for high urgency."
+          }
+        ]
+      },
+      {
+        "id": "m004",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is a senior asking for snow removal assistance due to medical restrictions."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for snow removal assistance for a senior citizen, but there is no immediate life-safety threat described."
+          }
+        ]
+      },
+      {
+        "id": "m056",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting non-emergency transportation for a scheduled medical appointment."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting scheduled transportation for a medical appointment."
+          }
+        ]
+      },
+      {
+        "id": "m081",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "hit the back of my head on the rail and since then I been sleeping most the day and yesterday I walked to the corner store and couldn't fine my way back home",
+            "reason": "The requester describes a head injury followed by loss of consciousness/lethargy and disorientation, implying a medical emergency."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "hit the back of my head on the rail and since then I been sleeping most the day and yesterday I walked to the corner store and couldn't fine my way back home",
+            "reason": "The sender reports a head injury followed by loss of consciousness/lethargy and disorientation/memory issues."
+          }
+        ]
+      },
+      {
+        "id": "m092",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running indoors in the basement",
+            "reason": "The user mentioned running a generator in the basement, which poses a carbon monoxide poisoning risk."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "generator running it in the basement at night",
+            "reason": "Running a generator indoors poses a significant carbon monoxide poisoning risk."
+          }
+        ]
+      },
+      {
+        "id": "m048",
+        "passes": [
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "back bleeding rn. im scared to go back tonight",
+            "reason": "The message reports child abuse with physical injury and immediate safety concerns."
+          },
+          {
+            "service": "T.E.X.T. Tactical Extraction Team for DV / Sex Trafficking",
+            "division": "Tactical Extraction Team",
+            "urgency": "high",
+            "words": "back bleeding rn. im scared to go back tonight",
+            "reason": "The message describes an injured child in immediate physical danger and fear of returning to an abusive home."
+          }
+        ]
+      },
+      {
+        "id": "m027",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "A community pantry box was damaged by a snowplow and needs repair and restocking."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is to repair and restock a food pantry box that was damaged by a plow."
+          }
+        ]
+      },
+      {
+        "id": "m030",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is an elderly person asking for snow removal assistance but reports she is currently uninjured and feeling fine."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "An elderly resident is requesting snow removal assistance but states she is currently uninjured and feeling fine."
+          }
+        ]
+      },
+      {
+        "id": "m012",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I took all my pills a little while ago",
+            "reason": "The message implies a potential intentional overdose or self-harm incident."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I took all my pills a little while ago",
+            "reason": "The mention of taking all pills implies a potential overdose or self-harm incident."
+          }
+        ]
+      },
+      {
+        "id": "m020",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no heat at all I got a new born she three week sold and it's forty eight degrees in here",
+            "reason": "The request involves a lack of heat for a newborn in freezing temperatures."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no heat at all I got a new born she three week sold and it's forty eight degrees in here",
+            "reason": "The request involves a newborn in a home with no heat and freezing temperatures."
+          }
+        ]
+      },
+      {
+        "id": "m042",
+        "passes": [
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for mediation regarding a neighborhood dispute but does not imply immediate danger or violence."
+          },
+          {
+            "service": "Incident De-escalation",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for mediation regarding a recurring neighbor dispute rather than an active emergency."
+          }
+        ]
+      },
+      {
+        "id": "m095",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "lost the use of their home in a house fire",
+            "reason": "The family is displaced due to a recent house fire and requires immediate shelter and transportation assistance."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "lost the use of their home in a house fire",
+            "reason": "The family is displaced due to a recent house fire and requires immediate housing and transportation."
+          }
+        ]
+      },
+      {
+        "id": "m061",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "Investigations / Research Team",
+            "urgency": "low",
+            "words": "",
+            "reason": "The message is a complaint about illegal dumping and neighborhood maintenance rather than an immediate safety emergency."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The message is a complaint about illegal dumping and trash buildup, which does not meet the high urgency safety criteria."
+          }
+        ]
+      },
+      {
+        "id": "m093",
+        "passes": [
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking about youth programs/opportunities."
+          },
+          {
+            "service": "Youth Stipend Fund Opportunities",
+            "division": "Youth Issues / Outreach",
+            "urgency": "low",
+            "words": "",
+            "reason": "A teenager is inquiring about available youth programs or opportunities."
+          }
+        ]
+      },
+      {
+        "id": "m053",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for assistance with illegal dumping and cleanup, which falls under Community Clean ups but does not meet high urgency criteria."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is requesting assistance with illegal dumping cleanup for a future date."
+          }
+        ]
+      },
+      {
+        "id": "m032",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting property damage to a food pantry location and requesting assistance with restocking/repair."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting property damage and food spoilage at a food pantry location."
+          }
+        ]
+      },
+      {
+        "id": "m015",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "nowhere to sleep",
+            "reason": "The individual will be without shelter starting Monday night, requiring urgent emergency placement."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "he has nowhere to sleep",
+            "reason": "The individual will be without shelter starting Monday night, representing an immediate housing crisis."
+          }
+        ]
+      },
+      {
+        "id": "m096",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for snow removal for an elderly person and explicitly states there is no rush."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The requester is an elderly person needing snow removal but explicitly states there is no rush."
+          }
+        ]
+      },
+      {
+        "id": "m082",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for illegal dumping removal, which does not meet the criteria for high urgency."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is expressing frustration regarding illegal dumping, but there is no immediate danger to life, safety, or health."
+          }
+        ]
+      },
+      {
+        "id": "m088",
+        "passes": [
+          {
+            "service": "Burial Assistance",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is asking for financial assistance for a headstone for a deceased relative."
+          },
+          {
+            "service": "Burial Assistance",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The sender is asking if burial assistance covers a headstone for a past passing."
+          }
+        ]
+      },
+      {
+        "id": "m051",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting assistance with snow removal for an elderly individual with mobility issues."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for assistance with snow removal for an elderly person."
+          }
+        ]
+      },
+      {
+        "id": "m089",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "8 months pregnant, my doctor told me no shoveling",
+            "reason": "The requester is pregnant and cannot shovel, which presents a potential safety risk in freezing weather."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "8 months pregnant, my doctor told me no shoveling",
+            "reason": "The requester is pregnant and unable to shovel snow, which presents a physical risk and a potential safety hazard regarding sidewalk accessibility."
+          }
+        ]
+      },
+      {
+        "id": "m077",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "garage on fire RIGHT NOW",
+            "reason": "The message reports an active fire occurring immediately."
+          },
+          {
+            "service": "Other",
+            "division": "Rapid / Incident Response Team",
+            "urgency": "high",
+            "words": "garage on fire RIGHT NOW",
+            "reason": "The message reports an active fire in progress."
+          }
+        ]
+      },
+      {
+        "id": "m087",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a food box delivery for a family of four."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting a food delivery for a family of four on a specific date."
+          }
+        ]
+      },
+      {
+        "id": "m022",
+        "passes": [
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking general assistance following job loss but does not indicate an immediate crisis or emergency."
+          },
+          {
+            "service": "Bridge To Employment",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is seeking general assistance after job loss, but there is no immediate danger or crisis described."
+          }
+        ]
+      },
+      {
+        "id": "m097",
+        "passes": [
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "cut my arm again",
+            "reason": "The user reports self-harm and an overdose of sleeping pills."
+          },
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "took more of my sleeping pills than I am supposed to. I am very tired now.",
+            "reason": "The sender indicates a recent overdose and is experiencing lethargy, implying a high risk of self-harm/suicide."
+          }
+        ]
+      },
+      {
+        "id": "m047",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting a damaged community food cupboard rather than an immediate crisis."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The message reports a damaged food cupboard, which does not meet the criteria for high urgency."
+          }
+        ]
+      },
+      {
+        "id": "m021",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "8 months pregnant and my doctor said no lifting or shoveling",
+            "reason": "The requester is pregnant and cannot clear snow, which poses a safety risk for her upcoming medical visit."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "no lifting or shoveling. My front steps and walk... haven't been touched since Thursday's snow and I have a prenatal visit Monday.",
+            "reason": "The request involves a pregnant individual unable to clear snow, creating a potential safety/access hazard before a medical appointment."
+          }
+        ]
+      },
+      {
+        "id": "m024",
+        "passes": [
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "furnace quit Thursday night",
+            "reason": "The request involves a lack of heat, which is a safety concern for occupants."
+          },
+          {
+            "service": "Homelessness / Emergency Shelter",
+            "division": "Disaster Relief Division",
+            "urgency": "high",
+            "words": "no heat for an old person or a baby in freezing weather",
+            "reason": "The request involves a lack of heat in a residential unit, which poses a safety risk."
+          }
+        ]
+      },
+      {
+        "id": "m001",
+        "passes": [
+          {
+            "service": "Burial Assistance",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting assistance for funeral costs for a deceased relative, but there is no immediate life-safety emergency."
+          },
+          {
+            "service": "Burial Assistance",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request is for financial assistance for funeral costs, which is not an immediate life-safety emergency."
+          }
+        ]
+      },
+      {
+        "id": "m010",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "I can't stand on that leg so I'm just sitting here on the floor",
+            "reason": "The sender has suffered a fall and is currently unable to stand or move from the floor."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "went down on my hip I got myself back to the kitchen but I can't stand on that leg so I'm just sitting here on the floor",
+            "reason": "The sender is injured and unable to stand, currently sitting on the floor."
+          }
+        ]
+      },
+      {
+        "id": "m044",
+        "passes": [
+          {
+            "service": "Transportation Service",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "caught the back of my head on the concrete since then the room's been kind of spinning and I threw up a couple times this morning and I keep nodding off",
+            "reason": "The user is reporting symptoms of a head injury, including dizziness, vomiting, and loss of consciousness/nodding off."
+          },
+          {
+            "service": "Transportation Service",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "caught the back of my head on the concrete since then the room's been kind of spinning and I threw up a couple times this morning and I keep nodding off",
+            "reason": "The sender is reporting neurological symptoms following a head injury, indicating a potential medical emergency."
+          }
+        ]
+      },
+      {
+        "id": "m011",
+        "passes": [
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for utility bill assistance, which is not a service offered by ComForce."
+          },
+          {
+            "service": "Other",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is asking for utility bill assistance, which is not a service offered by ComForce."
+          }
+        ]
+      },
+      {
+        "id": "m078",
+        "passes": [
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "Some nights I think everybody would be better off without me",
+            "reason": "The sender expresses suicidal ideation and is seeking someone to talk to regarding these thoughts."
+          },
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "Some nights I think everybody would be better off without me.",
+            "reason": "The sender is expressing suicidal ideation and requesting emotional support to avoid being alone with these thoughts."
+          }
+        ]
+      },
+      {
+        "id": "m045",
+        "passes": [
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "snow help for seniors",
+            "reason": "The sender is an elderly person trapped by snow and experiencing physical pain, implying a potential safety risk due to weather."
+          },
+          {
+            "service": "Free services for elderly, disabled, pregnant (lawn care, snow removal)",
+            "division": "No clear home",
+            "urgency": "high",
+            "words": "can't lift a shovel",
+            "reason": "The sender is an elderly person unable to clear snow, which presents a safety risk in freezing weather."
+          }
+        ]
+      },
+      {
+        "id": "m036",
+        "passes": [
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The request concerns a damaged food pantry box, but there is no immediate threat to life, safety, or health."
+          },
+          {
+            "service": "Meal Programs / Pantry",
+            "division": "Disaster Relief Division",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is reporting ruined food in a community pantry due to weather and damage, but there is no immediate threat to life or safety."
+          }
+        ]
+      },
+      {
+        "id": "m023",
+        "passes": [
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting debris removal during a future cleanup day."
+          },
+          {
+            "service": "Community Clean ups",
+            "division": "No clear home",
+            "urgency": "low",
+            "words": "",
+            "reason": "The user is requesting debris removal during a scheduled cleanup."
+          }
+        ]
+      },
+      {
+        "id": "m068",
+        "passes": [
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "took the whole bottle of my sleeping pills",
+            "reason": "The sender indicates they have ingested a large quantity of medication and are expressing a desire to sleep/not wake up."
+          },
+          {
+            "service": "Suicide Prevention",
+            "division": "Emergency Response / Mental Health",
+            "urgency": "high",
+            "words": "I took the whole bottle of my sleeping pills",
+            "reason": "The sender describes a recent suicide attempt via medication overdose."
+          }
+        ]
+      }
+    ]
+  ]
+}

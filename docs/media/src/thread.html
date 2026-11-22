@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>One request, hand to hand</title>
+    <link rel="stylesheet" href="base.css" />
+    <style>
+      .meta {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 16px;
+        row-gap: 4px;
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        border-radius: 2px;
+        background: var(--bg-panel);
+      }
+
+      .meta .code {
+        font-size: 16px;
+        color: var(--text);
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        column-gap: 24px;
+        margin-top: 32px;
+      }
+
+      .step {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        padding-bottom: 12px;
+      }
+
+      .step .code {
+        font-size: 14px;
+        color: var(--text-3);
+      }
+
+      .step h2 {
+        font-family: var(--cond);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .rail-label {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 4px 0 16px;
+      }
+
+      .rail-label .rule {
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .hold {
+        position: relative;
+        padding: 52px 0 20px;
+      }
+
+      .hold::before {
+        content: "";
+        position: absolute;
+        top: 34px;
+        left: -12px;
+        right: -12px;
+        height: 3px;
+        background: var(--accent);
+      }
+
+      .hold.first::before {
+        left: 0;
+      }
+
+      .hold.closed::before {
+        right: 0;
+        height: 0;
+        border-top: 2px dashed var(--text-3);
+      }
+
+      .node {
+        position: absolute;
+        top: 0;
+        left: -12px;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hold.first .node {
+        left: 0;
+        transform: none;
+        align-items: flex-start;
+      }
+
+      .node .code {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text);
+        white-space: nowrap;
+      }
+
+      .node i {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: var(--accent);
+        border: 2px solid var(--bg-app);
+        box-sizing: content-box;
+        margin-top: -2px;
+      }
+
+      .hold.closed .node i {
+        background: var(--bg-app);
+        border: 2px solid var(--text-3);
+        width: 10px;
+        height: 10px;
+      }
+
+      .who {
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+
+      .hold.closed .who {
+        color: var(--text-2);
+      }
+
+      .role {
+        margin-top: 2px;
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+      }
+
+      .clocks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 20px;
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-2);
+      }
+
+      .clocks span {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .clocks svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: var(--text-3);
+        stroke-width: 1.5;
+      }
+
+      .clocks .code {
+        color: var(--text);
+      }
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        background: var(--bg-panel);
+        border: 1px solid var(--line);
+        border-radius: 2px;
+      }
+
+      .card + .card::before {
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: -18px;
+        width: 8px;
+        height: 8px;
+        border-top: 1.5px solid var(--line-strong);
+        border-right: 1.5px solid var(--line-strong);
+        transform: rotate(45deg);
+      }
+
+      .card p {
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+      }
+
+      .card p strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .chips {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .route {
+        font-family: var(--mono);
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 0.04em;
+        color: var(--text);
+      }
+
+      .quote {
+        padding: 8px 10px;
+        background: var(--bg-inset);
+        border-left: 2px solid var(--text-3);
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text);
+      }
+
+      .answers {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 8px 10px;
+      }
+
+      .answers .code {
+        font-size: 14px;
+        color: var(--text);
+        white-space: nowrap;
+      }
+
+      .answers .num {
+        display: inline-grid;
+        place-items: center;
+        width: 26px;
+        height: 26px;
+        border: 1px solid var(--line-strong);
+        border-radius: 2px;
+        font-family: var(--mono);
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--text);
+      }
+
+      .answers .back {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-2);
+      }
+
+      .balance {
+        display: grid;
+        grid-template-columns: 14px 1fr;
+        column-gap: 6px;
+        padding: 10px 12px;
+        background: var(--bg-inset);
+        font-family: var(--mono);
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--text);
+      }
+
+      .balance b {
+        font-weight: 500;
+        color: var(--text-3);
+      }
+
+      .screen {
+        margin-top: auto;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .screen span:last-child {
+        min-height: 44px;
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text);
+      }
+
+      .loop {
+        grid-column: 1 / -1;
+        position: relative;
+        height: 112px;
+      }
+
+      .loop .path {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+      }
+
+      .loop-text {
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 16px;
+        background: var(--bg-app);
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+        white-space: nowrap;
+      }
+
+      .loop-text strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <header class="head">
+        <div>
+          <p class="eyebrow"><span>Vision</span><b>Figure 1</b><span>The request thread</span></p>
+          <h1 class="title">One request, hand to hand</h1>
+          <p class="lede">
+            Every open job has one holder at every moment. It moves to a new holder only on a receipt, and
+            every hold has a clock. When a clock ends, the job moves on by itself.
+          </p>
+        </div>
+        <div class="meta">
+          <span class="label">Example</span><span class="code">SNOW-16-001</span>
+          <span class="label">Need</span><span class="code">Snow shovelling</span>
+          <span class="label">ZIP</span><span class="code">53216</span>
+        </div>
+      </header>
+
+      <section class="flow">
+        <div class="step"><span class="code">01</span><h2>Ask</h2></div>
+        <div class="step"><span class="code">02</span><h2>Sort</h2></div>
+        <div class="step"><span class="code">03</span><h2>Offer</h2></div>
+        <div class="step"><span class="code">04</span><h2>Accept</h2></div>
+        <div class="step"><span class="code">05</span><h2>Visit</h2></div>
+        <div class="step"><span class="code">06</span><h2>Check-back</h2></div>
+        <div class="step"><span class="code">07</span><h2>Statement</h2></div>
+
+        <div class="rail-label"><span class="label">Held by</span><span class="rule"></span></div>
+
+        <div class="hold first" style="grid-column: 1 / span 3">
+          <div class="node"><span class="code">REQUEST IN</span><i></i></div>
+          <p class="who">Morgan Desk (test)</p>
+          <p class="role">The desk person on shift holds the card from the first word until a volunteer accepts.</p>
+          <div class="clocks">
+            <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" /><path d="M7 3.5 V7 L9.5 8.5" /></svg><span class="code">15 min</span> to confirm</span>
+            <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" /><path d="M7 3.5 V7 L9.5 8.5" /></svg><span class="code">5 min</span> for each wave of offers</span>
+          </div>
+        </div>
+
+        <div class="hold" style="grid-column: 4 / span 2">
+          <div class="node"><span class="code">ACCEPT</span><i></i></div>
+          <p class="who">Avery Snow (test)</p>
+          <p class="role">The volunteer holds the job from ACCEPT to DONE.</p>
+          <div class="clocks">
+            <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" /><path d="M7 3.5 V7 L9.5 8.5" /></svg><span class="code">2 h</span> to start the trip</span>
+            <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" /><path d="M7 3.5 V7 L9.5 8.5" /></svg><span class="code">60 min</span> visit, then the desk checks</span>
+          </div>
+        </div>
+
+        <div class="hold" style="grid-column: 6 / span 1">
+          <div class="node"><span class="code">DONE</span><i></i></div>
+          <p class="who">Morgan Desk (test)</p>
+          <p class="role">The desk holds it while the resident is asked.</p>
+          <div class="clocks">
+            <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" /><path d="M7 3.5 V7 L9.5 8.5" /></svg><span class="code">3 tries</span> then unreached</span>
+          </div>
+        </div>
+
+        <div class="hold closed" style="grid-column: 7 / span 1">
+          <div class="node"><span class="code">1 YES</span><i></i></div>
+          <p class="who">No holder</p>
+          <p class="role">Closed as helped. It counts once in the statement.</p>
+        </div>
+
+        <article class="card">
+          <span class="label">Resident</span>
+          <div class="chips">
+            <span class="chip grey"><svg viewBox="0 0 8 8"><circle cx="4" cy="4" r="3.25" class="line" /></svg>NEW</span>
+          </div>
+          <p>The resident asks in their own words. The tracking link comes back at once.</p>
+          <p class="screen"><span class="label">Where</span><span>Ask form, email or voicemail</span></p>
+        </article>
+
+        <article class="card">
+          <span class="label">AI and desk</span>
+          <div class="chips">
+            <span class="chip grey"><svg viewBox="0 0 8 8"><circle cx="4" cy="4" r="3.25" class="line" /><path d="M4 0.75 A3.25 3.25 0 0 0 4 7.25 Z" /></svg>SORTED</span>
+            <span class="chip"><svg viewBox="0 0 8 8"><circle cx="4" cy="4" r="3.5" /></svg>CONFIRMED</span>
+          </div>
+          <p>Gemma 4 suggests the need and the urgency, with the words it used. <strong>The desk confirms</strong> with one tap.</p>
+          <span class="route">SNOW-16-001</span>
+          <p class="screen"><span class="label">Where</span><span>Desk website</span></p>
+        </article>
+
+        <article class="card">
+          <span class="label">Hub</span>
+          <div class="chips">
+            <span class="chip"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6" class="line" /></svg>OFFERED</span>
+          </div>
+          <p>The offer goes to the nearest volunteers with the skill. It shows the need and the distance, never a name or an address.</p>
+          <p class="screen"><span class="label">Where</span><span>Volunteer app</span></p>
+        </article>
+
+        <article class="card">
+          <span class="label">Volunteers</span>
+          <div class="chips">
+            <span class="chip"><svg viewBox="0 0 8 8"><rect x="0.5" y="0.5" width="7" height="7" /></svg>ACCEPTED</span>
+          </div>
+          <p><strong>The first accept wins.</strong> The other phones show "Taken. Thank you." The address shows only now.</p>
+          <p class="screen"><span class="label">Where</span><span>Volunteer app</span></p>
+        </article>
+
+        <article class="card">
+          <span class="label">Volunteer</span>
+          <div class="chips">
+            <span class="chip"><svg viewBox="0 0 8 8"><polyline points="2,0.75 6,4 2,7.25" class="line" /></svg>ON MY WAY</span>
+            <span class="chip"><svg viewBox="0 0 8 8"><polygon points="0.5,0.5 5,4 0.5,7.5" /><rect x="6" y="0.5" width="1.5" height="7" /></svg>THERE</span>
+            <span class="chip ok"><svg viewBox="0 0 8 8"><polyline points="0.75,4.25 3,6.5 7.25,1.5" class="line" /></svg>DONE, CHECKING</span>
+          </div>
+          <p>Each tap is one dated ledger line. The hours come from the taps.</p>
+          <p class="screen"><span class="label">Where</span><span>Volunteer app and tracking page</span></p>
+        </article>
+
+        <article class="card">
+          <span class="label">Resident</span>
+          <p class="quote">"Did they help? 1 yes, 2 partly, 3 no."</p>
+          <div class="answers">
+            <span class="num">1</span>
+            <span><span class="chip ok"><svg viewBox="0 0 8 8"><circle cx="4" cy="4" r="3.75" /><polyline points="2,4.25 3.5,5.75 6,2.5" class="cut" /></svg>HELPED</span></span>
+            <span class="num">2</span>
+            <span class="back">Back to the desk</span>
+            <span class="num">3</span>
+            <span><span class="chip crit"><svg viewBox="0 0 8 8"><polygon points="4,0.5 7.5,7.5 0.5,7.5" /></svg>MISMATCH</span></span>
+          </div>
+          <p class="screen"><span class="label">Where</span><span>Tracking page</span></p>
+        </article>
+
+        <article class="card">
+          <span class="label">Organiser</span>
+          <div class="balance">
+            <b></b><span>open at start</span>
+            <b>+</b><span>new</span>
+            <b>=</b><span>helped</span>
+            <b>+</b><span>unmet</span>
+            <b>+</b><span>unreached</span>
+            <b>+</b><span>withdrawn</span>
+            <b>+</b><span>still open</span>
+          </div>
+          <div class="chips">
+            <span class="chip ok"><svg viewBox="0 0 8 8"><circle cx="4" cy="4" r="3.75" /><polyline points="2,4.25 3.5,5.75 6,2.5" class="cut" /></svg>BALANCES</span>
+          </div>
+          <p>"Check the seal" reads every SHA-256 fingerprint again.</p>
+          <p class="screen"><span class="label">Where</span><span>Organiser view and Google Sheet</span></p>
+        </article>
+
+        <div class="loop">
+          <svg class="path" viewBox="0 0 1504 112">
+            <path d="M1188.6 0 V40 H533.7 V12" fill="none" stroke="#FF6B5E" stroke-width="2" />
+            <path d="M526.7 14 L533.7 2 L540.7 14 Z" fill="#FF6B5E" />
+          </svg>
+          <p class="loop-text">
+            <span class="chip crit"><svg viewBox="0 0 8 8"><polygon points="4,0.5 7.5,7.5 0.5,7.5" /></svg>3 NO</span>
+            <span><strong>The card turns red on the desk.</strong> The job is offered to someone new, and the first volunteer is left out.</span>
+          </p>
+        </div>
+
+      </section>
+
+      <footer class="foot">
+        <p>
+          <span class="label">Source</span>&nbsp;&nbsp;<span class="code">packages/core/src/holder.ts</span>,
+          <span class="code">clocks.ts</span>, <span class="code">statement.ts</span>,
+          <span class="code">docs/demo-script.md</span>
+        </p>
+        <p>Synthetic data. The people are test members from the demo seed.</p>
+      </footer>
+    </main>
+  </body>
+</html>

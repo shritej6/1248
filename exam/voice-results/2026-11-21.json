@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-21",
+  "voiceModel": "@cf/openai/whisper-large-v3-turbo",
+  "speech": "macOS say, voice Samantha, 16 kHz WAV",
+  "auraEstimate": 9434,
+  "sorterModel": "@cf/google/gemma-4-26b-a4b-it",
+  "messages": [
+    {
+      "id": "m016",
+      "trueUrgency": "low",
+      "transcript": "Hi this is Miss Bernice calling I'm 84 years old and I live on High Mount Boulevard near Lloyd Street in Washington Heights I need somebody shuffle my front steps and the sidewalk the snow from Thursday is still there and I use a walk her so I can't do it myself the mailman left a note he won't come up the steps till it's clear could you send somebody this week and call me at 414-555-0185 thank you baby",
+      "words": 89,
+      "errors": 17,
+      "rate": 0.19101123595505617,
+      "wordListInOriginal": false,
+      "wordListInTranscript": false,
+      "sorter": "high",
+      "found": true
+    },
+    {
+      "id": "m020",
+      "trueUrgency": "high",
+      "transcript": "hi my name is tasha i'm calling cause our furnish went out thursday night and we got no heat at all i got a newborn she three weeks old and it's 48 degrees in here we been staying in one room with blankets i can't reach nobody about the furnish is there somewhere warm we can go or can somebody bring a heater we upstairs on 47 and low cussed my number is 414-555-0132 please call me back",
+      "words": 85,
+      "errors": 12,
+      "rate": 0.1411764705882353,
+      "wordListInOriginal": true,
+      "wordListInTranscript": true,
+      "sorter": "high",
+      "found": true
+    },
+    {
+      "id": "m026",
+      "trueUrgency": "low",
+      "transcript": "Hi yes this is Miss Lorraine calling about the snow I'm 82 and I walk with a came so I can't shuffle it myself I need my front walk and the steps done I'm over here in Harambon North Buff I'm in the 2900 block between Locust and Chambers the city gave me a ticket last year for not clearing it so if your young people are coming out this weekend please put me on the list my number is 414-555-0148 thank you and god bless",
+      "words": 92,
+      "errors": 9,
+      "rate": 0.09782608695652174,
+      "wordListInOriginal": false,
+      "wordListInTranscript": false,
+      "sorter": "low",
+      "found": false
+    },
+    {
+      "id": "m033",
+      "trueUrgency": "high",
+      "transcript": "Hello please somebody call me back it's my husband Walter he's 81 and he has the dimension and he got out of the house this morning before I woke up maybe 5 o'clock the door was open and his coat is still here he only has his slippers and a cardigan I been up and down the block and I can't find him we are on North Riches near our avenue he gets mixed up and don't know his way home it's so cold please my number is 414-555-0163 this is Bernice",
+      "words": 95,
+      "errors": 3,
+      "rate": 0.031578947368421054,
+      "wordListInOriginal": true,
+      "wordListInTranscript": true,
+      "sorter": "high",
+      "found": true
+    },
+    {
+      "id": "m059",
+      "trueUrgency": "low",
+      "transcript": "Yes hello this is for the snow shuffling for seniors I am 83 and my heart doctor says no shuffling so I'm calling to see if somebody can come do the sidewalk and the back steps out to the alley I'm in the 24 Hunter block of south 13th street between Lincoln and author it's about 3 inches from Thursday night I'll be home all day sad her day just knock loud I don't hear so good thank you kindly",
+      "words": 83,
+      "errors": 10,
+      "rate": 0.12048192771084337,
+      "wordListInOriginal": false,
+      "wordListInTranscript": false,
+      "sorter": "low",
+      "found": false
+    },
+    {
+      "id": "m069",
+      "trueUrgency": "low",
+      "transcript": "Hi this is a message about the alley in Walker's Pint the one between 5th and 6th street just south of Washington Somebody dumped for mattresses and a big couch and a bunch of tired back there before the snow And now it's all snowed over and the garbage truck could not get through on Friday We got a few neighbors who will help all it out But we need a truck or a dumpster or something. Can somebody call us back? Thank you. Bye",
+      "words": 88,
+      "errors": 10,
+      "rate": 0.11363636363636363,
+      "wordListInOriginal": false,
+      "wordListInTranscript": false,
+      "sorter": "low",
+      "found": false
+    },
+    {
+      "id": "m081",
+      "trueUrgency": "high",
+      "transcript": "Hi this is Dolores I stay in Heaven Woods off 51st and Douglas I'm calling about a ride I slipped on my back steps Thursday night taking the trash out and hit the back of my head on the rail and since then I've been sleeping most the day and yesterday I walked to the corner store and couldn't find my way back home a young man had to walk me my words keep coming out wrong I don't want to make a fuss I just need a ride to my docker on Monday thank you bye.",
+      "words": 100,
+      "errors": 9,
+      "rate": 0.09,
+      "wordListInOriginal": false,
+      "wordListInTranscript": false,
+      "sorter": "high",
+      "found": true
+    },
+    {
+      "id": "m083",
+      "trueUrgency": "low",
+      "transcript": "Yes hello this is Mr. Otis I'm 83 years old and I live in Thurston Woods on 34th Street just off of Carmen Avenue I had my hip replays in September and I can't shuffle the snow from Thursday night it's still on my front walk and the steps and the mail lady says she can't come up till it's clear if somebody could come by today or tomorrow I would sure appreciate it the number here is 414-555-0147. Thank you kindly.",
+      "words": 88,
+      "errors": 9,
+      "rate": 0.10227272727272728,
+      "wordListInOriginal": false,
+      "wordListInTranscript": false,
+      "sorter": "high",
+      "found": true
+    }
+  ],
+  "overall": {
+    "words": 720,
+    "errors": 79,
+    "rate": 0.10972222222222222
+  },
+  "emergencies": {
+    "ids": [
+      "m020",
+      "m033",
+      "m081"
+    ],
+    "foundInOriginal": [
+      "m020",
+      "m033"
+    ],
+    "foundInTranscript": [
+      "m020",
+      "m033",
+      "m081"
+    ],
+    "allFound": true
+  },
+  "demo": {
+    "transcript": "Hi, this is Ruthie calling. The snow from Thursday is still on my front walk and I can't shovel it with my bad knee. Could somebody come by this weekend? Oh, and there's a gas smell in the kitchen since last night, but I'm sure it's nothing. Thank you.",
+    "wordListHit": true
+  },
+  "neurons": {
+    "speech": 0,
+    "transcription": 160.41918952954322,
+    "sorter": 158.79089021682742,
+    "total": 319.21007974637064
+  }
+}

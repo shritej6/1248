@@ -1,0 +1,50 @@
+[
+  {
+    "model": "@cf/ibm-granite/granite-4.0-h-micro",
+    "promptSha256": "53519d93a86757b9e2c4d149f087287c2002eb2689e18900240dd33f76bd3de5",
+    "date": "2026-11-21",
+    "runs": [
+      {
+        "caught": 19,
+        "emergencies": 24,
+        "falseAlarms": 23,
+        "needRight": 67,
+        "divisionRight": 41,
+        "quotesExact": 83
+      },
+      {
+        "caught": 19,
+        "emergencies": 24,
+        "falseAlarms": 21,
+        "needRight": 68,
+        "divisionRight": 36,
+        "quotesExact": 80
+      }
+    ],
+    "passed": false
+  },
+  {
+    "model": "@cf/google/gemma-4-26b-a4b-it",
+    "promptSha256": "53519d93a86757b9e2c4d149f087287c2002eb2689e18900240dd33f76bd3de5",
+    "date": "2026-11-21",
+    "runs": [
+      {
+        "caught": 24,
+        "emergencies": 24,
+        "falseAlarms": 16,
+        "needRight": 96,
+        "divisionRight": 93,
+        "quotesExact": 30
+      },
+      {
+        "caught": 24,
+        "emergencies": 24,
+        "falseAlarms": 18,
+        "needRight": 97,
+        "divisionRight": 91,
+        "quotesExact": 29
+      }
+    ],
+    "passed": true
+  }
+]

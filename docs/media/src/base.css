@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  src: url("../../../apps/web/public/fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-weight: 500;
+  src: url("../../../apps/web/public/fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-weight: 600;
+  src: url("../../../apps/web/public/fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Condensed";
+  font-weight: 500;
+  src: url("../../../apps/web/public/fonts/ibm-plex-sans-condensed-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Condensed";
+  font-weight: 600;
+  src: url("../../../apps/web/public/fonts/ibm-plex-sans-condensed-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  src: url("../../../apps/web/public/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 500;
+  src: url("../../../apps/web/public/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
+  src: url("../../../apps/web/public/fonts/ibm-plex-mono-latin-600-normal.woff2") format("woff2");
+}
+
+:root {
+  --bg-app: #111315;
+  --bg-panel: #1a1d20;
+  --bg-raised: #23272b;
+  --bg-inset: #0b0c0e;
+  --line: #2e3338;
+  --line-strong: #6a727b;
+  --text: #e8eaec;
+  --text-2: #a4abb3;
+  --text-3: #868e97;
+  --accent: #ffb000;
+  --on-accent: #111315;
+  --accent-tint: #2a2416;
+  --crit: #ff6b5e;
+  --crit-tint: #2c1715;
+  --ok: #4cc982;
+  --paper-bg: #f6f4ef;
+  --paper-surface: #ffffff;
+  --paper-inset: #ece9e1;
+  --paper-line: #d6d2c8;
+  --paper-line-strong: #7d7a73;
+  --ink: #1b1d1f;
+  --ink-2: #4d5257;
+  --ink-3: #6b7075;
+  --sans: "IBM Plex Sans", sans-serif;
+  --cond: "IBM Plex Sans Condensed", sans-serif;
+  --mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: var(--bg-app);
+}
+
+body {
+  width: 1600px;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+.frame {
+  width: 1600px;
+  padding: 48px 48px 40px;
+  background: var(--bg-app);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-family: var(--cond);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.eyebrow b {
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-2);
+}
+
+.title {
+  margin-top: 8px;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  margin-top: 8px;
+  max-width: 980px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-2);
+}
+
+.label {
+  font-family: var(--cond);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.code {
+  font-family: var(--mono);
+  font-weight: 500;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 26px;
+  padding: 0 8px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  font-family: var(--cond);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.chip svg {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  fill: currentColor;
+}
+
+.chip .line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+}
+
+.chip .dash {
+  stroke-dasharray: 1.5 1;
+}
+
+.chip .cut {
+  fill: none;
+  stroke: var(--bg-panel);
+  stroke-width: 1.25;
+}
+
+.chip.grey {
+  color: var(--text-2);
+}
+
+.chip.dim {
+  color: var(--text-3);
+}
+
+.chip.ok {
+  color: var(--ok);
+}
+
+.chip.crit {
+  color: var(--crit);
+  background: var(--crit-tint);
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-3);
+}
+
+.foot .code {
+  color: var(--text-2);
+  font-weight: 400;
+}

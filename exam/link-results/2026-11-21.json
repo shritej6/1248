@@ -1,0 +1,511 @@
+{
+  "check": "link",
+  "model": "@cf/baai/bge-m3",
+  "date": "2026-11-21",
+  "messages": 100,
+  "pairs": 4950,
+  "rule": "A true pair has the same event_group. Every other pair is a false join: a near_miss_partner pair, two event groups, or a message with no event group, which is its own event.",
+  "threshold": 0.839,
+  "truePairs": 36,
+  "found": 0,
+  "recall": 0,
+  "falseJoins": 0,
+  "labelledRule": {
+    "rule": "As the strict rule, but a pair with a message with no event group is not counted.",
+    "threshold": 0.806,
+    "truePairs": 36,
+    "found": 1,
+    "recall": 0.028
+  },
+  "operatingPoint": {
+    "rule": "The owner set LINK_THRESHOLD to 0.75 on 2026-11-21. A person answers each proposed link, and a wrong one costs one tap on Not the same.",
+    "threshold": 0.75,
+    "truePairs": 36,
+    "found": 12,
+    "recall": 0.333,
+    "wrongPairs": 15,
+    "lookAlike": 1,
+    "twoGroups": 4,
+    "unlabelled": 10
+  },
+  "sweep": [
+    {
+      "threshold": 0.7,
+      "found": 23,
+      "wrongPairs": 76,
+      "lookAlike": 2,
+      "twoGroups": 22,
+      "unlabelled": 52
+    },
+    {
+      "threshold": 0.71,
+      "found": 19,
+      "wrongPairs": 62,
+      "lookAlike": 2,
+      "twoGroups": 19,
+      "unlabelled": 41
+    },
+    {
+      "threshold": 0.72,
+      "found": 18,
+      "wrongPairs": 43,
+      "lookAlike": 2,
+      "twoGroups": 13,
+      "unlabelled": 28
+    },
+    {
+      "threshold": 0.73,
+      "found": 15,
+      "wrongPairs": 35,
+      "lookAlike": 2,
+      "twoGroups": 11,
+      "unlabelled": 22
+    },
+    {
+      "threshold": 0.74,
+      "found": 14,
+      "wrongPairs": 21,
+      "lookAlike": 1,
+      "twoGroups": 6,
+      "unlabelled": 14
+    },
+    {
+      "threshold": 0.75,
+      "found": 12,
+      "wrongPairs": 15,
+      "lookAlike": 1,
+      "twoGroups": 4,
+      "unlabelled": 10
+    },
+    {
+      "threshold": 0.76,
+      "found": 9,
+      "wrongPairs": 13,
+      "lookAlike": 1,
+      "twoGroups": 4,
+      "unlabelled": 8
+    },
+    {
+      "threshold": 0.77,
+      "found": 7,
+      "wrongPairs": 12,
+      "lookAlike": 1,
+      "twoGroups": 3,
+      "unlabelled": 8
+    },
+    {
+      "threshold": 0.78,
+      "found": 6,
+      "wrongPairs": 9,
+      "lookAlike": 0,
+      "twoGroups": 3,
+      "unlabelled": 6
+    },
+    {
+      "threshold": 0.79,
+      "found": 5,
+      "wrongPairs": 6,
+      "lookAlike": 0,
+      "twoGroups": 2,
+      "unlabelled": 4
+    },
+    {
+      "threshold": 0.8,
+      "found": 3,
+      "wrongPairs": 4,
+      "lookAlike": 0,
+      "twoGroups": 1,
+      "unlabelled": 3
+    },
+    {
+      "threshold": 0.81,
+      "found": 1,
+      "wrongPairs": 2,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 2
+    },
+    {
+      "threshold": 0.82,
+      "found": 1,
+      "wrongPairs": 1,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 1
+    },
+    {
+      "threshold": 0.83,
+      "found": 1,
+      "wrongPairs": 1,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 1
+    },
+    {
+      "threshold": 0.84,
+      "found": 0,
+      "wrongPairs": 0,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 0
+    },
+    {
+      "threshold": 0.85,
+      "found": 0,
+      "wrongPairs": 0,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 0
+    },
+    {
+      "threshold": 0.86,
+      "found": 0,
+      "wrongPairs": 0,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 0
+    },
+    {
+      "threshold": 0.87,
+      "found": 0,
+      "wrongPairs": 0,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 0
+    },
+    {
+      "threshold": 0.88,
+      "found": 0,
+      "wrongPairs": 0,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 0
+    },
+    {
+      "threshold": 0.89,
+      "found": 0,
+      "wrongPairs": 0,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 0
+    },
+    {
+      "threshold": 0.9,
+      "found": 0,
+      "wrongPairs": 0,
+      "lookAlike": 0,
+      "twoGroups": 0,
+      "unlabelled": 0
+    }
+  ],
+  "lookAlikes": [
+    {
+      "a": "m007",
+      "b": "m018",
+      "score": 0.654
+    },
+    {
+      "a": "m031",
+      "b": "m043",
+      "score": 0.731
+    },
+    {
+      "a": "m056",
+      "b": "m066",
+      "score": 0.777
+    },
+    {
+      "a": "m080",
+      "b": "m094",
+      "score": 0.643
+    }
+  ],
+  "highestTwoGroups": [
+    {
+      "a": "m014",
+      "b": "m053",
+      "score": 0.805
+    },
+    {
+      "a": "m002",
+      "b": "m053",
+      "score": 0.797
+    },
+    {
+      "a": "m014",
+      "b": "m061",
+      "score": 0.785
+    },
+    {
+      "a": "m019",
+      "b": "m053",
+      "score": 0.763
+    },
+    {
+      "a": "m023",
+      "b": "m053",
+      "score": 0.747
+    }
+  ],
+  "highestUnlabelled": [
+    {
+      "a": "m021",
+      "b": "m067",
+      "score": 0.838
+    },
+    {
+      "a": "m064",
+      "b": "m086",
+      "score": 0.813
+    },
+    {
+      "a": "m051",
+      "b": "m076",
+      "score": 0.803
+    },
+    {
+      "a": "m012",
+      "b": "m068",
+      "score": 0.797
+    },
+    {
+      "a": "m016",
+      "b": "m083",
+      "score": 0.781
+    }
+  ],
+  "sameEvent": [
+    {
+      "a": "m002",
+      "b": "m023",
+      "score": 0.835
+    },
+    {
+      "a": "m053",
+      "b": "m069",
+      "score": 0.804
+    },
+    {
+      "a": "m014",
+      "b": "m019",
+      "score": 0.801
+    },
+    {
+      "a": "m014",
+      "b": "m023",
+      "score": 0.796
+    },
+    {
+      "a": "m027",
+      "b": "m041",
+      "score": 0.795
+    },
+    {
+      "a": "m053",
+      "b": "m061",
+      "score": 0.782
+    },
+    {
+      "a": "m002",
+      "b": "m014",
+      "score": 0.772
+    },
+    {
+      "a": "m010",
+      "b": "m023",
+      "score": 0.769
+    },
+    {
+      "a": "m077",
+      "b": "m085",
+      "score": 0.765
+    },
+    {
+      "a": "m002",
+      "b": "m010",
+      "score": 0.759
+    },
+    {
+      "a": "m006",
+      "b": "m014",
+      "score": 0.754
+    },
+    {
+      "a": "m010",
+      "b": "m014",
+      "score": 0.75
+    },
+    {
+      "a": "m002",
+      "b": "m019",
+      "score": 0.741
+    },
+    {
+      "a": "m019",
+      "b": "m023",
+      "score": 0.74
+    },
+    {
+      "a": "m006",
+      "b": "m019",
+      "score": 0.73
+    },
+    {
+      "a": "m010",
+      "b": "m019",
+      "score": 0.728
+    },
+    {
+      "a": "m061",
+      "b": "m069",
+      "score": 0.727
+    },
+    {
+      "a": "m036",
+      "b": "m041",
+      "score": 0.726
+    },
+    {
+      "a": "m002",
+      "b": "m006",
+      "score": 0.714
+    },
+    {
+      "a": "m027",
+      "b": "m036",
+      "score": 0.706
+    },
+    {
+      "a": "m041",
+      "b": "m047",
+      "score": 0.701
+    },
+    {
+      "a": "m082",
+      "b": "m091",
+      "score": 0.701
+    },
+    {
+      "a": "m057",
+      "b": "m065",
+      "score": 0.7
+    },
+    {
+      "a": "m036",
+      "b": "m047",
+      "score": 0.699
+    },
+    {
+      "a": "m027",
+      "b": "m032",
+      "score": 0.681
+    },
+    {
+      "a": "m085",
+      "b": "m095",
+      "score": 0.677
+    },
+    {
+      "a": "m006",
+      "b": "m023",
+      "score": 0.676
+    },
+    {
+      "a": "m032",
+      "b": "m036",
+      "score": 0.674
+    },
+    {
+      "a": "m027",
+      "b": "m047",
+      "score": 0.673
+    },
+    {
+      "a": "m006",
+      "b": "m010",
+      "score": 0.667
+    },
+    {
+      "a": "m032",
+      "b": "m041",
+      "score": 0.624
+    },
+    {
+      "a": "m032",
+      "b": "m047",
+      "score": 0.619
+    },
+    {
+      "a": "m053",
+      "b": "m073",
+      "score": 0.607
+    },
+    {
+      "a": "m061",
+      "b": "m073",
+      "score": 0.605
+    },
+    {
+      "a": "m069",
+      "b": "m073",
+      "score": 0.602
+    },
+    {
+      "a": "m077",
+      "b": "m095",
+      "score": 0.553
+    }
+  ],
+  "sameEventWithHigh": [
+    {
+      "a": "m002",
+      "b": "m010",
+      "score": 0.759,
+      "linked": true
+    },
+    {
+      "a": "m006",
+      "b": "m010",
+      "score": 0.667,
+      "linked": false
+    },
+    {
+      "a": "m010",
+      "b": "m014",
+      "score": 0.75,
+      "linked": true
+    },
+    {
+      "a": "m010",
+      "b": "m019",
+      "score": 0.728,
+      "linked": false
+    },
+    {
+      "a": "m010",
+      "b": "m023",
+      "score": 0.769,
+      "linked": true
+    },
+    {
+      "a": "m057",
+      "b": "m065",
+      "score": 0.7,
+      "linked": false
+    },
+    {
+      "a": "m077",
+      "b": "m085",
+      "score": 0.765,
+      "linked": true
+    },
+    {
+      "a": "m077",
+      "b": "m095",
+      "score": 0.553,
+      "linked": false
+    }
+  ],
+  "neurons": 16.011,
+  "usageReported": true
+}

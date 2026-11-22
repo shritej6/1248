@@ -1,0 +1,19 @@
+{
+  "member": {
+    "id": "m_be8eaf14-ceca-412a-944f-0f39d961779d",
+    "name": "Avery Snow (test)",
+    "on": false,
+    "skills": ["snow", "lawn"],
+    "zip": "53216"
+  },
+  "offers": [],
+  "jobs": [],
+  "record": {
+    "jobsDone": 0,
+    "hours": 0
+  },
+  "clock": {
+    "now": 1795334400000,
+    "offsetMs": 0
+  }
+}

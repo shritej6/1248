@@ -1,0 +1,15 @@
+{
+  "org": "comforce-demo",
+  "orgName": "ComForce demo",
+  "pageList": [
+    "m_c49cea58-4873-4fae-92e0-e292ec742a7f",
+    "m_07edb9a6-a0d9-4429-a35b-0dcf45cecdf4",
+    "m_c14e291c-eaf6-4a97-9eeb-45b6b41208c3",
+    "m_70331f4b-968d-4b66-b62f-9bc465e8368e"
+  ],
+  "waveSize": 10,
+  "maxWaves": 3,
+  "demoMode": true,
+  "forgetDays": 90,
+  "sorterOn": false
+}

@@ -1,0 +1,148 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 640px;
+  padding: var(--space-4);
+}
+
+.section,
+.form,
+.field,
+.send {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  gap: var(--space-4);
+}
+
+.form {
+  gap: var(--space-6);
+}
+
+.field,
+.send {
+  gap: var(--space-2);
+}
+
+.title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.hint {
+  color: var(--color-text-2);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  min-height: var(--control-h);
+  padding: var(--space-3);
+  border: var(--line-w) solid var(--color-line-strong);
+  border-radius: var(--radius);
+  background: var(--color-bg-panel);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.zip {
+  max-width: 10ch;
+  font-variant-numeric: tabular-nums;
+}
+
+.input[aria-invalid="true"],
+.textarea[aria-invalid="true"] {
+  border-width: 2px;
+}
+
+.error {
+  font-weight: 600;
+}
+
+.pair {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.option {
+  display: flex;
+  flex: 1 1 0;
+}
+
+.choice {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-h);
+  padding: 0 var(--space-5);
+  border: var(--line-w) solid var(--color-line-strong);
+  border-radius: var(--radius);
+  background: var(--color-bg-panel);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.choice[data-selected] {
+  border: 2px solid var(--color-text);
+  background: var(--color-bg-inset);
+}
+
+.choice[data-selected]::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-right: var(--space-2);
+  border-radius: var(--radius);
+  background: var(--color-text);
+}
+
+.choice[data-focus-visible] {
+  outline: var(--focus-w) solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.primary {
+  width: 100%;
+  min-height: var(--control-h);
+  padding: 0 var(--space-5);
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary[data-disabled] {
+  background: var(--color-bg-inset);
+  color: var(--color-text-3);
+  cursor: default;
+}
+
+.tracking {
+  overflow-wrap: anywhere;
+  color: var(--color-link);
+  font-weight: 600;
+}

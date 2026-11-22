@@ -1,0 +1,49 @@
+.clock {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  color: var(--color-text-2);
+}
+
+.label {
+  color: var(--color-text-2);
+}
+
+.value {
+  min-width: 6ch;
+  font-weight: 500;
+  text-align: right;
+}
+
+.word:empty {
+  display: none;
+}
+
+.word {
+  font-family: var(--font-cond);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.late .value,
+.late .word {
+  color: var(--color-accent);
+}
+
+.overdue .value,
+.overdue .word {
+  color: var(--color-crit);
+}
+
+.stale .value {
+  outline: var(--line-w) dashed var(--color-line-strong);
+  outline-offset: 2px;
+}
+
+.sync {
+  color: var(--color-text-3);
+  font-size: 12px;
+  line-height: 16px;
+}

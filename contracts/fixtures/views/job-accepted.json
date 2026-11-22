@@ -1,0 +1,30 @@
+{
+  "job": "j_8d4f1b27-6c3e-4a95-b0d8-7e2a5c9f1b63",
+  "routeCode": "SNOW-4821",
+  "needLabel": "Snow shovelling",
+  "status": "accepted",
+  "firstName": "Avery",
+  "address": "1 Test St, Milwaukee, WI 53216",
+  "words": "Snow on my walk and I cannot get to the bus",
+  "promiseAt": 1795420800000,
+  "accessNotes": "Side door, ring twice",
+  "actions": ["on_my_way", "help", "hand_off"],
+  "thread": [
+    {
+      "at": 1795333800000,
+      "from": "desk",
+      "text": "Please use the side door"
+    }
+  ],
+  "clock": {
+    "now": 1795334400000,
+    "offsetMs": 0
+  },
+  "promiseFrom": 1795248000000,
+  "steps": [
+    {
+      "status": "accepted",
+      "at": 1795333200000
+    }
+  ]
+}

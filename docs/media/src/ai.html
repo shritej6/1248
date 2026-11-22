@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Four AI jobs, one rule set</title>
+    <link rel="stylesheet" href="base.css" />
+    <style>
+      .jobs {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(5, auto);
+        column-gap: 24px;
+        margin-top: 32px;
+      }
+
+      .job {
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        background: var(--bg-panel);
+        border: 1px solid var(--line);
+        border-radius: 2px;
+      }
+
+      .job-head {
+        padding: 18px 20px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .frame {
+        width: 1280px;
+        zoom: 1.25;
+      }
+
+      .job-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .job-top h2 {
+        font-family: var(--cond);
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+      }
+
+      .switch {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--mono);
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-3);
+      }
+
+      .switch i {
+        display: block;
+        width: 26px;
+        height: 14px;
+        border: 1px solid var(--line-strong);
+        border-radius: 2px;
+        position: relative;
+      }
+
+      .switch i::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 8px;
+        height: 8px;
+        background: var(--text-2);
+      }
+
+      .model {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+      }
+
+      .model-id {
+        font-family: var(--mono);
+        font-size: 12.5px;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+        line-height: 20px;
+        color: var(--text-2);
+      }
+
+      .part {
+        padding: 14px 20px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .part:last-child {
+        border-bottom: 0;
+      }
+
+      .part p {
+        margin-top: 4px;
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+      }
+
+      .part p .said {
+        color: var(--text);
+      }
+
+      .person {
+        position: relative;
+        background: var(--accent-tint);
+      }
+
+      .person::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--accent);
+      }
+
+      .person .label {
+        color: var(--accent);
+      }
+
+      .person p {
+        color: var(--text);
+      }
+
+      .check .code {
+        display: block;
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: var(--text-3);
+      }
+
+      .lower {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 640px;
+        gap: 24px;
+        margin-top: 24px;
+      }
+
+      .panel {
+        padding: 20px 24px;
+        background: var(--bg-panel);
+        border: 1px solid var(--line);
+        border-radius: 2px;
+      }
+
+      .panel h3 {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 600;
+      }
+
+      .panel .sub {
+        margin-top: 2px;
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-2);
+      }
+
+      .rules {
+        list-style: none;
+        margin-top: 16px;
+        border-top: 1px solid var(--line);
+      }
+
+      .rules li {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 14px;
+        align-items: start;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .rules li:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .rules .n {
+        display: grid;
+        place-items: center;
+        width: 26px;
+        height: 24px;
+        border: 1px solid var(--line-strong);
+        border-radius: 2px;
+        font-family: var(--mono);
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .rules span:last-child {
+        color: var(--text);
+      }
+
+      .rules small {
+        font-size: 15px;
+        color: var(--text-2);
+      }
+
+      .chart {
+        margin-top: 20px;
+      }
+
+      .group + .group {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+      }
+
+      .group-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .group-head strong {
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+
+      .bar-row {
+        display: grid;
+        grid-template-columns: 52px 384px 1fr;
+        align-items: center;
+        gap: 12px;
+        height: 30px;
+      }
+
+      .bar-row .run {
+        font-size: 14px;
+        color: var(--text-3);
+      }
+
+      .track {
+        position: relative;
+        display: flex;
+        gap: 2px;
+        height: 18px;
+      }
+
+      .track::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        bottom: -6px;
+        right: -1px;
+        border-right: 1px dashed var(--line-strong);
+      }
+
+      .fill {
+        height: 100%;
+        background: var(--text);
+        border-radius: 0 2px 2px 0;
+      }
+
+      .fill.low {
+        background: var(--text-3);
+      }
+
+      .miss {
+        height: 100%;
+        background: var(--crit-tint);
+        border: 1px solid var(--crit);
+        border-radius: 2px;
+      }
+
+      .bar-row .code {
+        font-size: 15px;
+        color: var(--text);
+        white-space: nowrap;
+      }
+
+      .miss {
+        display: grid;
+        place-items: center;
+        font-family: var(--cond);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        color: var(--crit);
+      }
+
+      .stats {
+        margin-top: 8px;
+        padding-left: 64px;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-2);
+      }
+
+      .stats .code {
+        color: var(--text);
+        font-weight: 400;
+      }
+
+      .limit {
+        margin-top: 20px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-3);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <header class="head">
+        <div>
+          <p class="eyebrow"><span>Vision</span><b>Figure 3</b><span>Supervised AI</span></p>
+          <h1 class="title">Four AI jobs, one rule set</h1>
+          <p class="lede">
+            Each AI job suggests and shows its evidence. A person decides. With every job switched off, Vision
+            still works fully, and each card simply waits for a person.
+          </p>
+        </div>
+        <p class="eyebrow"><span>All four run on Cloudflare Workers AI</span></p>
+      </header>
+
+      <section class="jobs">
+        <article class="job">
+          <div class="job-head">
+            <div class="job-top"><h2>SORT</h2><span class="switch">SORTER_MODEL<i></i></span></div>
+            <p class="model">Gemma 4 26B</p>
+            <p class="model-id">@cf/google/gemma-4-26b-a4b-it</p>
+          </div>
+          <div class="part">
+            <span class="label">It suggests</span>
+            <p>The need, the team and the urgency of each new card. It reads the message two times.</p>
+          </div>
+          <div class="part">
+            <span class="label">Its evidence</span>
+            <p>The exact words it used and one reason. Code checks that both reads agree and each quote is in the message.</p>
+          </div>
+          <div class="part person">
+            <span class="label">A person</span>
+            <p>The desk confirms the need with one tap and picks HIGH or LOW. Only a person can lower urgency.</p>
+          </div>
+          <div class="part check">
+            <span class="label">Measured check</span>
+            <p>The sorter exam: 100 synthetic messages, 24 of them emergencies.</p>
+            <span class="code">exam/results/record.json</span>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <div class="job-top"><h2>LISTEN</h2><span class="switch">VOICE_MODEL<i></i></span></div>
+            <p class="model">Whisper large v3 turbo</p>
+            <p class="model-id">@cf/openai/whisper-large-v3-turbo</p>
+          </div>
+          <div class="part">
+            <span class="label">It suggests</span>
+            <p>A transcript of each voicemail. The transcript then goes through the sorter and the word list.</p>
+          </div>
+          <div class="part">
+            <span class="label">Its evidence</span>
+            <p>The recording plays above the transcript, with the line <span class="said">"Listen before you confirm."</span></p>
+          </div>
+          <div class="part person">
+            <span class="label">A person</span>
+            <p>The desk listens and confirms. When the job is off or fails, the desk types the gist.</p>
+          </div>
+          <div class="part check">
+            <span class="label">Measured check</span>
+            <p>8 synthetic voicemails with speech errors: the word error rate, and the 3 emergencies must still be found.</p>
+            <span class="code">exam/src/voice-check.ts</span>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <div class="job-top"><h2>LINK</h2><span class="switch">LINK_MODEL<i></i></span></div>
+            <p class="model">BGE M3</p>
+            <p class="model-id">@cf/baai/bge-m3</p>
+          </div>
+          <div class="part">
+            <span class="label">It suggests</span>
+            <p><span class="said">"Same event?"</span> for two open reports from one ZIP within 7 days.</p>
+          </div>
+          <div class="part">
+            <span class="label">Its evidence</span>
+            <p>Both reports side by side, with the ZIP, the time and the score.</p>
+          </div>
+          <div class="part person">
+            <span class="label">A person</span>
+            <p>The desk answers <span class="said">"Same event"</span> or <span class="said">"Not the same"</span>. A link never merges, closes or lowers a card.</p>
+          </div>
+          <div class="part check">
+            <span class="label">Measured check</span>
+            <p>The 100 exam messages: the lowest threshold with zero false joins, and its recall.</p>
+            <span class="code">exam/src/link-check.ts</span>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <div class="job-top"><h2>TRANSLATE</h2><span class="switch">TRANSLATE_MODEL<i></i></span></div>
+            <p class="model">M2M100 1.2B</p>
+            <p class="model-id">@cf/meta/m2m100-1.2b</p>
+          </div>
+          <div class="part">
+            <span class="label">It suggests</span>
+            <p>An English translation of a Spanish message, for the desk only.</p>
+          </div>
+          <div class="part">
+            <span class="label">Its evidence</span>
+            <p>The original words stay above the translation.</p>
+          </div>
+          <div class="part person">
+            <span class="label">A person</span>
+            <p>The desk reads both. A resident gets only Spanish written by people, never a machine translation.</p>
+          </div>
+          <div class="part check">
+            <span class="label">Measured check</span>
+            <p>6 of 6 Spanish messages found, no English message marked Spanish, and 6 translations saved.</p>
+            <span class="code">exam/src/lang-check.ts</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="lower">
+        <div class="panel">
+          <h3>The supervision rules</h3>
+          <p class="sub">Every job follows all seven. The code holds each one.</p>
+          <ol class="rules">
+            <li><span class="n">1</span><span>One off switch for each job. <small>Empty means off, and Vision still works fully.</small></span></li>
+            <li><span class="n">2</span><span>It only suggests, and it always shows its evidence.</span></li>
+            <li><span class="n">3</span><span>It can only add caution. <small>It never lowers urgency, closes or merges a card, or picks who helps.</small></span></li>
+            <li><span class="n">4</span><span>A person confirms.</span></li>
+            <li><span class="n">5</span><span>A failure goes to a person with a flag, <small>after at most 3 tries.</small></span></li>
+            <li><span class="n">6</span><span>What it makes from personal words or audio lives in the vault until the forget date. <small>Never in the ledger or the logs.</small></span></li>
+            <li><span class="n">7</span><span>Each job has a measured check on synthetic data, <small>kept in the repository.</small></span></li>
+          </ol>
+        </div>
+
+        <div class="panel">
+          <h3>The sorter exam</h3>
+          <p class="sub">Emergencies found out of 24, in two runs. A model passes only with 24 of 24 in both.</p>
+          <div class="chart">
+            <div class="group">
+              <div class="group-head">
+                <strong>Gemma 4 26B</strong>
+                <span class="chip"><svg viewBox="0 0 8 8"><circle cx="4" cy="4" r="3.75" /><polyline points="2,4.25 3.5,5.75 6,2.5" class="cut" /></svg>PASSED, SWITCHED ON</span>
+              </div>
+              <div class="bar-row"><span class="run">Run 1</span><div class="track"><div class="fill" style="width: 384px"></div></div><span class="code">24 of 24</span></div>
+              <div class="bar-row"><span class="run">Run 2</span><div class="track"><div class="fill" style="width: 384px"></div></div><span class="code">24 of 24</span></div>
+              <p class="stats">False alarms <span class="code">16</span> and <span class="code">18</span> of 76. Right need <span class="code">96</span> and <span class="code">97</span> of 100.</p>
+            </div>
+            <div class="group">
+              <div class="group-head">
+                <strong>Granite 4.0 Micro</strong>
+                <span class="chip grey"><svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6" class="line dash" /></svg>FAILED, STAYS OFF</span>
+              </div>
+              <div class="bar-row"><span class="run">Run 1</span><div class="track"><div class="fill low" style="width: 304px"></div><div class="miss" style="width: 78px">5 MISSED</div></div><span class="code">19 of 24</span></div>
+              <div class="bar-row"><span class="run">Run 2</span><div class="track"><div class="fill low" style="width: 304px"></div><div class="miss" style="width: 78px">5 MISSED</div></div><span class="code">19 of 24</span></div>
+              <p class="stats">False alarms <span class="code">23</span> and <span class="code">21</span> of 76. Right need <span class="code">67</span> and <span class="code">68</span> of 100.</p>
+            </div>
+          </div>
+          <p class="limit">The messages are synthetic. 0 misses in 24 still allows a miss rate near 12 percent, so the organisation must repeat the exam on its own past messages.</p>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <p>
+          <span class="label">Source</span>&nbsp;&nbsp;<span class="code">exam/results/record.json</span>,
+          <span class="code">docs/exam.md</span>, <span class="code">docs/ai-jobs.md</span>
+        </p>
+        <p>Synthetic data only.</p>
+      </footer>
+    </main>
+  </body>
+</html>

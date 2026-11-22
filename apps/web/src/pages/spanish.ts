@@ -166,7 +166,7 @@ export const TRACK_ES: TrackWords = {
   messagesTitle: "Mensajes para usted",
   consentTitle: "¿Podemos compartir sus datos?",
   consentText: (partnerName, needLabel) =>
-    `${partnerName} puede ayudar con ${needLabel}. ¿Podemos darles su nombre, su código postal y lo que necesita?`,
+    `${partnerName} puede ayudar con ${needLabel}. ¿Podemos darles su nombre, su código postal, lo que necesita y cómo comunicarse con usted?`,
   shareYes: "Sí, compartir",
   shareNo: "No, no compartir",
   checkbackTitle: "¿Le ayudaron?",

@@ -4,7 +4,7 @@
     "slots": ["orgName", "routeCode", "needLabel", "promiseAt", "trackingLink"]
   },
   "consent_ask": {
-    "text": "{orgName} can ask {partnerName} to help with {needLabel}. May we share your first name, your ZIP code and your need with them? Answer here: {trackingLink}. Your details are deleted 90 days after the request closes.",
+    "text": "{orgName} can ask {partnerName} to help with {needLabel}. May we share your first name, your ZIP code, your need and your contact details with them? Answer here: {trackingLink}. Your details are deleted 90 days after the request closes.",
     "slots": ["orgName", "partnerName", "needLabel", "trackingLink"]
   },
   "partner_ask": {
